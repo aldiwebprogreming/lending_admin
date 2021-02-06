@@ -247,7 +247,7 @@
           
        <!--    <li class="nav-header">EXAMPLES</li> -->
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="<?= base_url() ?>promo/promo" class="nav-link">
               <i class="nav-icon fas fa-calendar-alt"></i>
               <p>
                 Promo
@@ -256,7 +256,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
+            <a href="<?= base_url() ?>galery/galery" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>
                 Gallery Produk
@@ -264,7 +264,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/kanban.html" class="nav-link">
+            <a href="<?= base_url() ?>video/video" class="nav-link">
               <i class="nav-icon fas fa-video"></i>
               <p>
                 Video Review
