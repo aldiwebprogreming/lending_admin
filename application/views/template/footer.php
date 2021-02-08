@@ -1,5 +1,5 @@
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">ebunga</a>.</strong>
+    <strong>Copyright &copy;  <a href="https://adminlte.io">ebunga</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b></b>
@@ -28,6 +28,16 @@
 <script src="<?= base_url() ?>assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="<?= base_url() ?>assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="<?php echo base_url() ?>assets/alert.js"></script>
+<script src="<?php echo base_url() ?>assets/plugins/jquery-knob/jquery.knob.min.js"></script>
+<script src="<?php echo base_url() ?>assets/plugins/moment/moment.min.js"></script>
+<script src="<?php echo base_url() ?>assets/plugins/daterangepicker/daterangepicker.js"></script>
+
+<script src="<?php echo base_url() ?>assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+
+<script src="<?php echo base_url() ?>assets/plugins/summernote/summernote-bs4.min.js"></script>
+
+
+
 <script>
   $(function () {
     $("#example1").DataTable({

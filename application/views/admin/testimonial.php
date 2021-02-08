@@ -21,30 +21,32 @@
               <div class="card-body">
 
             
-                <a href="<?= base_url() ?>galery/add_galery" class="btn btn-primary mb-4"><i class="fas fa-plus"></i> Tambah Galery Product</a>
+                <a href="<?= base_url() ?>testimonials/add_testimonial" class="btn btn-primary mb-4"><i class="fas fa-plus"></i> Tambah Testimonials</a>
             
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>No</th>
-                  <th>Nama Product</th>
-                  <th>Keterangan</th>
-                  <th>Gambar</th>
+                  <th>Nama User</th>
+                  <th>Ket Testimonial</th>
+                  <th>Foto</th>
+                  <th>Date Post</th>
                   <th>Opsi</th>
                 </tr>
                 </thead>
                 <tbody>
                   <?php 
                   $no =1;
-                  foreach ($galery as $data) { ?>
+                  foreach ($testimonial as $data) { ?>
                 <tr> 
                     <td><?= $no++; ?></td>
-                    <td><?= $data['nama_product'] ?></td>
-                    <td><?= $data['keterangan'] ?></td>
-                    <td><?= $data['gambar'] ?></td>
+                    <td><?= $data['nama_user'] ?></td>
+                    <td><?= $data['ket_testimonial'] ?></td>
+                    <td><?= $data['foto'] ?></td>
+                     <td><?= $data['date_post'] ?></td>
                     <td>
-                      <a href="<?= base_url('galery/') ?>hapus?id=<?= $data['id'] ?>"  onclick="return confirm('Yakin Hapus?')" class="badge badge-danger">Hapus</a>
-                      <a href="<?= base_url('galery/') ?>edit?id=<?= $data['id'] ?>" class="badge badge-success">Edit</a>
+                      <a href="<?= base_url('testimonials/') ?>hapus?id=<?= $data['id'] ?>"  onclick="return confirm('Yakin Hapus?')" class="badge badge-danger">Hapus</a>
+                      <a href="<?= base_url('testimonials/') ?>edit?id=<?= $data['id'] ?>" class="badge badge-success">Edit</a>
                       <!-- <a href="<?= base_url('promo/') ?>det?id=<?= $data['id'] ?>" class="badge badge-primary" data-target="#exampleModal">Detail</a> -->
                      
                     </td>
@@ -56,9 +58,10 @@
                 <tfoot>
                 <tr>
                   <th>No</th>
-                  <th>Nama Product</th>
-                  <th>Keterangan</th>
-                  <th>Gambar</th>
+                  <th>Nama User</th>
+                  <th>Ket Testimonial</th>
+                  <th>Foto</th>
+                  <th>Date Post</th>
                   <th>Opsi</th>
                 </tr>
                 </tfoot>
@@ -83,12 +86,12 @@
 
   <!-- Main Footer -->
 <script src="<?php echo base_url() ?>assets/alert.js"></script>
-  <script>
+  <!-- <script>
 
-   function tambah(){
-    $("#tambah").click(function(){
+   // function tambah(){
+   //  $("#tambah").click(function(){
 
-      swal("Maaf!", " promo tidak dapat ditambah", "error");
-    })
-   }
-  </script>
+   //    swal("Maaf!", " promo tidak dapat ditambah", "error");
+   //  })
+   // }
+  </script> -->

@@ -21,30 +21,28 @@
               <div class="card-body">
 
             
-                <a href="<?= base_url() ?>galery/add_galery" class="btn btn-primary mb-4"><i class="fas fa-plus"></i> Tambah Galery Product</a>
+                <a href="<?= base_url() ?>operator/add_operator" class="btn btn-primary mb-4"><i class="fas fa-plus"></i> Tambah Operator</a>
             
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>No</th>
-                  <th>Nama Product</th>
-                  <th>Keterangan</th>
-                  <th>Gambar</th>
+                  <th>Username</th>
+                  <th>Password</th>
                   <th>Opsi</th>
                 </tr>
                 </thead>
                 <tbody>
                   <?php 
                   $no =1;
-                  foreach ($galery as $data) { ?>
+                  foreach ($operator as $data) { ?>
                 <tr> 
                     <td><?= $no++; ?></td>
-                    <td><?= $data['nama_product'] ?></td>
-                    <td><?= $data['keterangan'] ?></td>
-                    <td><?= $data['gambar'] ?></td>
+                    <td><?= $data['username'] ?></td>
+                    <td><?= $data['pass'] ?></td>
                     <td>
-                      <a href="<?= base_url('galery/') ?>hapus?id=<?= $data['id'] ?>"  onclick="return confirm('Yakin Hapus?')" class="badge badge-danger">Hapus</a>
-                      <a href="<?= base_url('galery/') ?>edit?id=<?= $data['id'] ?>" class="badge badge-success">Edit</a>
+                      <a href="<?= base_url('operator/') ?>hapus?id=<?= $data['id'] ?>"  onclick="return confirm('Yakin Hapus?')" class="badge badge-danger">Hapus</a>
+                    <!--   <a href="<?= base_url('operator/') ?>edit?id=<?= $data['id'] ?>" class="badge badge-success">Edit</a> -->
                       <!-- <a href="<?= base_url('promo/') ?>det?id=<?= $data['id'] ?>" class="badge badge-primary" data-target="#exampleModal">Detail</a> -->
                      
                     </td>
@@ -56,9 +54,8 @@
                 <tfoot>
                 <tr>
                   <th>No</th>
-                  <th>Nama Product</th>
-                  <th>Keterangan</th>
-                  <th>Gambar</th>
+                  <th>Username</th>
+                  <th>Password</th>
                   <th>Opsi</th>
                 </tr>
                 </tfoot>
@@ -83,12 +80,12 @@
 
   <!-- Main Footer -->
 <script src="<?php echo base_url() ?>assets/alert.js"></script>
-  <script>
+  <!-- <script>
 
-   function tambah(){
-    $("#tambah").click(function(){
+   // function tambah(){
+   //  $("#tambah").click(function(){
 
-      swal("Maaf!", " promo tidak dapat ditambah", "error");
-    })
-   }
-  </script>
+   //    swal("Maaf!", " promo tidak dapat ditambah", "error");
+   //  })
+   // }
+  </script> -->
