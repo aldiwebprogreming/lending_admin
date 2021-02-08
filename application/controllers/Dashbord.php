@@ -23,6 +23,8 @@
 			$this->load->View('template/footer', $data);
 
 		}
+
+		
 	}
 
 
