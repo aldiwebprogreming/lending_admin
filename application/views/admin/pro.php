@@ -519,8 +519,8 @@
 
 	</footer>
 	<!-- End footer -->
-
-	  <script src="<?php echo base_url() ?>assets/alert.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	  <?php echo "<script>".$this->session->flashdata('message')."</script>"?>
 	
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

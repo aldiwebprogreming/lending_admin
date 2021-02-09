@@ -185,7 +185,7 @@
           <img src="<?= base_url() ?>assets/logo/user.png" class="img-circle" alt="User Image" style="height: 32px;">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Admin</a>
+          <a href="#" class="d-block"><?= $this->session->userdata('username'); ?></a>
         </div>
       </div>
 

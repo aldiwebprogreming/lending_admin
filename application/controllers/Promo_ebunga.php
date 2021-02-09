@@ -36,7 +36,14 @@
 				];
 
 				$input = $this->db->insert('tbl_pesan', $data);
-				$this->session->set_flashdata('message', 'swal("Sukses!", "Message Berhasil Dikirim", "success");');
+				$this->session->set_flashdata('message', "Swal.fire({
+					  title: 'Yess!',
+					  text: 'Message anda berhasil dikirim',
+					  imageUrl: 'http://localhost:8080/lending_admin/assets2/images/message.svg',
+					  imageWidth: 200,
+					  imageHeight: 100,
+					  imageAlt: 'Custom image',
+					})");
 				redirect('Promo_ebunga/');
 			}
 		}
