@@ -9,7 +9,7 @@
  	function __construct()
  	{
  		parent:: __construct();
-
+ 		
  		$this->load->library('form_validation');
  	}
 
@@ -78,6 +78,22 @@
  			}
 
  		}	
+
+
+ 		 function logout(){
+
+			$this->session->unset_userdata('username');
+			 $this->session->set_flashdata('message', "Swal.fire({
+					  title: 'Yess!',
+					  text: 'Anda berhasil Keluar',
+					  imageUrl: 'http://localhost:8080/lending_admin/assets3/img/logout.svg',
+					  imageWidth: 200,
+					  imageHeight: 100,
+					  imageAlt: 'Custom image',
+					})");
+			redirect('login/');
+		}
+
  }
 
 

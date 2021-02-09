@@ -39,7 +39,7 @@
                             <div class="col-lg-9 m-auto">
                                 <div class="p-3">
                                     <div class="text-center">
-                                        <h4 class="text-gray-900 mb-4">Login</h4>
+                                        <h4 class="text-gray-900 mb-4">Login Admin</h4>
                                     </div>
                                     <!-- menampilkan pesan flash data dari session -->
                                    
