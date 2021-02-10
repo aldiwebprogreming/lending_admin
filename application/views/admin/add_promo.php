@@ -30,27 +30,28 @@
 
                   <div class="form-group">
                     <label for="formGroupExampleInput">Nama Promo</label>
-                    <input type="text" name="nama_promo" class="form-control" required="" placeholder="Masukan nama promo">
+                    <input type="text" name="nama_promo" class="form-control" required="" placeholder="Masukan nama promo" value="<?php echo set_value('nama_promo'); ?>">
                   </div>
 
                   <div class="form-group">
                     <label for="formGroupExampleInput">Judul</label>
-                    <input type="text" name="judul" class="form-control" required="" placeholder="Masukan judul promo">
+                    <input type="text" name="judul" class="form-control" required="" placeholder="Masukan judul promo" value="<?php echo set_value('judul'); ?>">
                   </div>
 
                   <div class="form-group">
                     <label for="formGroupExampleInput">Sub Judul</label>
-                    <textarea class="form-control" name="sub_judul" style="height: 100px;" placeholder="Masukan sub judul"></textarea>
+                    <textarea class="form-control" name="sub_judul" style="height: 100px;" placeholder="Masukan sub judul"><?php echo set_value('sub_judul'); ?></textarea>
                   </div>
 
                   <div class="form-group">
                     <label for="formGroupExampleInput">Start Promo</label>
-                    <input type="date" name="start_promo" class="form-control">
+                    <input type="date" name="start_promo" class="form-control" value="<?php echo set_value('start_promo'); ?>">
+                    <small style="color: red;"><?php echo validation_errors(); ?></small>
                   </div>
 
                   <div class="form-group">
                     <label for="formGroupExampleInput">End Promo</label>
-                    <input type="date" name="end_promo" class="form-control">
+                    <input type="date" name="end_promo" class="form-control" value="<?php echo set_value('end_promo'); ?>">
                   </div>
 
                   <div class="form-group">
@@ -61,7 +62,7 @@
 
                   <div class="form-group">
                     <label for="formGroupExampleInput">Gambar Promo</label>
-                    <input type="file" name="foto" class="form-control" required="" id="image">
+                    <input type="file" name="foto" class="form-control" required="" id="image"  value="<?php echo set_value('foto'); ?>">
                     <small>Format  gambar harus jpg/jpeg dan png</small>
                   </div>
                    

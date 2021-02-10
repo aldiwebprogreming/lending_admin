@@ -228,16 +228,20 @@
 								<h2 class="mu-heading-title">Check Out Our Video Review</h2>
 								<span class="mu-header-dot"></span>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
-							</div>
+							
 
 							<!-- Start Video Review Content -->
-							
+						
 							<div class="mu-video-review-content">
 								<div class="embed-responsive embed-responsive-16by9">
-									<iframe width="560" height="315" src="https://www.youtube.com/embed/FBU-qweFF4g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								
+									<iframe  width="560" height="315" src="https://www.youtube.com/embed/FBU-qweFF4g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								</div>
+								
 							</div>
-							</center>
+						</div>
+						</div>
+							
 							<!-- End Video Review Content -->
 
 						</div>

@@ -9,9 +9,8 @@
 		function __construct()
 		{
 			parent:: __construct();
-			if ($this->session->userdata('username') == NULL) {
-			redirect('login/');
-			}
+			
+			
 		}
 
 		function index(){

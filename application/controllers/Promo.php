@@ -21,18 +21,49 @@
 			$data['title'] = "Promo";
 			$data['sub_title'] = "Promo";
 
-			$data['promo'] = $this->db->get('tbl_promo')->result_array();
-			$data['num_promo'] = $this->db->get('tbl_promo')->num_rows();
+			$tgl = date('Y-m-d');
+			
+			// $data['promo'] = $this->db->get('tbl_promo')->result_array();
+
+			
+			// var_dump($data['promo']);
+			$start_date='2021-02-00';
+			$end_date='2021-02-00';
+
+	$this->db->where('start_promo AND end_promo BETWEEN "'. date('Y-m-d', strtotime($start_date)). '" and "'. date('Y-m-d', strtotime($end_date)).'"');
+	$data['num_promo'] = $this->db->get('tbl_promo')->result_array();
+
+		var_dump($data['num_promo']);
+
+			// // $data['promo'] = $this->db->get_where('tbl_promo', array('start_promo'=>$tgl))->result_array();
+			// var_dump($data['promo']);
+				
+			// $data['num_promo'] = $this->db->get('tbl_promo')->num_rows();
 
 
 
-			$this->load->view('template/header', $data);
-			$this->load->view('admin/promo', $data);
-			$this->load->view('template/footer');
+			// $this->load->view('template/header', $data);
+			// $this->load->view('admin/promo', $data);
+			// $this->load->view('template/footer');
 
 		}
 
 		function add_promo(){
+
+		$this->form_validation->set_rules('start_promo', 'date start promo', 'is_unique[tbl_promo.start_promo]');
+
+		if ($this->form_validation->run() == FALSE) {
+
+			$data['title'] = "Tambah Promo";
+			$data['sub_title'] = "Tambah Promo";
+			$rand = mt_rand(1000, 10000);
+            $string = "PROMO";
+            $data['kd_promo'] = $string.$rand;
+
+			$this->load->view('template/header', $data);
+			$this->load->view('admin/add_promo', $data);
+			$this->load->view('template/footer');
+		} else {
 
 		$this->load->helper(array('form', 'url'));
 
@@ -82,6 +113,7 @@
 				redirect('promo/promo');
 			}
 		}
+	}
 
 		}
 

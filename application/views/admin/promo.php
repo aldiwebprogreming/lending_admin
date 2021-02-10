@@ -19,13 +19,9 @@
                 </div>
               </div>
               <div class="card-body">
-
-             <?php 
-                if ($num_promo >= 1) { ?>
-                  <button  class="btn btn-primary mb-4" id="tambah" onclick="tambah()"><i class="fas fa-plus"></i> Tambah Promo</button>
-              <?php } else{ ?>
+              
                 <a href="<?= base_url() ?>promo/add_promo" class="btn btn-primary mb-4"><i class="fas fa-plus"></i> Tambah Promo</a>
-              <?php } ?>
+            
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
