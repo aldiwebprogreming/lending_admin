@@ -46,16 +46,20 @@
                     <td>
                       <?php 
 
-                      foreach ($num_promo as $data1) {
-                        
+                      if ($num_promo == FALSE) {
+                        echo "disable";
+                      } else {
+
+                        foreach ($num_promo as $data1) {
+                          
+                        }
+
+                        if ($data['nama_promo'] == $data1['nama_promo']) {
+                          echo "active";
+                        }else{
+                          echo "disabale";
+                        }
                       }
-
-                          if ($data['nama_promo'] == $data1['nama_promo']) {
-                            echo "active";
-                          }else{
-
-                            echo "disable";
-                          }
 
                        
                       ?>

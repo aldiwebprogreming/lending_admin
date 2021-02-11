@@ -18,7 +18,7 @@
 		$data['promo'] = $this->db->get('tbl_promo')->result_array();
 		foreach ($data['promo'] as $date_hasil) {
 		$tgl1 =  $date_hasil['end_promo'];
-		$tgl = "2021-02-11";
+		$tgl = date('Y-m-d');
 
 	$this->db->where('start_promo AND end_promo BETWEEN "'. date('Y-m-d', strtotime($tgl)). '" and "'. date('Y-m-d', strtotime($tgl1)).'"');	
 
