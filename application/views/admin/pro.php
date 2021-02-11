@@ -93,13 +93,13 @@
 				
 				<div class="col-md-6 col-sm-6 col-sm-push-6">
 					<div class="mu-hero-right">
-						<img src="" alt="">
+						<img src="<?= base_url() ?>assets3/img/default.jpg" alt="">
 					</div>
 				</div>
 				
 				<div class="col-md-6 col-sm-6 col-sm-pull-6">
 					<div class="mu-hero-left" >
-						<h1>Yoook Belanja Di ebunga</h1>
+						<h1>Hello Sehabat Ebunga</h1>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -136,13 +136,14 @@
 									</div> -->
 									<!-- Start Single Counter -->
 									<div class="col-md-12 col-xl-6">
-										<div class="mu-single-counter" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-										<div style="">
+											
+										<center>
 											<h3 style="margin-top: 20px;">Remaining Promo Time</h3>
 								          		<span class="mu-header-dot"></span>
-								            <div id="DateCountdown" data-date="0-0-0 00:00:00"></div>
-								         </div>
-										</div>
+								          		<br>
+								            	<img src="<?= base_url() ?>assets3/img/not.svg" alt="" style="height: 250px;">
+								            	<!-- <h2 style="color: orange;">Not found promo time</h2> -->
+										</center>								         
 									</div>
 
 								</div>
