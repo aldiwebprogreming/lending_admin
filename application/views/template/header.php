@@ -270,7 +270,7 @@
           
        <!--    <li class="nav-header">EXAMPLES</li> -->
           <li class="nav-item">
-            <a href="<?= base_url() ?>promo/promo" class="nav-link">
+            <a href="<?= base_url() ?>promo/data_promo" class="nav-link">
               <i class="nav-icon fas fa-calendar-alt"></i>
               <p>
                 Promo

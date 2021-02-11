@@ -18,22 +18,9 @@
 
 		function promo(){
 
-			$data['title'] = "Promo";
-			$data['sub_title'] = "Promo";
-
-			$tgl = date('Y-m-d');
 			
-			// $data['promo'] = $this->db->get('tbl_promo')->result_array();
 
-			
-			// var_dump($data['promo']);
-			$start_date='2021-02-00';
-			$end_date='2021-02-00';
-
-	$this->db->where('start_promo AND end_promo BETWEEN "'. date('Y-m-d', strtotime($start_date)). '" and "'. date('Y-m-d', strtotime($end_date)).'"');
-	$data['num_promo'] = $this->db->get('tbl_promo')->result_array();
-
-		var_dump($data['num_promo']);
+		// var_dump($data['num_promo']);
 
 			// // $data['promo'] = $this->db->get_where('tbl_promo', array('start_promo'=>$tgl))->result_array();
 			// var_dump($data['promo']);
@@ -47,6 +34,27 @@
 			// $this->load->view('template/footer');
 
 		}
+
+	function data_promo(){
+
+			$data['title'] = "Data Promo";
+			$data['sub_title'] = "Data Promo";
+
+			$data['promo'] = $this->db->get('tbl_promo')->result_array();
+			foreach ($data['promo'] as $date_hasil) {
+				 $tgl1 =  $date_hasil['end_promo'];
+				$tgl = date('Y-m-d');
+	$this->db->where('start_promo AND end_promo BETWEEN "'. date('Y-m-d', strtotime($tgl)). '" and "'. date('Y-m-d', strtotime($tgl1)).'"');	
+
+	$data['num_promo'] = $this->db->get('tbl_promo',1)->result_array();
+	}
+	
+			$data['promo'] = $this->db->get('tbl_promo')->result_array();
+
+			$this->load->view('template/header', $data);
+			$this->load->view('admin/promo', $data);
+			$this->load->view('template/footer');
+	}
 
 		function add_promo(){
 
@@ -110,7 +118,7 @@
 				$input - $this->db->insert('tbl_promo', $data);
 				$upload = array('upload_data' => $this->upload->data());
 				$this->session->set_flashdata('message', 'swal("Sukses!", "Promo Berhasil Ditambah", "success");');
-				redirect('promo/promo');
+				redirect('promo/data_promo');
 			}
 		}
 	}
@@ -168,7 +176,7 @@
 				$this->db->update('tbl_promo', $data);
 				$upload = array('upload_data' => $this->upload->data());
 				$this->session->set_flashdata('message', 'swal("Sukses!", "Promo berhasil diubah", "success");');
-				redirect('promo/promo');
+				redirect('promo/data_promo');
 			}
 
 				
@@ -181,7 +189,7 @@
 			$this->db->where('id', $id);
 			$this->db->delete('tbl_promo');
 			$this->session->set_flashdata('message', 'swal("Sukses!", "Data Berhasil dihapus", "success");');
-				redirect('promo/promo');
+				redirect('promo/data_promo');
 		}
 	}
 

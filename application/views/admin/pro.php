@@ -85,12 +85,85 @@
 	<!-- End Header -->
 
 	<!-- Start Featured Slider -->
+<?php if ($num_promo == FALSE) { ?>
+	<section id="mu-hero" style="">
+		<div class="container">
+			<div class="row">
+
+				
+				<div class="col-md-6 col-sm-6 col-sm-push-6">
+					<div class="mu-hero-right">
+						<img src="" alt="">
+					</div>
+				</div>
+				
+				<div class="col-md-6 col-sm-6 col-sm-pull-6">
+					<div class="mu-hero-left" >
+						<h1>Yoook Belanja Di ebunga</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
+							Sign up now</a>
+						<!-- <span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span> -->
+					</div>
+				</div>	
+
+			</div>
+		</div>
+	</section>
+	
+	<!-- Start Featured Slider -->
+	
+	<!-- Start main content -->
+		
+	<main role="main">
+
+		<!-- Start Counter -->
+		<section id="mu-counter">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-counter-area">
+
+							<div class="mu-counter-block">
+								<div class="row">
+									<!-- <div class="col-md-2 col-sm-6">
+										
+									</div> -->
+									<!-- Start Single Counter -->
+									<div class="col-md-12 col-xl-6">
+										<div class="mu-single-counter" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+										<div style="">
+											<h3 style="margin-top: 20px;">Remaining Promo Time</h3>
+								          		<span class="mu-header-dot"></span>
+								            <div id="DateCountdown" data-date="0-0-0 00:00:00"></div>
+								         </div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+<?php } else{ ?>
+
+
 
 	<section id="mu-hero" style="">
 		<div class="container">
 			<div class="row">
 
-				<?php foreach ($promo as $data) {
+				<?php foreach ($num_promo as $data) {
 					# code...
 				} ?>
 
@@ -143,15 +216,6 @@
 										</div>
 									</div>
 
-									<!-- <div class="col-md-2 col-sm-12">
-										
-									</div> -->
-									<!-- / Single Counter -->
-
-									<!-- Start Single Counter -->
-									
-									<!-- / Single Counter -->
-
 								</div>
 							</div>
 
@@ -161,6 +225,19 @@
 				</div>
 			</div>
 		</section>
+
+					<?php } ?>
+
+
+									<!-- <div class="col-md-2 col-sm-12">
+										
+									</div> -->
+									<!-- / Single Counter -->
+
+									<!-- Start Single Counter -->
+									
+									<!-- / Single Counter -->
+
 		<!-- End Counter -->
 
 		<!-- Start Book Overview -->

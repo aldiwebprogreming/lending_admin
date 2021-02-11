@@ -26,10 +26,10 @@
                 <thead>
                 <tr>
                   <th>No</th>
-                  <th>Kd Promo</th>
                   <th>nama Promo</th>
                   <th>Judul</th>
                   <th>Sub Judul</th>
+                  <th>Status</th>
                   <th>Opsi</th>
                 </tr>
                 </thead>
@@ -39,10 +39,27 @@
                   foreach ($promo as $data) { ?>
                 <tr> 
                     <td><?= $no++; ?></td>
-                    <td><?= $data['kd_promo'] ?></td>
+                   
                     <td><?= $data['nama_promo'] ?></td>
                     <td><?= $data['judul'] ?></td>
                     <td><?= $data['sub_judul'] ?></td>
+                    <td>
+                      <?php 
+
+                      foreach ($num_promo as $data1) {
+                        
+                      }
+
+                          if ($data['nama_promo'] == $data1['nama_promo']) {
+                            echo "active";
+                          }else{
+
+                            echo "disable";
+                          }
+
+                       
+                      ?>
+                    </td>
                     <td>
                       <a href="<?= base_url('promo/') ?>hapus?id=<?= $data['id'] ?>"  onclick="return confirm('Yakin Hapus?')" class="badge badge-danger">Hapus</a>
                       <a href="<?= base_url('promo/') ?>edit?id=<?= $data['id'] ?>" class="badge badge-success">Edit</a>
@@ -120,10 +137,10 @@
                 <tfoot>
                 <tr>
                   <th>No</th>
-                  <th>Kd Promo</th>
                   <th>nama Promo</th>
                   <th>Judul</th>
                   <th>Sub Judul</th>
+                  <th>Status</th>
                   <th>Opsi</th>
                 </tr>
                 </tfoot>
