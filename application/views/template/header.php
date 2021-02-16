@@ -266,7 +266,13 @@
             </a>
           </li>
           
-              
+            
+          <?php 
+
+              $data_promo = $this->db->query("SELECT * FROM tbl_promo")->num_rows();
+
+
+           ?>
           
        <!--    <li class="nav-header">EXAMPLES</li> -->
           <li class="nav-item">
@@ -274,7 +280,7 @@
               <i class="nav-icon fas fa-calendar-alt"></i>
               <p>
                 Promo
-                <span class="badge badge-info right">2</span>
+                <span class="badge badge-info right"><?= $data_promo; ?></span>
               </p>
             </a>
           </li>
@@ -312,6 +318,36 @@
                 Message
               </p>
             </a>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-atlas"></i>
+              <p>
+                Visitor
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= base_url() ?>visitor/data_visitor" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data Visitor</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url() ?>visitor/pengunjunghariini" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Visitor hari ini</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url() ?>visitor/data_online" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Visitor Online</p>
+                </a>
+              </li>
+            </ul>
           </li>
          
           

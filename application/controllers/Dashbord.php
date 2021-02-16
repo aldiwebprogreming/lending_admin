@@ -28,6 +28,29 @@
 
 		}
 
+		function data_pengunjung(){
+			$date = date('Y-m-d');
+			$data['pengunjung'] =  $this->db->query("SELECT * FROM tbl_visitor WHERE date ='".$date."' GROUP BY ip")->num_rows();
+
+			$this->load->view('admin/pengunjunghariini', $data); 
+		}
+
+
+		function jumlah_pengunjung(){
+
+			$dbpengunjung =  $this->db->query("SELECT COUNT(hits) as hits FROM tbl_visitor")->row();  
+             $data['totalpengunjung'] = isset($dbpengunjung->hits)?($dbpengunjung->hits):0; 
+			$this->load->view('admin/jumlah_pengunjung', $data);
+		}
+
+		function online(){
+
+			$bataswaktu = time() -300;
+            $data['pengunjungonline']  = $this->db->query("SELECT * FROM tbl_visitor WHERE online > '".$bataswaktu."'")->num_rows(); // hitung pengunjung online
+
+			$this->load->view('admin/online', $data);
+		}
+
 		
 	}
 

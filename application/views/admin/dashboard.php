@@ -68,81 +68,28 @@
             </div>
           </div>
 
-          <?php 
+         
+          <!-- card pengunjung hari ini -->
+           <div class="col-lg-6 col-6" id="pengunjunghariini">
+           
+           
+           </div>
 
-              $date = date('Y-m-d');
+           <!-- end card -->
 
-              $pengunjunghariini  = $this->db->query("SELECT * FROM tbl_visitor WHERE date ='".$date."' GROUP BY ip")->num_rows(); // Hitung jumlah pengunjung
-
+          <!-- card jumlah pengunjung-->
+          <div class="col-lg-6 col-6" id="jumlahpengunjung">
               
-
-           ?>
-
-           <div class="col-lg-6 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3><?=  $pengunjunghariini ?></h3>
-
-                <p>Pengunjung Hari Ini</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-iphone"></i>
-              </div>
-              <a href="<?= base_url() ?>message/message" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
           </div>
+          <!-- end card -->
 
 
-          <?php 
-
-              $dbpengunjung = $this->db->query("SELECT COUNT(hits) as hits FROM tbl_visitor")->row(); 
-               
-              $totalpengunjung = isset($dbpengunjung->hits)?($dbpengunjung->hits):0; 
-
-           ?>
-
-          <div class="col-lg-6 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3><?= $totalpengunjung; ?></h3>
-
-                <p>Jumlah Pengunjung</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-laptop"></i>
-              </div>
-              <a href="<?= base_url() ?>message/message" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
+          <!-- card visitor online -->
+          <div class="col-lg-6 col-6" id="online">
+            
+            
           </div>
-
-
-          <?php 
-
-          $bataswaktu = time() -300;
-
-          
-
-            $pengunjungonline  = $this->db->query("SELECT * FROM tbl_visitor WHERE online > '".$bataswaktu."'")->num_rows(); // hitung pengunjung online
-
-           ?>
-
-
-          <div class="col-lg-6 col-6">
-            <!-- small box -->
-            <div class="small-box bg-primary">
-              <div class="inner">
-                <h3><?= $pengunjungonline; ?></h3>
-
-                <p>Pengunjung Online</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-checkmark"></i>
-              </div>
-              <a href="<?= base_url() ?>message/message" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
+          <!-- end card -->
 
 
 
@@ -166,4 +113,36 @@
   <!-- /.control-sidebar -->
 
   <!-- Main Footer -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> 
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function(){
+    setInterval(function(){            
+
+        data_pengunjung();
+        jumlah_pengunjung();
+         online()
+    }, 100 );
+})
+
+function data_pengunjung(){
+  $.get("<?= base_url() ?>dashbord/data_pengunjung", function(data, success){
+    $("#pengunjunghariini").html(data);
+  });
+}
+
+function jumlah_pengunjung(){
+  $.get("<?= base_url() ?>dashbord/jumlah_pengunjung", function(data,success){
+      $("#jumlahpengunjung").html(data);
+  });
+}
+
+function online(){
+  $.get("<?= base_url() ?>dashbord/online", function(data, success){
+      $("#online").html(data);
+
+  });
+}
+</script>
