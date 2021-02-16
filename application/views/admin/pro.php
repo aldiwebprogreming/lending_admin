@@ -1,3 +1,28 @@
+<?php 
+
+	$ip  = $this->input->ip_address(); // Mendapatkan IP user
+
+	$date  = date("Y-m-d"); // Mendapatkan tanggal sekarang
+	$waktu = time(); //\
+	$timeinsert = date("Y-m-d H:i:s");
+
+	// Cek berdasarkan IP, apakah user sudah pernah mengakses hari ini
+$s = $this->db->query("SELECT * FROM tbl_visitor WHERE ip='".$ip."' AND date='".$date."'")->num_rows();
+$ss = isset($s)?($s):0;
+
+//kalau belum ada simpan data ip
+if($ss == 0){
+$this->db->query("INSERT INTO tbl_visitor(ip, date, hits, online, time) VALUES('".$ip."','".$date."','1','".$waktu."','".$timeinsert."')");
+}
+
+// Jika sudah ada, update
+else{
+$this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE ip='".$ip."' AND date='".$date."'");
+}
+		
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -115,6 +140,8 @@
 			</div>
 		</div>
 	</section>
+
+
 	
 	<!-- Start Featured Slider -->
 	
@@ -139,6 +166,7 @@
 											
 										<center>
 											<h3 style="margin-top: 20px;">Remaining Promo Time</h3>
+
 								          		<span class="mu-header-dot"></span>
 								          		<br>
 								            	<img src="<?= base_url() ?>assets3/img/not.svg" alt="" style="height: 250px;">
@@ -590,9 +618,9 @@
 		<div class="container">
 			<div class="mu-footer-area">
 				<div class="mu-social-media">
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-youtube"></i></a>
+					<a href="https://www.facebook.com/ebungasuksesmakmur"><i class="fa fa-facebook"></i></a>
+					<a href="https://www.instagram.com/ebunga_com/"><i class="fa fa-instagram"></i></a>
+					<a href="https://www.youtube.com/channel/UCckDN3oAXos7DQhYugR9SZQ"><i class="fa fa-youtube"></i></a>
 					<!-- <a href="#"><i class="fa fa-linkedin"></i></a> -->
 				</div>
 				<p class="mu-copyright">&copy; Copyright <a rel="nofollow" href="http://markups.io">www.ebunga.com</a>. All right reserved.</p>

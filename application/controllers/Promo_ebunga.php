@@ -15,6 +15,8 @@
 
 		function index(){
 
+			
+
 		$data['promo'] = $this->db->get('tbl_promo')->result_array();
 		foreach ($data['promo'] as $date_hasil) {
 		$tgl1 =  $date_hasil['end_promo'];
