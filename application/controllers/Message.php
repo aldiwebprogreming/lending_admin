@@ -40,7 +40,7 @@
 		function get_message(){
 			$tgl = date('Y-m-d');
 
-			$data['get_message'] = $this->db->get_where('tbl_pesan',array('date' => $tgl ))->result_array();
+			$data['get_message'] = $this->db->query("SELECT * FROM tbl_pesan WHERE date = '$tgl' ORDER BY status DESC")->result_array();
 			
 			$data['pesan'] = $this->load->view('admin/get_pesan', $data);
 		}
@@ -57,6 +57,11 @@
 			$data['title'] = "Detail Message";
 			$data['sub_title'] = "Detail Message";
 			$id = $this->input->get('id');
+			$up = [
+				'status' => 1
+			];
+			$this->db->where('id', $id);
+			$this->db->update('tbl_pesan', $up);
 
 			$data['detail'] = $this->db->get_where('tbl_pesan',  array('id' => $id))->result_array();
 			$this->load->view('template/header', $data);

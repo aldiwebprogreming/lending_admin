@@ -7,7 +7,11 @@
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                  	<?= $data['nama'] ?>
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i> New</span>
+                 	<?php if ($data['status'] == 0) { ?>
+                  <span class="float-right text-sm text-primary"><i class="fas fa-star"></i> New</span>
+              <?php } else {  ?>
+              	 <span class="float-right text-sm text-danger"><i class="fas fa-star"></i> Read</span>
+              <?php } ?>
                 </h3>
                 <p class="text-sm">
                 	<?php 
@@ -23,4 +27,4 @@
           </a>
            <?php } ?>
             <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+          <a href="<?= base_url() ?>message/message" class="dropdown-item dropdown-footer">See All Messages</a>
