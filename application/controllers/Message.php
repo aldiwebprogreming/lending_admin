@@ -44,6 +44,26 @@
 			
 			$data['pesan'] = $this->load->view('admin/get_pesan', $data);
 		}
+
+		function get_row(){
+			$tgl = date('Y-m-d');
+
+			$row = $this->db->get_where('tbl_pesan',array('date' => $tgl ))->num_rows();
+			echo $row;
+		}
+
+		function detail_message(){
+
+			$data['title'] = "Detail Message";
+			$data['sub_title'] = "Detail Message";
+			$id = $this->input->get('id');
+
+			$data['detail'] = $this->db->get_where('tbl_pesan',  array('id' => $id))->result_array();
+			$this->load->view('template/header', $data);
+			$this->load->view('admin/detail_message', $data);
+			$this->load->view('template/footer', $data);
+
+		}
 	}
 		
  ?>

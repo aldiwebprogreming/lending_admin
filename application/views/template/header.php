@@ -75,12 +75,11 @@
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
+          <span class="badge badge-danger navbar-badge" id="jml_inbox"></span>
         </a>
         <div id="inbox" class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
          
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+         
         </div>
       </li>
       <!-- Notifications Dropdown Menu -->
@@ -313,14 +312,33 @@
     </div>
     <!-- /.sidebar -->
   </aside>
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
   <script>
-    $.(document).ready(fucntion(){
+   $(document).ready(function(){
+    setInterval(function(){            
 
-        message();
+          jml_inbox()
+         message();
+    }, 200 );
+})
 
-    })
+    function message(){
 
+    $.get("<?= base_url() ?>message/get_message", function(data, success){
+    $("#inbox").html(data);
+  });
+    }
+
+    function jml_inbox(){
+
+    $.get("<?= base_url() ?>message/get_row", function(data, success){
+    $("#jml_inbox").html(data);
+  });
+    }
+
+
+    
     
   </script>
