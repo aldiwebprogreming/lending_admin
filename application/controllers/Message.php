@@ -40,7 +40,7 @@
 		function get_message(){
 			$tgl = date('Y-m-d');
 
-			$data['get_message'] = $this->db->query("SELECT * FROM tbl_pesan WHERE date = '$tgl' ORDER BY status DESC")->result_array();
+			$data['get_message'] = $this->db->query("SELECT * FROM tbl_pesan WHERE date = '$tgl' ORDER BY id DESC")->result_array();
 			
 			$data['pesan'] = $this->load->view('admin/get_pesan', $data);
 		}

@@ -51,6 +51,28 @@
 			$this->load->view('admin/online', $data);
 		}
 
+		function notf_promo(){
+
+
+		$data['promo'] = $this->db->get('tbl_promo')->result_array();
+		foreach ($data['promo'] as $date_hasil) {
+		$tgl1 =  $date_hasil['end_promo'];
+		$tgl = date('Y-m-d');
+
+		$this->db->where('start_promo AND end_promo BETWEEN "'. date('Y-m-d', strtotime($tgl)). '" and "'. date('Y-m-d', strtotime($tgl1)).'"');	
+
+		$data = $this->db->get('tbl_promo',1)->result_array();
+		}
+
+		if ($data == TRUE) {
+			echo "Active" ;
+		}else{
+			echo "Disable";
+		}
+
+		}
+
+
 		
 	}
 

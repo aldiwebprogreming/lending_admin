@@ -26,14 +26,14 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>Active</h3>
+                <h3 id="nof"></h3>
 
-                <p>Lending</p>
+                <p>Promo</p>
               </div>
               <div class="icon">
                 <i class="ion ion-android-bulb"></i>
               </div>
-              <a href="<?= base_url() ?>/promo/promo" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?= base_url() ?>/promo/data_promo" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -127,6 +127,7 @@ $(document).ready(function(){
         jumlah_pengunjung();
          online()
          message();
+         notf_promo();
     }, 100 );
 })
 
@@ -148,6 +149,14 @@ function online(){
 
   });
 }
+
+ function notf_promo(){
+
+      $.get("<?= base_url() ?>Dashbord/notf_promo", function(data,success){
+
+        $("#nof").html(data);
+      });
+    }
 
 
 </script>
