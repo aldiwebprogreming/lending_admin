@@ -108,9 +108,15 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		</div>
 	</header>
 	<!-- End Header -->
-
+	<?php 
+		$null = $this->db->get('tbl_promo')->num_rows();
+		if ($null == null) {
+			$num_promo = FALSE;
+			$promo = 0;
+		}
+	 ?>
 	<!-- Start Featured Slider -->
-<?php if ($num_promo == FALSE) { ?>
+<?php if ($num_promo == FALSE OR $promo == 0) { ?>
 	<section id="mu-hero" style="">
 		<div class="container">
 			<div class="row">

@@ -28,6 +28,7 @@
 	}
 	
 			// $data['promo'] = $this->db->get('tbl_promo')->result_array();
+			
 			$data['product'] = $this->db->get('tbl_galeri_product')->result_array();
 			$data['video'] = $this->db->get('tbl_video_review')->result_array();
 			$data['testimoni'] = $this->db->get('tbl_testimonial')->result_array();

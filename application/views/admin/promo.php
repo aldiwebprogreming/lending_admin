@@ -65,7 +65,10 @@
                       ?>
                     </td>
                     <td>
-                      <a href="<?= base_url('promo/') ?>hapus?id=<?= $data['id'] ?>"  onclick="return confirm('Yakin Hapus?')" class="badge badge-danger">Hapus</a>
+
+                    <!--   <button class="btn btn-primary" id="hapus" onclick="return hapus()">Delet</button> -->
+                      <a id="hapus" href="<?= base_url('promo/') ?>hapus?id=<?= $data['id'] ?>" onclick="return hapus()" class="badge badge-danger">Hapus</a>
+
                       <a href="<?= base_url('promo/') ?>edit?id=<?= $data['id'] ?>" class="badge badge-success">Edit</a>
                       <!-- <a href="<?= base_url('promo/') ?>det?id=<?= $data['id'] ?>" class="badge badge-primary" data-target="#exampleModal">Detail</a> -->
                       <button type="button" class="badge badge-primary" data-toggle="modal" data-target="#exampleModal<?= $data['id'] ?>">
@@ -178,3 +181,33 @@
     })
    }
   </script>
+
+
+<script>
+
+   function hapus(){
+    $("#hapus").click(function(){
+
+      Swal.fire({
+  title: 'Are you sure?',
+  text: "You won't be able to revert this!",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Yes, delete it!'
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire(
+      'Deleted!',
+      'Your file has been deleted.',
+      'success'
+    )
+  }
+})
+    })
+   }
+    
+  
+
+</script>

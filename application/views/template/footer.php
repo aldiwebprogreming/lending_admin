@@ -36,6 +36,7 @@
 
 <script src="<?php echo base_url() ?>assets/plugins/summernote/summernote-bs4.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.15.1/sweetalert2.min.js" integrity="sha512-haPWapEH4geHw14UUzxrXfv7WygtauJoqmcg9f3HRgqE1cr+TSlB8hqsyq0F3i34DUsvq9k3r8uCjJFBmdDE4g==" crossorigin="anonymous"></script>
 
 
 <script>
