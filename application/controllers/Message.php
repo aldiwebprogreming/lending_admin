@@ -35,6 +35,15 @@
 			$this->session->set_flashdata('message', 'swal("Sukses!", "Data Berhasil dihapus", "success");');
 				redirect('message/message');
 		}
+
+
+		function get_message(){
+			$tgl = date('Y-m-d');
+
+			$data['get_message'] = $this->db->get_where('tbl_pesan',array('date' => $tgl ))->result_array();
+			
+			$data['pesan'] = $this->load->view('admin/get_pesan', $data);
+		}
 	}
 		
  ?>

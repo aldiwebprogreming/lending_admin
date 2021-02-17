@@ -89,6 +89,11 @@
             
             
           </div>
+
+          <div class="col-lg-6 col-6" id="inbox">
+            
+            
+          </div>
           <!-- end card -->
 
 
@@ -124,6 +129,7 @@ $(document).ready(function(){
         data_pengunjung();
         jumlah_pengunjung();
          online()
+         message();
     }, 100 );
 })
 
@@ -145,4 +151,11 @@ function online(){
 
   });
 }
+
+function message(){
+
+    $.get("<?= base_url() ?>message/get_message", function(data, success){
+    $("#inbox").html(data);
+  });
+    }
 </script>
