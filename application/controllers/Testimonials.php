@@ -116,7 +116,7 @@
 						if (!$this->upload->do_upload('foto')) {
 							 $error = array('error' => $this->upload->display_errors());
 						 $this->session->set_flashdata('message', 'swal("Error!", "Proses input data gagal", "error");');
-			         	 redirect("testimonials/add_testimonial");
+			         	 redirect("testimonials/testimonials");
 
 			         	} else {
 

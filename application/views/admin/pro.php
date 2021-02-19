@@ -42,11 +42,19 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
     <!-- Theme color -->
     <link id="switcher" href="<?= base_url() ?>assets2/css/theme-color/default-theme.css" rel="stylesheet">
 
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/color.css">
+
     <!-- Main Style -->
     <link href="<?= base_url() ?>assets2/style.css" rel="stylesheet">
 
     <!-- Fonts -->
-
+    <link rel="stylesheet" href="/assets/css/app.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/app.css?v=1.1">
     <!-- Open Sans for body font -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
     <!-- Lato for Title -->
@@ -55,6 +63,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
   	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="<?= base_url() ?>assets2/inc/TimeCircles.js"></script>
     <link rel="stylesheet" href="<?= base_url() ?>assets2/inc/TimeCircles.css" />
+    <link rel="stylesheet" href="<?= base_url() ?>assets2/header.css" />
+
+    <script type="text/javascript" src="<?= base_url() ?>assets3/dist/wow.min.js"></script>
  
  
 	
@@ -64,13 +75,24 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script type="text/javascript">
+    	$(window).on('scroll',function(){
+    		if($(window).scrollTop()){
+    			$('header').addClass('black');
+    		}else{
+    			$("header").removeClass('black');
+    		}
+    	})
+    </script>
+
   </head>
 
   <body>
 
    	
   	<!-- Start Header -->
-	<header id="mu-header" class="" role="banner">
+	<header id="mu-header" role="banner" style="position: fixed;">
 		<div class="container">
 			<nav class="navbar navbar-default mu-navbar">
 			  	<div class="container-fluid">
@@ -87,7 +109,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 				     <!--  <a class="navbar-brand" href="index.html"><i class="fa fa-book" aria-hidden="true"></i> Kindle</a> -->
 
 				      <!-- Image Logo -->
-				     <a class="navbar-brand" href="index.html"><img src="<?= base_url() ?>assets2/images/ebunga.png" style="height: 70.5px; width: 57.5px; margin-bottom: 9px;"></a>
+				     <a class="navbar-brand" href="#"><img src="<?= base_url() ?>assets2/images/ebunga.png" style="height: 70.5px; width: 57.5px; margin-bottom: 9px;"></a>
 
 
 				    </div>
@@ -117,26 +139,21 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 	 ?>
 	<!-- Start Featured Slider -->
 <?php if ($num_promo == FALSE OR $promo == 0) { ?>
-	<section id="mu-hero" style="">
+	<section id="mu-hero" style=" background-color: #9500FF;">
 		<div class="container">
 			<div class="row">
 
 				
-				<div class="col-md-6 col-sm-6 col-sm-push-6">
+				<div class="col-md-6 col-sm-6 col-sm-push-6 animate__animated animate__fadeInRight">
 					<div class="mu-hero-right">
-						<img src="<?= base_url() ?>assets3/img/default.jpg" alt="">
+						<img src="<?= base_url() ?>assets3/img/default.jpg" alt="" style="border-radius: 2%;">
 					</div>
 				</div>
 				
 				<div class="col-md-6 col-sm-6 col-sm-pull-6">
 					<div class="mu-hero-left" >
-						<h1>Hello Sehabat Ebunga</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<h2 class="animate__animated animate__fadeInLeft" style="color: #fff;">Selamat Datang Diebunga</h2>
+						<p class="animate__animated animate__fadeInLeft">Sebuah bisnis e-commerce yang memudahkan masyarakat untuk kirim bingkisan ucapan ke teman, keluarga, dan kenalannya dimana saja di Indonesia tanpa perlu membayar ongkos kirim, karena ebunga ada disetiap kabupaten di Indonesia yang siap mengantarkan pesanan ke tujuan.</p>
 						<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
 							Sign up now</a>
 						<!-- <span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span> -->
@@ -173,9 +190,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 										<center>
 											<h3 style="margin-top: 20px;">Remaining Promo Time</h3>
 
-								          		<span class="mu-header-dot"></span>
+								          		<span class="mu-header-dot" style="background-color: orange;"></span>
 								          		<br>
-								            	<img src="<?= base_url() ?>assets3/img/not.svg" alt="" style="height: 250px;">
+								            	<img src="<?= base_url() ?>assets3/img/baru.gif" alt="" style="height: 250px;">
 								            	<!-- <h2 style="color: orange;">Not found promo time</h2> -->
 										</center>								         
 									</div>
@@ -245,7 +262,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 										<div class="mu-single-counter" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 										<div style="">
 											<h3 style="margin-top: 20px;">Remaining Promo Time</h3>
-								          		<span class="mu-header-dot"></span>
+								          		<span class="mu-header-dot" style="background-color: orange;"></span>
 								            <div id="DateCountdown" data-date="<?= $data['end_promo'] ?> 00:00:00"></div>
 								         </div>
 										</div>
@@ -262,6 +279,41 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		</section>
 
 					<?php } ?>
+
+			<section id="mu-video-review" style="background-image: url(<?= base_url() ?>assets2/images/bg-bunga.jpg); background-color: #9500FF;">
+			<div class="container" style="">
+				<div class="row" style="">
+					<div class="col-md-12">
+						<div class="mu-video-review-area">
+
+							<div class="mu-heading-area">
+
+								<h1 class="mu-heading-title " style="color">Video Review</h1>
+								<span class="mu-header-dot" style="background-color: orange;"></span>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+							
+
+							<!-- Start Video Review Content -->
+						
+							<div class="mu-video-review-content">
+								<div class="embed-responsive embed-responsive-16by9">
+								
+									<!-- <iframe  width="560" height="315" src="https://www.youtube.com/embed/FBU-qweFF4g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/1O5rUs20Iz0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								
+							</div>
+						</div>
+						</div>
+							
+							<!-- End Video Review Content -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 
 									<!-- <div class="col-md-2 col-sm-12">
@@ -283,9 +335,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="mu-book-overview-area">
 
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title">Product Overview</h2>
-								<span class="mu-header-dot"></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+								<h2 class="mu-heading-title ">Produk Ebunga</h2>
+								<span class="mu-header-dot" style="background-color: orange;"></span>
+								<p>Sekarang anda tidak perlu lagi</p>
 							</div>
 
 							<!-- Start Book Overview Content -->
@@ -330,15 +382,15 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		
 
 		<!-- Start Video Review -->
-		<section id="mu-video-review" style="background-image: url(<?= base_url() ?>assets2/images/bg-bunga.jpg);">
+		<section id="mu-video-review" style="background-image: url(<?= base_url() ?>assets2/images/bg-bunga.jpg); background-color: #9500FF;">
 			<div class="container">
-				<div class="row">
+				<div class="row" style="">
 					<div class="col-md-12">
 						<div class="mu-video-review-area">
 
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title">Check Out Our Video Review</h2>
-								<span class="mu-header-dot"></span>
+								<h2 class="mu-heading-title ">Terobosan Terbaru Cuma Diebunga</h2>
+								<span class="mu-header-dot" style="background-color: orange;"></span>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
 							
 
@@ -347,7 +399,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 							<div class="mu-video-review-content">
 								<div class="embed-responsive embed-responsive-16by9">
 								
-									<iframe  width="560" height="315" src="https://www.youtube.com/embed/FBU-qweFF4g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<!-- <iframe  width="560" height="315" src="https://www.youtube.com/embed/FBU-qweFF4g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/e8bW6DKXPmI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								</div>
 								
 							</div>
@@ -419,8 +473,8 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="mu-pricing-area">
 
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title">Our Pricing Plans</h2>
-								<span class="mu-header-dot"></span>
+								<h2 class="mu-heading-title ">Our Pricing Plans</h2>
+								<span class="mu-header-dot" style="background-color: orange;"></span>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
 							</div>
 
@@ -429,8 +483,8 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 								<div class="row">
 
 									<!-- Pricing Single Content -->
-									<div class="col-sm-6 col-md-6">
-										 <div class="mu-pricing-single" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+									<div class="col-sm-6 col-md-6 ">
+										 <div class="mu-pricing-single wow animate__animated animate__backInRight" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
 											<div class="mu-pricing-single-head">
 												<h4>ECONOMIC</h4>
@@ -441,6 +495,29 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 											<div class="">
 												<img src="<?= base_url() ?>assets2/images/eco.png" alt="..." class="" style="height: 300px;">
+											</div>
+
+											<div class="mu-pricing-single-footer">
+												<a href="https://www.ebunga.com/" class="mu-order-btn" target="_blank">Order Now!</a>
+											</div>
+
+										</div>
+									</div>
+
+									<!-- --------------------------- -->
+
+									<div class="col-sm-6 col-md-6 ">
+										 <div class="mu-pricing-single wow animate__animated animate__backInLeft" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+											<div class="mu-pricing-single-head">
+												<h4>PREMIUM</h4>
+												<p class="mu-price-tag">
+													<h3>IDR 1.000.000 ~ Above</h3>
+												</p>
+											</div>
+
+											<div class="">
+												<img src="<?= base_url() ?>assets2/images/und.png" alt="..." class="" style="height: 300px;">
 											</div>
 
 											<div class="mu-pricing-single-footer">
@@ -480,33 +557,12 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 									<!-- / Pricing Single Content -->
 
 									<!-- Pricing Single Content -->
-									<div class="col-sm-6 col-md-6">
-									 <div class="mu-pricing-single " style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-											<div class="mu-pricing-single-head">
-												<h4>PREMIUM</h4>
-												<p class="mu-price-tag">
-													<h3>IDR 1.000.000 ~ Above</h3>
-												</p>
-											</div>
-
-											<div class="">
-												<img src="<?= base_url() ?>assets2/images/und.png" alt="..." class="" style="height: 300px;">
-											</div>
-
-											<div class="mu-pricing-single-footer">
-												<a href="https://www.ebunga.com/" class="mu-order-btn" target="_blank">Order Now!</a>
-											</div>
-											
-											
-										</div>
-									</div>
+									
 									<!-- / Pricing Single Content -->
 
 
 								</div>
-							</div>
+							
 							<!-- End Pricing Content -->
 
 						</div>
@@ -523,8 +579,8 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 					<div class="col-md-12">
 						<div class="mu-testimonials-area">
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title">What Our Customers Say</h2>
-								<span class="mu-header-dot"></span>
+								<h2 class="mu-heading-title ">Lebih Dari 1000 Orang Telah Merasakan Inovasi Terbaru Diebunga</h2>
+								<span class="mu-header-dot" style="background-color: orange;"></span>
 							</div>
 
 							<div class="mu-testimonials-block">
@@ -534,8 +590,13 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 									<li>
 										<p>"<?= $data['ket_testimonial'] ?>"</p>
-										<img class="mu-rt-img" src="<?= base_url() ?>assets/gambar_testimoni/<?= $data['foto'] ?>" alt="img">
-										<h5 class="mu-rt-name">~ <?= $data['nama_user'] ?> ~</h5>
+
+										<center>
+										<img class="img-fluid" src="<?= base_url() ?>assets/gambar_testimoni/<?= $data['foto'] ?>" alt="img" style="height: 400px;">
+										</center>
+
+
+										<!-- <h5 class="mu-rt-name">~ <?= $data['nama_user'] ?> ~</h5> -->
 										
 									</li>
 
@@ -562,8 +623,8 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="mu-contact-area">
 
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title">Drop Us A Message</h2>
-								<span class="mu-header-dot"></span>
+								<h2 class="mu-heading-title ">Drop Us A Message</h2>
+								<span class="mu-header-dot" style="background-color: orange;"></span>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
 							</div>
 
@@ -603,7 +664,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 		<!-- Start Google Map -->
 		<section id="mu-google-map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d912.8357592517264!2d98.69582144273261!3d3.629044874562542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031322e4b729385%3A0xac458639382f0c39!2sTiki%20Gerai%2056%20Cemara!5e0!3m2!1sid!2sid!4v1612251591516!5m2!1sid!2sid" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d912.8357592517264!2d98.69582144273261!3d3.629044874562542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031322e4b729385%3A0xac458639382f0c39!2sTiki%20Gerai%2056%20Cemara!5e0!3m2!1sid!2sid!4v1612251591516!5m2!1sid!2sid" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
 		</section>
 
 			
@@ -649,9 +710,8 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
     <script type="text/javascript" src="<?= base_url() ?>assets2/js/counter.js"></script>
     <!-- Ajax contact form  -->
     <script type="text/javascript" src="<?= base_url() ?>assets2/js/app.js"></script>
-   
+   	<script src="<?= base_url() ?>assets3/dist/wow.js"></script>
  
-	
     <!-- Custom js -->
 	<script type="text/javascript" src="<?= base_url() ?>assets2/js/custom.js"></script>
 	
@@ -661,7 +721,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
      </script>
 
    
-
+		 <script>
+              new WOW().init();
+          </script>
     
   </body>
 </html>

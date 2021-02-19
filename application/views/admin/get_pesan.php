@@ -27,4 +27,10 @@
           </a>
            <?php } ?>
             <div class="dropdown-divider"></div>
+
+            <?php if ($get_message  == NULL) {
+            	echo "<center><label>Tidak ada pesan</label></center>";
+            } else { ?>
           <a href="<?= base_url() ?>message/message" class="dropdown-item dropdown-footer">See All Messages</a>
+
+          <?php } ?>

@@ -23,7 +23,7 @@
             
                 <?php 
                 if ($num >= 1) { ?>
-                  <button  class="btn btn-primary mb-4" id="tambah" onclick="tambah()"><i class="fas fa-plus"></i> Tambah Video Review</button>
+                  
               <?php } else{ ?>
                 <a href="<?= base_url() ?>video/add_video" class="btn btn-primary mb-4"><i class="fas fa-plus"></i> Tambah Video Review</a>
               <?php } ?>
