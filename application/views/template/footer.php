@@ -77,8 +77,7 @@
         });
     });
 </script>
-
-<?php echo "<script>".$this->session->flashdata('message')."</script>"?>
+ 
 
 
 </body>

@@ -100,3 +100,5 @@
   </aside>
   <!-- /.control-sidebar -->
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<?php echo "<script>".$this->session->flashdata('message')."</script>"?>

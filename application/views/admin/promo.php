@@ -67,7 +67,7 @@
                     <td>
 
                     <!--   <button class="btn btn-primary" id="hapus" onclick="return hapus()">Delet</button> -->
-                      <a id="hapus" href="<?= base_url('promo/') ?>hapus?id=<?= $data['id'] ?>" onclick="return hapus()" class="badge badge-danger">Hapus</a>
+                      <a id="hapus" href="<?= base_url('promo/') ?>hapus?id=<?= $data['id'] ?>" onclick="return confirm('Yakin Hapus?')" class="badge badge-danger">Hapus</a>
 
                       <a href="<?= base_url('promo/') ?>edit?id=<?= $data['id'] ?>" class="badge badge-success">Edit</a>
                       <!-- <a href="<?= base_url('promo/') ?>det?id=<?= $data['id'] ?>" class="badge badge-primary" data-target="#exampleModal">Detail</a> -->
