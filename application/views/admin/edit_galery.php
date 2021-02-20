@@ -32,6 +32,17 @@
                     <input type="text" class="form-control" id="" placeholder="" value="<?= $data['nama_product'] ?>"  name="nama_product">
                   </div>
 
+                   <div class="form-group">
+                    <label for="formGroupExampleInput">Kategori Produk</label>
+                    <select class="form-control" name="kategori_produk">
+                      <option>-- Pilih Kategori Produk --</option>
+                      <option>Bunga</option>
+                      <option>Papan Bunga</option>
+                       <option>Parcel</option>
+                      <option>Cake</option>
+
+                    </select>
+                  </div>
                 
 
                   <div class="form-group">

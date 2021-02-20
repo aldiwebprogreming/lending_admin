@@ -56,10 +56,15 @@
 
 	         	} else {
 
+	         		if ($this->input->post('kategori_produk') == '-- Pilih Kategori Produk --') {
+	         			$this->session->set_flashdata('message', 'swal("Sukses!", "Galery Product Gagal Ditambahkan", "error");');
+				redirect('galery/galery');
+	         		} else {
 				
 				$data = [
 
 					'nama_product' => $this->input->post('nama_product'),
+					'kategori_produk' => $this->input->post('kategori_produk'),
 					'keterangan' => $this->input->post('keterangan'),
 					'gambar' => $this->upload->data('file_name'),  
 					
@@ -70,6 +75,7 @@
 				$this->session->set_flashdata('message', 'swal("Sukses!", "Galery Product Berhasil Ditambah", "success");');
 				redirect('galery/galery');
 			}
+		}
 
 			}
 
@@ -108,11 +114,15 @@
 	         	 redirect("galery/add_galery");
 
 	         	} else {
-
-				
+	         		if ($this->input->post('kategori_produk') == '-- Pilih Kategori Produk --') {
+	         			$this->session->set_flashdata('message', 'swal("Sukses!", "Galery Product Gagal Diubah", "error");');
+				redirect('galery/galery');
+	         		} else {
+					
 				$data = [
 
 					'nama_product' => $this->input->post('nama_product'),
+					'kategori_produk' => $this->input->post('kategori_produk'),
 					'keterangan' => $this->input->post('keterangan'),
 					'gambar' => $this->upload->data('file_name'),  
 					
@@ -125,6 +135,7 @@
 				$this->session->set_flashdata('message', 'swal("Sukses!", "Galery Product Berhasil Diubah", "success");');
 				redirect('galery/galery');
 			}
+		}
 
 			}
 

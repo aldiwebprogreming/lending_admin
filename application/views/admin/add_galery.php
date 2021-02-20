@@ -29,6 +29,18 @@
                   </div>
 
                   <div class="form-group">
+                    <label for="formGroupExampleInput">Kategori Produk</label>
+                    <select class="form-control" name="kategori_produk">
+                      <option>-- Pilih Kategori Produk --</option>
+                      <option>Bunga</option>
+                      <option>Papan Bunga</option>
+                       <option>Parcel</option>
+                      <option>Cake</option>
+
+                    </select>
+                  </div>
+
+                  <div class="form-group">
                     <label for="formGroupExampleInput">Keterangan</label>
                     <textarea class="form-control" name="keterangan" style="height: 100px;" placeholder="Masukan keterangan product"></textarea>
                   </div>

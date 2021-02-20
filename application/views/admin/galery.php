@@ -28,6 +28,7 @@
                 <tr>
                   <th>No</th>
                   <th>Nama Product</th>
+                  <th>Kategori Product</th>
                   <th>Keterangan</th>
                   <th>Gambar</th>
                   <th>Opsi</th>
@@ -40,6 +41,7 @@
                 <tr> 
                     <td><?= $no++; ?></td>
                     <td><?= $data['nama_product'] ?></td>
+                    <td><?= $data['kategori_produk'] ?></td>
                     <td><?= $data['keterangan'] ?></td>
                     <td><?= $data['gambar'] ?></td>
                     <td>
@@ -57,6 +59,7 @@
                 <tr>
                   <th>No</th>
                   <th>Nama Product</th>
+                  <th>Kategori Product</th>
                   <th>Keterangan</th>
                   <th>Gambar</th>
                   <th>Opsi</th>

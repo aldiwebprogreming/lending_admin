@@ -42,12 +42,19 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
     <!-- Theme color -->
     <link id="switcher" href="<?= base_url() ?>assets2/css/theme-color/default-theme.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
+
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
 
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/color.css">
+  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/style.css">
 
     <!-- Main Style -->
     <link href="<?= base_url() ?>assets2/style.css" rel="stylesheet">
@@ -66,6 +73,8 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
     <link rel="stylesheet" href="<?= base_url() ?>assets2/header.css" />
 
     <script type="text/javascript" src="<?= base_url() ?>assets3/dist/wow.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
  
  
 	
@@ -335,7 +344,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="mu-book-overview-area">
 
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title ">Produk Ebunga</h2>
+								<h2 class="mu-heading-title">Produk Ebunga</h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
 								<p>Sekarang anda tidak perlu lagi</p>
 							</div>
@@ -344,29 +353,41 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 							<div class="mu-book-overview-content">
 								<div class="row">
 
+								<div class="col-md-12">
+
+									<center>
+										
+										<button class="btn btn-warning" id="bunga" style="margin-bottom: 20px;"><i class="fas fa-fan"></i> Bunga</button>
+										<button class="btn btn-warning" id="papan" style="margin-bottom: 20px;"><i class="fas fa-border-all"></i> Papan Bunga</button>
+										<button class="btn btn-warning" id="cake" style="margin-bottom: 20px;"><i class="fas fa-birthday-cake"></i> Cake</button>
+										<button class="btn btn-warning" id="parcel" style="margin-bottom: 20px;"><i class="fas fa-fan"></i> Parcel</button>
+										
+									<div class="owl-carousel owl-theme">
 									<?php foreach ($product as $data) { ?>
-
-									<!-- Book Overview Single Content -->
-									<div class="col-md-3 col-sm-6">
-										<div class="mu-book-overview-single">
-											<span class="mu-book-overview-icon-box">
-												<img src="<?= base_url() ?>assets/gambar_galery/<?= $data['gambar'] ?>" class="img-fluid" alt="Image">
-											</span>
-											<h4><?= $data['nama_product'] ?></h4>
-											<p><?= $data['keterangan'] ?></p>
-										</div>
-									</div>
-
+	
+								    <div class="item" id="slider">
+								    	
+								    	<img src="<?= base_url() ?>assets/gambar_galery/<?= $data['gambar'] ?>" class="img-fluid" alt="Image">
+								    	
+								    </div>
 								<?php } ?>
-									<!-- / Book Overview Single Content -->
+								    
+								</div>
 
-									<!-- About Us Single Content -->
-									
-									<!-- / Book Overview Single Content -->
-
-									<!-- About Us Single Content -->
-									
-									<!-- / Book Overview Single Content -->
+								<div class="owl-carousel owl-theme">
+									<?php $product2 = $this->db->get_where('tbl_galeri_product',array('kategori_produk' => 'Parcel' ))->result_array(); ?>
+									<?php foreach ($product2 as $data1) { ?>
+	
+								    <div class="item" id="slider">
+								    	
+								    	<img src="<?= base_url() ?>assets/gambar_galery/<?= $data1['gambar'] ?>" class="img-fluid" alt="Image">
+								    	
+								    </div>
+								<?php } ?>
+								    
+								</div>
+								</center>
+							</div>
 
 								</div>
 							</div>
@@ -614,6 +635,31 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		</section>
 		<!-- End Testimonials -->
 
+		<section id="mu-contact" style="background-color: silver;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-contact-area">
+
+							<div class="mu-heading-area">
+								<h2 class="mu-heading-title ">Apa yang ingin anda tanyakan ?</h2>
+								<span class="mu-header-dot" style="background-color: orange;"></span>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+							</div>
+
+							<!-- Start Contact Content -->
+							<div class="mu-contact-content">
+								<center>
+								<button class="btn btn-primary">Pertanyaan ?</button>
+								</center>
+							<!-- End Contact Content -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 	
 		<!-- Start Contact -->
 		<section id="mu-contact">
@@ -660,6 +706,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 				</div>
 			</div>
 		</section>
+
+
+		
 		<!-- End Contact -->
 
 		<!-- Start Google Map -->
@@ -724,6 +773,42 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		 <script>
               new WOW().init();
           </script>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+
+	
+
+<script type="text/javascript">
+	$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+    }
+})
+
+	
+</script>
+
+
+<script >
+	$(document).ready(function(){
+		$("#bunga").click(function(){
+			$(".item").hide();
+		})
+	})
+</script>
     
   </body>
 </html>
