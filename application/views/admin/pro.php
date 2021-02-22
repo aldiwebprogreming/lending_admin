@@ -375,12 +375,11 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 								</div>
 
 								<div class="owl-carousel owl-theme">
-									<?php $product2 = $this->db->get_where('tbl_galeri_product',array('kategori_produk' => 'Parcel' ))->result_array(); ?>
-									<?php foreach ($product2 as $data1) { ?>
+									<?php foreach ($product as $data) { ?>
 	
 								    <div class="item" id="slider">
 								    	
-								    	<img src="<?= base_url() ?>assets/gambar_galery/<?= $data1['gambar'] ?>" class="img-fluid" alt="Image">
+								    	<img src="<?= base_url() ?>assets/gambar_galery/<?= $data['gambar'] ?>" class="img-fluid" alt="Image">
 								    	
 								    </div>
 								<?php } ?>
@@ -635,30 +634,89 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		</section>
 		<!-- End Testimonials -->
 
-		<section id="mu-contact" style="background-color: silver;">
+		<section id="mu-pricing" style="background-color: silver">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="mu-contact-area">
+						<div class="mu-pricing-area">
 
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title ">Apa yang ingin anda tanyakan ?</h2>
+								<h2 class="mu-heading-title ">Apa Yang Ingin Anda Tanyakan</h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
 							</div>
+							
 
-							<!-- Start Contact Content -->
-							<div class="mu-contact-content">
-								<center>
-								<button class="btn btn-primary">Pertanyaan ?</button>
-								</center>
-							<!-- End Contact Content -->
+							<!-- Start Pricing Content -->
+							<div class="mu-pricing-content">
+							<center>
+							<button id="pertanyaan" class="mu-send-msg-btn" style="margin-bottom: 20px;">Pertanyaan</button>
+							<button id="jawaban" class="mu-send-msg-btn" style="margin-bottom: 20px; display: none;">Jawaban</button>
+							</center>
+								<div class="row">
+
+
+
+									<!-- Pricing Single Content -->
+									<div id="row" class="col-sm-6 col-md-12 ">
+										 <div  id="boox" class="mu-pricing-single animate__animated animate__backInRight" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); display: none;">
+
+											<div class="mu-pricing-single-head">
+												<h4>Pertanyaan</h4>
+												<p class="mu-price-tag">
+													<!-- <h3>IDR 100.000 ~ 1.000.000</h3> -->
+												</p>
+											</div>
+
+											<div class="" style="text-align: left; margin-left: 15px;">
+												<h4>1. Apa Itu Ebunga ?</h4>
+												<h4>2. Bagaimana Sitem Kerja Ebunga ?</h4>
+												<h4>3. Apa Keuntungan Bergabung Dengan Ebunga ?</h4>
+												<h4>4. Apa Itu Ebunga ?</h4>
+												<h4>5. Bagaimana Sitem Kerja Ebunga ?</h4>
+												<h4>6. Apa Keuntungan Bergabung Dengan Ebunga ?</h4>
+											</div>
+											
+
+										</div>
+									</div>
+
+									<!-- --------------------------- -->
+
+									<div class="col-sm-6 col-md-6 ">
+										 <div id="boox2" class="mu-pricing-single  animate__animated animate__backInLeft" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); display: none;">
+
+											<div class="mu-pricing-single-head">
+												<h4>Jawaban kami</h4>
+												<p class="mu-price-tag">
+													<!-- <h3>IDR 1.000.000 ~ Above</h3> -->
+												</p>
+											</div>
+
+											<div class="" style="text-align: left; margin-left: 15px;">
+												<h4>1. Apa Itu Ebunga ?</h4>
+												<h4>2. Bagaimana Sitem Kerja Ebunga ?</h4>
+												<h4>3. Apa Keuntungan Bergabung Dengan Ebunga ?</h4>
+												<h4>4. Apa Itu Ebunga ?</h4>
+												<h4>5. Bagaimana Sitem Kerja Ebunga ?</h4>
+												<h4>6. Apa Keuntungan Bergabung Dengan Ebunga ?</h4>
+											</div>
+
+											
+
+										</div>
+									</div>
+									
+								</div>
+							
+							<!-- End Pricing Content -->
 
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+
 
 	
 		<!-- Start Contact -->
@@ -734,8 +792,8 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		<div class="container">
 			<div class="mu-footer-area">
 				<div class="mu-social-media">
-					<a href="https://www.facebook.com/ebungasuksesmakmur"><i class="fa fa-facebook"></i></a>
-					<a href="https://www.instagram.com/ebunga_com/"><i class="fa fa-instagram"></i></a>
+					<a href="https://www.facebook.com/ebungasuksesmakmur"><i class="fas fa-facebook"></i></a>
+					<a href="https://www.instagram.com/ebunga_com/"><i class="fas fa-instagram"></i></a>
 					<a href="https://www.youtube.com/channel/UCckDN3oAXos7DQhYugR9SZQ"><i class="fa fa-youtube"></i></a>
 					<!-- <a href="#"><i class="fa fa-linkedin"></i></a> -->
 				</div>
@@ -806,6 +864,32 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 	$(document).ready(function(){
 		$("#bunga").click(function(){
 			$(".item").hide();
+		})
+	})
+</script>
+
+<script>
+	$(document).ready(function(){
+		$("#pertanyaan").click(function(){
+			$("#boox").show(500)
+			$('#pertanyaan').hide();
+			$("#jawaban").show();
+		});
+
+		$("#jawaban").click(function(){
+			$("#boox2").show(500);
+			$('#pertanyaan').hide();
+			$("#jawaban").show();
+		})
+	})
+</script>
+
+<script>
+	$(document).ready(function(){
+
+		$("#jawaban").click(function(){
+
+			$("#row").removeClass('col-md-12');
 		})
 	})
 </script>
