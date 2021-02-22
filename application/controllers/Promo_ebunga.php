@@ -59,11 +59,12 @@
 					'date' => $date,
 					'status' => 0
 				];
+
 				$nama  = $this->input->post('nama');
 				$email = $this->input->post('email');
 
 
-				
+				$this->_kirimEmail($email, $nama);
 				$input = $this->db->insert('tbl_pesan', $data);
 				$this->session->set_flashdata('message', "Swal.fire({
 					  title: 'Yess!',
@@ -102,7 +103,10 @@
 	      $this->email->subject('Info ebunga');
 
 
-	  	$this->email->message("hay");
+	  	$this->email->message("<ul>
+ 	<li>Ebunga</li>
+ 	<li></li>
+ </ul>");
 	 
 
         if ($this->email->send()) {
@@ -126,3 +130,6 @@
 	}
 
  ?>
+
+
+ 
