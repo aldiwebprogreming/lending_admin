@@ -102,11 +102,8 @@
 	      $this->email->to($email);
 	      $this->email->subject('Info ebunga');
 
-
-	  	$this->email->message("<ul>
- 	<li>Ebunga</li>
- 	<li></li>
- </ul>");
+	      $get = file_get_contents(base_url('email/email.html'));	
+	  	$this->email->message("$get");
 	 
 
         if ($this->email->send()) {
@@ -132,4 +129,3 @@
  ?>
 
 
- 
