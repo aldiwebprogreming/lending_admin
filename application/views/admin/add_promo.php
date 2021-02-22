@@ -70,7 +70,7 @@
 
                   <div class="form-group">
                   <input type="submit" name="kirim" class="btn btn-primary" value="Save">
-                  <a href="<?= base_url() ?>promo/promo"  class = "btn btn-success">Kembali</a>
+                  <a href="<?= base_url() ?>promo/data_promo"  class = "btn btn-success">Kembali</a>
                   </div>
 
 

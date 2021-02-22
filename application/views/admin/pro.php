@@ -131,7 +131,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 					       <!--  <li><a href="#mu-author">AUTHOR</a></li> -->
 				            <li><a href="#mu-pricing">PRICE</a></li>
 				            <li><a href="#mu-testimonials">TESTIMONIALS</a></li>
-				            <li><a href="#mu-contact">CONTACT</a></li>
+				            <li><a href="#mu-contact">MESSAGE</a></li>
 				      	</ul>
 				    </div><!-- /.navbar-collapse -->
 			  	</div><!-- /.container-fluid -->
@@ -357,15 +357,17 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 									<center>
 										
-										<button class="btn btn-warning" id="bunga" style="margin-bottom: 20px;"><i class="fas fa-fan"></i> Bunga</button>
-										<button class="btn btn-warning" id="papan" style="margin-bottom: 20px;"><i class="fas fa-border-all"></i> Papan Bunga</button>
-										<button class="btn btn-warning" id="cake" style="margin-bottom: 20px;"><i class="fas fa-birthday-cake"></i> Cake</button>
-										<button class="btn btn-warning" id="parcel" style="margin-bottom: 20px;"><i class="fas fa-fan"></i> Parcel</button>
+										<button class="mu-order-btn" id="bunga" style="margin-bottom: 20px;"><i class="fas fa-fan"></i> Bunga</button>
+										<button class="mu-order-btn" id="papan" style="margin-bottom: 20px;"><i class="fas fa-border-all"></i> Papan Bunga</button>
+										<button class="mu-order-btn" id="cake" style="margin-bottom: 20px;"><i class="fas fa-birthday-cake"></i> Cake</button>
+										<button class="mu-order-btn" id="parcel" style="margin-bottom: 20px;"><i class="fas fa-fan"></i> Parcel</button>
+
+
 										
-									<div class="owl-carousel owl-theme">
+								<div id="bungaku" class="owl-carousel owl-theme">
 									<?php foreach ($product as $data) { ?>
-	
-								    <div class="item" id="slider">
+		
+								    <div id="slid_bunga" class="item slid_bunga">
 								    	
 								    	<img src="<?= base_url() ?>assets/gambar_galery/<?= $data['gambar'] ?>" class="img-fluid" alt="Image">
 								    	
@@ -374,17 +376,47 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 								    
 								</div>
 
-								<div class="owl-carousel owl-theme">
-									<?php foreach ($product as $data) { ?>
+								<div id="papanku" class="owl-carousel owl-theme" style="">
+									<?php foreach ($papan_bunga as $data1) { ?>
 	
-								    <div class="item" id="slider">
+								    <div id="slid_papan" class="item slid_papan" style="display: none">
 								    	
-								    	<img src="<?= base_url() ?>assets/gambar_galery/<?= $data['gambar'] ?>" class="img-fluid" alt="Image">
+								    	<img src="<?= base_url() ?>assets/gambar_galery/<?= $data1['gambar'] ?>" class="img-fluid" alt="Image">
 								    	
 								    </div>
-								<?php } ?>
-								    
+
+									<?php } ?>
 								</div>
+
+								
+								<div id="parcelku" class="owl-carousel owl-theme">
+									<?php foreach ($parcel as $data2) { ?>
+	
+								    <div class="item slid_parcel" style="display: none">
+								    	
+								    	<img src="<?= base_url() ?>assets/gambar_galery/<?= $data2['gambar'] ?>" class="img-fluid" alt="Image">
+								    	
+								    </div>
+
+									<?php } ?>
+								</div>
+
+								<div id="cakeku" class="owl-carousel owl-theme">
+									<?php foreach ($cake as $data3) { ?>
+	
+								    <div class="item slid_cake" style="display: none">
+								    	
+								    	<img src="<?= base_url() ?>assets/gambar_galery/<?= $data3['gambar'] ?>" class="img-fluid" alt="Image">
+								    	
+								    </div>
+
+									<?php } ?>
+								</div>
+
+
+								
+
+								
 								</center>
 							</div>
 
@@ -493,7 +525,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="mu-pricing-area">
 
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title ">Our Pricing Plans</h2>
+								<h2 class="mu-heading-title ">Paket Harga Ebunga</h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
 							</div>
@@ -727,7 +759,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="mu-contact-area">
 
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title ">Drop Us A Message</h2>
+								<h2 class="mu-heading-title ">Kirimkan Pesan Anda</h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
 							</div>
@@ -792,9 +824,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		<div class="container">
 			<div class="mu-footer-area">
 				<div class="mu-social-media">
-					<a href="https://www.facebook.com/ebungasuksesmakmur"><i class="fas fa-facebook"></i></a>
-					<a href="https://www.instagram.com/ebunga_com/"><i class="fas fa-instagram"></i></a>
-					<a href="https://www.youtube.com/channel/UCckDN3oAXos7DQhYugR9SZQ"><i class="fa fa-youtube"></i></a>
+					<a href="https://www.facebook.com/ebungasuksesmakmur"><i class="fab fa-facebook"></i></a>
+					<a href="https://www.instagram.com/ebunga_com/"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.youtube.com/channel/UCckDN3oAXos7DQhYugR9SZQ"><i class="fab fa-youtube"></i></a>
 					<!-- <a href="#"><i class="fa fa-linkedin"></i></a> -->
 				</div>
 				<p class="mu-copyright">&copy; Copyright <a rel="nofollow" href="http://markups.io">www.ebunga.com</a>. All right reserved.</p>
@@ -863,10 +895,72 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 <script >
 	$(document).ready(function(){
 		$("#bunga").click(function(){
-			$(".item").hide();
+			$("#bungaku").show();
+			$(".slid_bunga").show(500);
+			$(".slid_papan").hide();
+			$(".slid_parcel").hide();
+			$(".slid_cake").hide();
+			
 		})
+		
 	})
 </script>
+
+
+<script >
+	$(document).ready(function(){
+		$("#papan").click(function(){
+
+			$(".slid_papan").show(500);
+			$(".slid_bunga").hide();
+			$(".slid_parcel").hide();
+			$(".slid_cake").hide();
+			$("#bungaku").hide();
+			
+
+
+			
+	
+	
+		})
+	
+	})
+</script>
+
+
+<script >
+	$(document).ready(function(){
+		$("#parcel").click(function(){
+			$(".slid_papan").hide();
+			$(".slid_bunga").hide();
+			$(".slid_parcel").show(500);
+			$("#bungaku").hide();
+			$(".slid_cake").hide();
+			$("#bungaku").hide();
+			
+	
+		})
+	
+	})
+</script>
+
+
+<script >
+	$(document).ready(function(){
+		$("#cake").click(function(){
+			$(".slid_papan").hide();
+			$(".slid_bunga").hide();
+			$(".slid_parcel").hide();
+			$(".slid_cake").show(500);
+			$("#bungaku").hide();
+
+	
+		})
+	
+	})
+</script>
+
+
 
 <script>
 	$(document).ready(function(){

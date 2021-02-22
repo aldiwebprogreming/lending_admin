@@ -79,6 +79,8 @@
 				$this->session->set_flashdata('message', 'swal("Sukses!", "Video Review Berhasil Diubah", "success");');
 				redirect('video/video');
 
+			
+
 			}
 		}
 

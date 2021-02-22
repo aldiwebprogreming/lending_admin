@@ -11,6 +11,7 @@
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
+
 <script src="<?= base_url() ?>assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="<?= base_url() ?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -77,7 +78,10 @@
         });
     });
 </script>
- 
+
+<script src="<?php echo base_url() ?>assets/alert.js"></script>
+
+ <?php echo "<script>".$this->session->flashdata('message')."</script>"?> 
 
 
 </body>

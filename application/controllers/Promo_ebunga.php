@@ -32,6 +32,12 @@
 			$data['product'] = $this->db->get('tbl_galeri_product')->result_array();
 			$data['video'] = $this->db->get('tbl_video_review')->result_array();
 			$data['testimoni'] = $this->db->get('tbl_testimonial')->result_array();
+			$papan = "Papan bunga";
+			$cake = "Cake";
+			$parcel = "Parcel";
+			$data['papan_bunga'] = $this->db->get_where('tbl_galeri_product', array('kategori_produk' => $papan ))->result_array();
+			$data['cake'] = $this->db->get_where('tbl_galeri_product', array('kategori_produk' => $cake ))->result_array();
+			$data['parcel'] = $this->db->get_where('tbl_galeri_product', array('kategori_produk' => $parcel ))->result_array();
 
 			$this->load->view('admin/pro', $data);
 		}
