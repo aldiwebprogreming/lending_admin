@@ -621,7 +621,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 									<?php foreach ($testimoni as $data) { ?>
 
 									<li>
-										<p>"<?= $data['ket_testimonial'] ?>"</p>
+										<!-- <p>"<?= $data['ket_testimonial'] ?>"</p> -->
 
 										<center>
 										<img class="img-fluid" src="<?= base_url() ?>assets/gambar_testimoni/<?= $data['foto'] ?>" alt="img" style="height: 400px;">
