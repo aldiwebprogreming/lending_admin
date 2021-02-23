@@ -35,7 +35,7 @@
                    <div class="form-group">
                     <label for="formGroupExampleInput">Kategori Produk</label>
                     <select class="form-control" name="kategori_produk">
-                      <option>-- Pilih Kategori Produk --</option>
+                      <option><?= $data['kategori_produk'] ?></option>
                       <option>Bunga</option>
                       <option>Papan Bunga</option>
                        <option>Parcel</option>

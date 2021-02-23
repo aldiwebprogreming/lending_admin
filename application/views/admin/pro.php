@@ -30,7 +30,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Ebunga</title>
+    <title>ebunga | promo</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="<?= base_url() ?>assets2/images/logo3.png" style="height: 300px; width: 200px;">
     <!-- Font Awesome -->
@@ -229,15 +229,15 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 				} ?>
 
 				<div class="col-md-6 col-sm-6 col-sm-push-6">
-					<div class="mu-hero-right">
+					<div class="mu-hero-right animate__animated animate__fadeInRight">
 						<img src="<?= base_url() ?>assets/gambar_promo/<?= $data['foto'] ?>" alt="">
 					</div>
 				</div>
 				
 				<div class="col-md-6 col-sm-6 col-sm-pull-6">
 					<div class="mu-hero-left" >
-						<h1><?= $data['judul'] ?></h1>
-						<p><?= $data['sub_judul'] ?></p>
+						<h1 class="animate__animated animate__fadeInLeft"><?= $data['judul'] ?></h1>
+						<p class="animate__animated animate__fadeInLeft"><?= $data['sub_judul'] ?></p>
 						<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
 							Sign up now</a>
 						<!-- <span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span> -->
@@ -299,7 +299,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 								<h1 class="mu-heading-title " style="color">Video Review</h1>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+								<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p> -->
 							
 
 							<!-- Start Video Review Content -->
@@ -346,7 +346,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 							<div class="mu-heading-area">
 								<h2 class="mu-heading-title">Produk Ebunga</h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<p>Sekarang anda tidak perlu lagi</p>
+							<!-- 	<p>Sekarang anda tidak perlu lagi</p> -->
 							</div>
 
 							<!-- Start Book Overview Content -->
@@ -356,66 +356,46 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 								<div class="col-md-12">
 
 									<center>
-										
+										<!-- 
 										<button class="mu-order-btn" id="bunga" style="margin-bottom: 20px;"><i class="fas fa-fan"></i> Bunga</button>
 										<button class="mu-order-btn" id="papan" style="margin-bottom: 20px;"><i class="fas fa-border-all"></i> Papan Bunga</button>
 										<button class="mu-order-btn" id="cake" style="margin-bottom: 20px;"><i class="fas fa-birthday-cake"></i> Cake</button>
 										<button class="mu-order-btn" id="parcel" style="margin-bottom: 20px;"><i class="fas fa-fan"></i> Parcel</button>
-
+ -->
 
 										
 								<div id="bungaku" class="owl-carousel owl-theme">
 									<?php foreach ($product as $data) { ?>
 		
 								    <div id="slid_bunga" class="item slid_bunga">
-								    	
+								    	<span class="mu-book-overview-icon-box">
 								    	<img src="<?= base_url() ?>assets/gambar_galery/<?= $data['gambar'] ?>" class="img-fluid" alt="Image">
-								    	
+								    	</span>
+								    	<h4><?= $data['nama_product'] ?></h4>
+										<p><?= $data['keterangan'] ?></p>
+
+										<?php 
+
+											$bilangan = $data['id'];
+											$hasil = $bilangan % 2;
+											if ($hasil == 0) { ?>
+										<i class="fas fa-star" style="color: #FFD700;"></i>
+										<i class="fas fa-star" style="color: #FFD700;"></i>
+										<i class="fas fa-star" style="color: #FFD700;"></i>
+										<i class="fas fa-star" style="color: #FFD700;"></i>
+										<i class="fas fa-star" style="color: #FFD700;"></i>
+									<?php } else { ?>
+										<i class="fas fa-star" style="color: #FFD700;"></i>
+										<i class="fas fa-star" style="color: #FFD700;"></i>
+										<i class="fas fa-star" style="color: #FFD700;"></i>
+										<i class="fas fa-star" style="color: #FFD700;"></i>
+										<i class="fas fa-star" style="color: silver;"></i>
+									<?php } ?>
+
 								    </div>
 								<?php } ?>
 								    
 								</div>
-
-								<div id="papanku" class="owl-carousel owl-theme" style="">
-									<?php foreach ($papan_bunga as $data1) { ?>
-	
-								    <div id="slid_papan" class="item slid_papan" style="display: none">
-								    	
-								    	<img src="<?= base_url() ?>assets/gambar_galery/<?= $data1['gambar'] ?>" class="img-fluid" alt="Image">
-								    	
-								    </div>
-
-									<?php } ?>
-								</div>
-
-								
-								<div id="parcelku" class="owl-carousel owl-theme">
-									<?php foreach ($parcel as $data2) { ?>
-	
-								    <div class="item slid_parcel" style="display: none">
-								    	
-								    	<img src="<?= base_url() ?>assets/gambar_galery/<?= $data2['gambar'] ?>" class="img-fluid" alt="Image">
-								    	
-								    </div>
-
-									<?php } ?>
-								</div>
-
-								<div id="cakeku" class="owl-carousel owl-theme">
-									<?php foreach ($cake as $data3) { ?>
-	
-								    <div class="item slid_cake" style="display: none">
-								    	
-								    	<img src="<?= base_url() ?>assets/gambar_galery/<?= $data3['gambar'] ?>" class="img-fluid" alt="Image">
-								    	
-								    </div>
-
-									<?php } ?>
-								</div>
-
-
-								
-
 								
 								</center>
 							</div>
@@ -443,7 +423,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 							<div class="mu-heading-area">
 								<h2 class="mu-heading-title ">Terobosan Terbaru Cuma Diebunga</h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+								<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p> -->
 							
 
 							<!-- Start Video Review Content -->
@@ -527,7 +507,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 							<div class="mu-heading-area">
 								<h2 class="mu-heading-title ">Paket Harga Ebunga</h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+								<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p> -->
 							</div>
 
 							<!-- Start Pricing Content -->
@@ -675,7 +655,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 							<div class="mu-heading-area">
 								<h2 class="mu-heading-title ">Apa Yang Ingin Anda Tanyakan</h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+								<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p> -->
 							</div>
 							
 
@@ -701,12 +681,11 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 											</div>
 
 											<div class="" style="text-align: left; margin-left: 15px;">
-												<h4>1. Apa Itu Ebunga ?</h4>
-												<h4>2. Bagaimana Sitem Kerja Ebunga ?</h4>
-												<h4>3. Apa Keuntungan Bergabung Dengan Ebunga ?</h4>
-												<h4>4. Apa Itu Ebunga ?</h4>
-												<h4>5. Bagaimana Sitem Kerja Ebunga ?</h4>
-												<h4>6. Apa Keuntungan Bergabung Dengan Ebunga ?</h4>
+												<h4>1. Apa itu ebunga ?</h4>
+												<h4>2. Manfaat bergabung diebunga ?</h4>
+												<h4>3. Produk apa saja yang dijual ebunga ?</h4>
+												<h4>4. Cara pemesanan diebunga ?</h4>
+												<h4>5. Bagaimana harganya ?</h4>
 											</div>
 											
 
@@ -726,12 +705,20 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 											</div>
 
 											<div class="" style="text-align: left; margin-left: 15px;">
-												<h4>1. Apa Itu Ebunga ?</h4>
-												<h4>2. Bagaimana Sitem Kerja Ebunga ?</h4>
-												<h4>3. Apa Keuntungan Bergabung Dengan Ebunga ?</h4>
-												<h4>4. Apa Itu Ebunga ?</h4>
-												<h4>5. Bagaimana Sitem Kerja Ebunga ?</h4>
-												<h4>6. Apa Keuntungan Bergabung Dengan Ebunga ?</h4>
+												<ol>
+													<li>Sebuah bisnis e-commerce yang memudahkan masyarakat untuk kirim bingkisan ucapan ke teman, keluarga, dan kenalannya dimana saja di Indonesia tanpa perlu membayar ongkos kirim.</li>
+													<li>Dengan bergabung diebunga anda akan mendapatkan CASHBACK SEUMUR HIDUP.</li>
+													<li>
+														Produk ebunga terdiri dari BUNGA, PAPAN BUNGA, PARCEL DAN CAKE. 
+													</li>
+													<li>
+														Cara pemesanan produk diebunga sangat mudah, dengan mendaftar akun diebunga selanjutnya menentukan tujuan pengantaran produk, pilih produk yang tersedia, dan lakukan proses pembayaran. 
+													</li>
+													<li>
+														Harga produk diebunga sangat terjangkau
+														mulai dari IDR 100.000 ~ IDR 1000.000 untuk ekonomi dan IDR 1000.000 ~ Above untuk yang premium. 
+													</li>
+												</ol>
 											</div>
 
 											
@@ -761,7 +748,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 							<div class="mu-heading-area">
 								<h2 class="mu-heading-title ">Kirimkan Pesan Anda</h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+								<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p> -->
 							</div>
 
 							<!-- Start Contact Content -->
@@ -868,7 +855,76 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
 
+<script >
+	$(document).ready(function(){
+		$("#bunga").click(function(){
+			$("#bungaku").show();
+			("#papanku").hide();
+			$(".slid_bunga").show(500);
+			$(".slid_papan").hide();
+			$(".slid_parcel").hide();
+			$(".slid_cake").hide();
+
+			
+		})
+		
+	})
+</script>
+
+
+<script >
+	$(document).ready(function(){
+		$("#papan").click(function(){
+			$("#papanku").hide();
+			$(".slid_papan").show(500);
+			$(".slid_bunga").hide();
+			$(".slid_parcel").hide();
+			$(".slid_cake").hide();
+			$("#bungaku").hide();
 	
+	
+		})
+	
+	})
+</script>
+
+
+<script >
+	$(document).ready(function(){
+		$("#parcel").click(function(){
+			$(".slid_papan").hide();
+			$(".slid_bunga").hide();
+			$("#parcelku").show();
+			$(".slid_parcel").show();
+			$("#bungaku").hide();
+			$(".slid_cake").hide();
+			
+			
+	
+		})
+	
+	})
+</script>
+
+
+
+
+<script >
+	$(document).ready(function(){
+		$("#cake").click(function(){
+
+			$(".cakeku").show();
+			$(".slid_cake").show();
+			$(".slid_papan").hide();
+			$(".slid_bunga").hide();
+			$(".slid_parcel").hide();
+			$("#bungaku").hide();
+
+	
+		})
+	
+	})
+</script>
 
 <script type="text/javascript">
 	$('.owl-carousel').owlCarousel({
@@ -892,73 +948,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 </script>
 
 
-<script >
-	$(document).ready(function(){
-		$("#bunga").click(function(){
-			$("#bungaku").show();
-			$(".slid_bunga").show(500);
-			$(".slid_papan").hide();
-			$(".slid_parcel").hide();
-			$(".slid_cake").hide();
-			
-		})
-		
-	})
-</script>
 
-
-<script >
-	$(document).ready(function(){
-		$("#papan").click(function(){
-
-			$(".slid_papan").show(500);
-			$(".slid_bunga").hide();
-			$(".slid_parcel").hide();
-			$(".slid_cake").hide();
-			$("#bungaku").hide();
-			
-
-
-			
-	
-	
-		})
-	
-	})
-</script>
-
-
-<script >
-	$(document).ready(function(){
-		$("#parcel").click(function(){
-			$(".slid_papan").hide();
-			$(".slid_bunga").hide();
-			$(".slid_parcel").show(500);
-			$("#bungaku").hide();
-			$(".slid_cake").hide();
-			$("#bungaku").hide();
-			
-	
-		})
-	
-	})
-</script>
-
-
-<script >
-	$(document).ready(function(){
-		$("#cake").click(function(){
-			$(".slid_papan").hide();
-			$(".slid_bunga").hide();
-			$(".slid_parcel").hide();
-			$(".slid_cake").show(500);
-			$("#bungaku").hide();
-
-	
-		})
-	
-	})
-</script>
 
 
 

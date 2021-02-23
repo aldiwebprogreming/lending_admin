@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
 
   <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/daterangepicker/daterangepicker.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+ 
   <script src="<?= base_url() ?>assets/plugins/jquery/jquery.min.js"></script>
 </head>
 <!--
@@ -327,7 +327,7 @@
 
           jml_inbox()
          message();
-    },1000 );
+    },300 );
 })
 
     function message(){

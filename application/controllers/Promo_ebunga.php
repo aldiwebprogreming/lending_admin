@@ -85,8 +85,8 @@
 			$config = [
 			'protocol'  => 'smtp',
 			'smtp_host' => 'ssl://smtp.googlemail.com',
-			'smtp_user' => 'alldii1956@gmail.com',
-			'smtp_pass' => 'aldimantap123',
+			'smtp_user' => 'ebungasuksesmakmur@gmail.com',
+			'smtp_pass' => 'master@1719',
 			'smtp_port' => 465,
 			'mailtype'  => 'html',
 			'charset'   => 'utf-8',
@@ -98,7 +98,7 @@
 		$this->load->library('email', $config);
 		$this->email->initialize($config);
 
-	      $this->email->from('alldii1956@gmail.com', 'Ebunga');
+	      $this->email->from('ebungasuksesmakmur@gmail.com', 'ebunga');
 	      $this->email->to($email);
 	      $this->email->subject('Info ebunga');
 

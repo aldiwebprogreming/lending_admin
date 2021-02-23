@@ -35,12 +35,12 @@
 
                  
                   <div class="form-group">
-                    <img src="<?= base_url() ?>assets/gambar_promo/default.jpg" class = "img-thumbnail" style="height: 300px;" id="imgPreview">
+                   <img src="<?= base_url() ?>assets/default/default.png" class = "img-thumbnail" style="height: 300px;" id="imgPreview">
                   </div>
 
 
                   <div class="form-group">
-                    <label for="formGroupExampleInput">Foto User</label>
+                    <label for="formGroupExampleInput">Gambar Testimoni</label>
                     <input type="file" name="foto" class="form-control" required="" id="image">
                     <small>Format  gambar harus jpg/jpeg dan png</small>
                   </div>
