@@ -662,8 +662,8 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 							<!-- Start Pricing Content -->
 							<div class="mu-pricing-content">
 							<center>
-							<button id="pertanyaan" class="mu-send-msg-btn" style="margin-bottom: 20px;">Pertanyaan</button>
-							<button id="jawaban" class="mu-send-msg-btn" style="margin-bottom: 20px; display: none;">Jawaban</button>
+							<button id="pertanyaan" class="mu-send-msg-btn" style="margin-bottom: 60px;">Pertanyaan </button>
+							<!-- <button id="jawaban" class="mu-send-msg-btn" style="margin-bottom: 20px; display: none;">Jawaban</button> -->
 							</center>
 								<div class="row">
 
@@ -674,18 +674,78 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 										 <div  id="boox" class="mu-pricing-single animate__animated animate__backInRight" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); display: none;">
 
 											<div class="mu-pricing-single-head">
-												<h4>Pertanyaan</h4>
+												<h4>Pertanyaan Yang Sering Diajukan</h4>
 												<p class="mu-price-tag">
 													<!-- <h3>IDR 100.000 ~ 1.000.000</h3> -->
 												</p>
 											</div>
 
 											<div class="" style="text-align: left; margin-left: 15px;">
-												<h4>1. Apa itu ebunga ?</h4>
-												<h4>2. Manfaat bergabung diebunga ?</h4>
-												<h4>3. Produk apa saja yang dijual ebunga ?</h4>
-												<h4>4. Cara pemesanan diebunga ?</h4>
-												<h4>5. Bagaimana harganya ?</h4>
+												<div class="" style="margin-left: 50px; ">
+												<ul>
+													<li style="font-weight: bold;">Apa itu ebunga ? <button id="tanya1" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 40px;">+</button>
+
+													<button id="tutup1" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 40px; ">-</button></li>
+
+													<div id="jwb1" class="jwb1" style="margin-top: 20px; display: none;">
+														Sebuah bisnis e-commerce yang memudahkan masyarakat untuk kirim bingkisan ucapan ke teman, keluarga, dan kenalannya dimana saja di Indonesia tanpa perlu membayar ongkos kirim.
+													</div>
+
+													<hr>
+													<li style="font-weight: bold;">Manfaat bergabung diebunga ? 
+
+													<button id="tanya2" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 40px;">+</button>
+													<button id="tutup2" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 40px; ">-</button></li>
+
+													</li>
+
+													<div id="jwb2" class="jwb2" style="margin-top: 20px; display: none;">
+														Dengan bergabung diebunga anda akan mendapatkan cashback seumur hidup dan tentunnya belanja tanpa ongkir.
+													</div>
+
+													<hr>
+													<li style="font-weight: bold;">Produk apa saja yang dijual ebunga ? 
+													<button id="tanya3" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 40px;">+</button>
+
+													<button id="tutup3" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 40px;">-</button></li>
+
+													</li>
+													<div id="jwb3" class="jwb3" style="margin-top: 20px; display: none;">
+														Produk ebunga terdiri dari BUNGA, PAPAN BUNGA, PARCEL dan CAKE.
+													</div>
+													<hr>
+
+
+
+													<li style="font-weight: bold;">Cara pemesanan diebunga ? 
+													<button id="tanya4" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 40px;">+</button>
+
+													<button id="tutup4" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 40px; ">-</button></li>
+
+													</li>
+
+													<div id="jwb4" class="jwb4" style="margin-top: 20px; display: none; ">
+														Cara pemesanan produk diebunga sangat mudah, dengan mendaftar akun diebunga selanjutnya menentukan tujuan pengantaran produk, pilih produk yang tersedia, dan lakukan proses pembayaran. 
+													</div>
+													<hr>
+													<li style="font-weight: bold">Bagaimana harganya ?
+
+													 <button id="tanya5" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 40px;">+</button>
+
+													 <button id="tutup5" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 40px; ">-</button></li>
+													</li>
+
+													<div id="jwb5" class="jwb5" style="margin-top: 20px; display: none;">
+														Harga produk diebunga sangat terjangkau
+														mulai dari IDR 100.000 ~ IDR 1000.000 untuk ekonomi dan IDR 1000.000 ~ Above untuk yang premium. 
+													</div>
+
+													<hr>
+
+
+
+												</ul>
+												</div>
 											</div>
 											
 
@@ -694,37 +754,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 									<!-- --------------------------- -->
 
-									<div class="col-sm-6 col-md-6 ">
-										 <div id="boox2" class="mu-pricing-single  animate__animated animate__backInLeft" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); display: none;">
-
-											<div class="mu-pricing-single-head">
-												<h4>Jawaban kami</h4>
-												<p class="mu-price-tag">
-													<!-- <h3>IDR 1.000.000 ~ Above</h3> -->
-												</p>
-											</div>
-
-											<div class="" style="text-align: left; margin-left: 15px;">
-												<ol>
-													<li>Sebuah bisnis e-commerce yang memudahkan masyarakat untuk kirim bingkisan ucapan ke teman, keluarga, dan kenalannya dimana saja di Indonesia tanpa perlu membayar ongkos kirim.</li>
-													<li>Dengan bergabung diebunga anda akan mendapatkan CASHBACK SEUMUR HIDUP.</li>
-													<li>
-														Produk ebunga terdiri dari BUNGA, PAPAN BUNGA, PARCEL DAN CAKE. 
-													</li>
-													<li>
-														Cara pemesanan produk diebunga sangat mudah, dengan mendaftar akun diebunga selanjutnya menentukan tujuan pengantaran produk, pilih produk yang tersedia, dan lakukan proses pembayaran. 
-													</li>
-													<li>
-														Harga produk diebunga sangat terjangkau
-														mulai dari IDR 100.000 ~ IDR 1000.000 untuk ekonomi dan IDR 1000.000 ~ Above untuk yang premium. 
-													</li>
-												</ol>
-											</div>
-
-											
-
-										</div>
-									</div>
+									
 									
 								</div>
 							
@@ -855,76 +885,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
 
-<script >
-	$(document).ready(function(){
-		$("#bunga").click(function(){
-			$("#bungaku").show();
-			("#papanku").hide();
-			$(".slid_bunga").show(500);
-			$(".slid_papan").hide();
-			$(".slid_parcel").hide();
-			$(".slid_cake").hide();
 
-			
-		})
-		
-	})
-</script>
-
-
-<script >
-	$(document).ready(function(){
-		$("#papan").click(function(){
-			$("#papanku").hide();
-			$(".slid_papan").show(500);
-			$(".slid_bunga").hide();
-			$(".slid_parcel").hide();
-			$(".slid_cake").hide();
-			$("#bungaku").hide();
-	
-	
-		})
-	
-	})
-</script>
-
-
-<script >
-	$(document).ready(function(){
-		$("#parcel").click(function(){
-			$(".slid_papan").hide();
-			$(".slid_bunga").hide();
-			$("#parcelku").show();
-			$(".slid_parcel").show();
-			$("#bungaku").hide();
-			$(".slid_cake").hide();
-			
-			
-	
-		})
-	
-	})
-</script>
-
-
-
-
-<script >
-	$(document).ready(function(){
-		$("#cake").click(function(){
-
-			$(".cakeku").show();
-			$(".slid_cake").show();
-			$(".slid_papan").hide();
-			$(".slid_bunga").hide();
-			$(".slid_parcel").hide();
-			$("#bungaku").hide();
-
-	
-		})
-	
-	})
-</script>
 
 <script type="text/javascript">
 	$('.owl-carousel').owlCarousel({
@@ -977,6 +938,109 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		})
 	})
 </script>
+
+<script>
+	$(document).ready(function(){
+		$("#tanya1").click(function(){
+			$(this).hide();
+			$("#jwb1").show(200);
+			$("#tutup1").show();
+		})
+	})
+</script>
+
+<script>
+	$(document).ready(function(){
+		$("#tanya2").click(function(){
+			$(this).hide();
+			$("#jwb2").show(200);
+			$("#tutup2").show();
+		})
+	})
+</script>
+
+<script>
+	$(document).ready(function(){
+		$("#tanya3").click(function(){
+			$(this).hide();
+			$("#jwb3").show(200);
+			$("#tutup3").show();
+		})
+	})
+</script>
+
+<script>
+	$(document).ready(function(){
+		$("#tanya4").click(function(){
+			$(this).hide();
+			$("#jwb4").show(200);
+			$("#tutup4").show();
+		})
+	})
+</script>
+
+<script>
+	$(document).ready(function(){
+		$("#tanya5").click(function(){
+			$(this).hide();
+			$("#jwb5").show(200);
+			$("#tutup5").show();
+		})
+	})
+</script>
+
+<script>
+	$(document).ready(function(){
+		$("#tutup1").click(function(){
+			$(this).hide();
+			$("#jwb1").hide(200);
+			$("#tanya1").show();
+		})
+	})
+</script>
+
+<script>
+	$(document).ready(function(){
+		$("#tutup2").click(function(){
+			$(this).hide();
+			$("#jwb2").hide(200);
+			$("#tanya2").show();
+		})
+	})
+</script>
+
+<script>
+	$(document).ready(function(){
+		$("#tutup3").click(function(){
+			$(this).hide();
+			$("#jwb3").hide(200);
+			$("#tanya3").show();
+		})
+	})
+</script>
+
+<script>
+	$(document).ready(function(){
+		$("#tutup4").click(function(){
+			$(this).hide();
+			$("#jwb4").hide(200);
+			$("#tanya4").show();
+		})
+	})
+</script>
+
+<script>
+	$(document).ready(function(){
+		$("#tutup5").click(function(){
+			$(this).hide();
+			$("#jwb5").hide(200);
+			$("#tanya5").show();
+		})
+	})
+</script>
+
+
+
     
   </body>
 </html>

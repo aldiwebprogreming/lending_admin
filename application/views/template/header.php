@@ -327,9 +327,13 @@
 
           jml_inbox()
          message();
-    },300 );
+    },6000 );
 })
+  
+  </script>
 
+
+  <script>
     function message(){
 
     $.get("<?= base_url() ?>message/get_message", function(data, success){
@@ -344,9 +348,4 @@
   });
     }
 
-   
-
-
-    
-    
   </script>

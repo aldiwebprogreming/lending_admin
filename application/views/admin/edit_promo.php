@@ -25,6 +25,7 @@
               <div class="card-body">
                 <div class="row">
                    <div class="col-lg-6">
+                    
                 <form method="post" action="" enctype="multipart/form-data">
 
                   <div class="form-group">
