@@ -32,7 +32,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>ebunga | promo</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/icon" href="<?= base_url() ?>assets2/images/logo3.png" style="height: 300px; width: 200px;">
+    <link rel="shortcut icon" type="image/icon" href="<?= base_url() ?>assets2/images/ebunga11.png" style="height: 200px; width: 100px;">
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap -->
