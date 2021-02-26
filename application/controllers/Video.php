@@ -12,6 +12,8 @@
 			if ($this->session->userdata('username') == NULL) {
 			redirect('login/');
 			}
+
+			$this->load->library('form_validation');
 		}
 
 		function video(){
@@ -30,6 +32,20 @@
 		}
 
 		function add_video(){
+
+
+			$this->form_validation->set_rules('section','Section','is_unique[tbl_video_review.section]');
+
+			if ($this->form_validation->run() == FALSE) {
+					
+			$data['title'] = "Tambah Video Review";
+			$data['sub_title'] = "Tambah Video Review";
+
+			$this->load->view('template/header', $data);
+			$this->load->view('admin/add_video', $data);
+			$this->load->view('template/footer');
+
+			} else {
 
 			$data['title'] = "Tambah Video Review";
 			$data['sub_title'] = "Tambah Video Review";
@@ -52,6 +68,7 @@
 				redirect('video/video');
 
 			}
+		}
 		}
 
 		function edit(){

@@ -309,7 +309,16 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 								
 									<!-- <iframe  width="560" height="315" src="https://www.youtube.com/embed/FBU-qweFF4g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
-									<iframe width="560" height="315" src="https://www.youtube.com/embed/1O5rUs20Iz0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<?php 
+
+
+									$video1 = $this->db->get_where('tbl_video_review',array('section' => 'section 1' ))->result_array();
+
+									foreach ($video1 as $video) {
+										echo $video['frame'];
+									}
+								
+									 ?>
 								</div>
 								
 							</div>
@@ -431,9 +440,16 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 							<div class="mu-video-review-content">
 								<div class="embed-responsive embed-responsive-16by9">
 								
-									<!-- <iframe  width="560" height="315" src="https://www.youtube.com/embed/FBU-qweFF4g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+									<?php 
 
-									<iframe width="560" height="315" src="https://www.youtube.com/embed/e8bW6DKXPmI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+									$video2 = $this->db->get_where('tbl_video_review',array('section' => 'section 2' ))->result_array();
+
+									foreach ($video2 as $videoo) {
+										echo $videoo['frame'];
+									}
+								
+									 ?>
 								</div>
 								
 							</div>

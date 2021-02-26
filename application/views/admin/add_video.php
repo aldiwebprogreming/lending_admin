@@ -25,7 +25,7 @@
 
                   <div class="form-group">
                     <label for="formGroupExampleInput">Nama Video Review</label>
-                    <input type="text" class="form-control" id="" placeholder="Masukan nama video review" name="nama_video_review">
+                    <input type="text" class="form-control" id="" placeholder="Masukan nama video review" name="nama_video_review" value="<?php echo set_value('nama_video_review'); ?>">
                   </div>
 
                  
@@ -33,7 +33,9 @@
 
                   <div class="form-group">
                     <label for="formGroupExampleInput">Embed Video</label>
-                    <textarea class="form-control" name="frame" placeholder="Masukan embed video"></textarea>
+                    <textarea class="form-control" name="frame" placeholder="Masukan embed video">
+                      <?php echo set_value('frame'); ?>
+                    </textarea>
                     <small>Ambil embed video darai youtube</small>
                   </div>
 
@@ -44,6 +46,7 @@
                       <option>section 1</option>
                       <option>section 2</option>
                     </select>
+                   <small style="color: red;"> <?php echo form_error('section'); ?></small>
                   </div>
                    
 
