@@ -60,7 +60,7 @@
 
                   <div class="form-group">
                     <label for="formGroupExampleInput">Gambar Promo</label>
-                    <input type="file" name="foto" class="form-control" required="" id="image" value="<?= $data['gambar'] ?>">
+                    <input type="file" name="foto" class="form-control"  id="image" value="<?= $data['gambar'] ?>">
                     <small>Format  gambar harus jpg/jpeg dan png</small>
                   </div>
                    

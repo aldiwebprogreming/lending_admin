@@ -109,10 +109,18 @@
 			if ($this->input->post('edit')) {
 				
 				if (!$this->upload->do_upload('foto')) {
-					 $error = array('error' => $this->upload->display_errors());
-				 $this->session->set_flashdata('message', 'swal("Error!", "Proses input data gagal", "error");');
-	         	 redirect("galery/add_galery");
+					 
+					 $data = [
 
+					'nama_product' => $this->input->post('nama_product'),
+					'kategori_produk' => $this->input->post('kategori_produk'),
+					'keterangan' => $this->input->post('keterangan'),
+				];
+				$this->db->where('id', $id);
+				$this->db->update('tbl_galeri_product', $data);
+				$this->session->set_flashdata('message', 'swal("Sukses!", "Galery Product Berhasil Diubah", "success");');
+				redirect('galery/galery');
+				
 	         	} else {
 	         		if ($this->input->post('kategori_produk') == '-- Pilih Kategori Produk --') {
 	         			$this->session->set_flashdata('message', 'swal("Sukses!", "Galery Product Gagal Diubah", "error");');
@@ -128,7 +136,11 @@
 					
 				];
 
-				
+
+				$delet_img = $this->db->get_where('tbl_galeri_product', array('id' =>$id ))->row();
+				$img = $delet_img->gambar;
+
+				unlink("./assets/gambar_galery/$img");
 				$this->db->where('id', $id);
 				$this->db->update('tbl_galeri_product', $data);
 				$upload = array('upload_data' => $this->upload->data());
@@ -145,11 +157,16 @@
 		function hapus(){
 
 			$id = $this->input->get('id');
+			$delet_images = $this->db->get_where('tbl_galeri_product',array('id' => $id))->row();
+			$target = $delet_images->gambar;
+			unlink("./assets/gambar_galery/$target");
+
 			$this->db->where('id', $id);
 			$this->db->delete('tbl_galeri_product');
 			$this->session->set_flashdata('message', 'swal("Sukses!", "Data Berhasil dihapus", "success");');
 				redirect('galery/galery');
 		}
+
 
 	}
 

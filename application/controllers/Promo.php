@@ -137,7 +137,7 @@
   		$this->load->library('upload', $config);
 
 			$data['title'] = "Edit Promo";
-			$data['sub_title'] = "Edit sPromo";
+			$data['sub_title'] = "Edit Promo";
 
 			$id = $this->input->get('id');
 			$data['det_promo'] = $this->db->get_where('tbl_promo', array('id' => $id))->result_array();
@@ -151,9 +151,22 @@
 
 
 				if (!$this->upload->do_upload('foto')) {
-					 $error = array('error' => $this->upload->display_errors());
-				 $this->session->set_flashdata('message', 'swal("Error!", "Proses input data gagal", "error");');
-	         	 redirect("promo/edit");
+						
+						$data = [
+
+					'kd_promo' => $this->input->post('kd_promo'),
+					'nama_promo' => $this->input->post('nama_promo'),
+					'judul' => $this->input->post('judul'),
+					'sub_judul' => $this->input->post('sub_judul'),
+					'start_promo' => $this->input->post('start_promo'),
+					'end_promo' => $this->input->post('end_promo'),
+					
+
+				];
+				$this->db->where('id', $id);
+				$this->db->update('tbl_promo', $data);
+				$this->session->set_flashdata('message', 'swal("Sukses!", "Promo berhasil diubah", "success");');
+				redirect('promo/data_promo');
 
 	         	} else {
 
@@ -171,9 +184,12 @@
 				];
 
 				$id = $this->input->get('id');
-
+				$delet_images = $this->db->get_where('tbl_promo',array('id' => $id))->row();
+				$target = $delet_images->foto;
+				unlink("./assets/gambar_promo/$target");
 				$this->db->where('id', $id);
 				$this->db->update('tbl_promo', $data);
+				
 				$upload = array('upload_data' => $this->upload->data());
 				$this->session->set_flashdata('message', 'swal("Sukses!", "Promo berhasil diubah", "success");');
 				redirect('promo/data_promo');
@@ -186,11 +202,18 @@
 		function hapus(){
 
 			$id = $this->input->get('id');
+
+			$delet_images = $this->db->get_where('tbl_promo',array('id' => $id))->row();
+			$target = $delet_images->foto;
+			unlink("./assets/gambar_promo/$target");
 			$this->db->where('id', $id);
 			$this->db->delete('tbl_promo');
+			
+
 			$this->session->set_flashdata('message', 'swal("Sukses!", "Data Berhasil dihapus", "success");');
 				redirect('promo/data_promo');
 		}
+
 	}
 
  ?>

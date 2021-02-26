@@ -81,6 +81,10 @@
 			function hapus(){
 
 				$id = $this->input->get('id');
+				$delet_images = $this->db->get_where('tbl_testimonial',array('id' => $id))->row();
+				$target = $delet_images->foto;
+				unlink("./assets/gambar_testimoni/$target");
+
 				$this->db->where('id', $id);
 				$this->db->delete('tbl_testimonial');
 				$this->session->set_flashdata('message', 'swal("Sukses!", "Data Berhasil dihapus", "success");');
@@ -114,10 +118,17 @@
 					if ($this->input->post('edit')) {
 						
 						if (!$this->upload->do_upload('foto')) {
-							 $error = array('error' => $this->upload->display_errors());
-						 $this->session->set_flashdata('message', 'swal("Error!", "Proses input data gagal", "error");');
-			         	 redirect("testimonials/testimonials");
+							$data = [
 
+								'nama_user' => $this->input->post('nama_user'),
+								'ket_testimonial' => $this->input->post('keterangan'),						
+						];
+						$this->db->where('id', $id);
+						$this->db->update('tbl_testimonial', $data);
+						$this->session->set_flashdata('message', 'swal("Sukses!", "Testiomoni Berhasil Diubah", "success");');
+						redirect('testimonials/testimonial');
+
+							 
 			         	} else {
 
 						
@@ -128,7 +139,11 @@
 								'foto' => $this->upload->data('file_name'), 
 							
 						];
-
+						
+						$id = $this->input->get('id');
+						$delet_images = $this->db->get_where('tbl_testimonial',array('id' => $id))->row();
+						$target = $delet_images->foto;
+						unlink("./assets/gambar_testimoni/$target");
 						
 						$this->db->where('id', $id);
 						$this->db->update('tbl_testimonial', $data);
