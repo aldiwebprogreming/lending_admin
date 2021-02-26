@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 26, 2021 at 03:36 AM
+-- Generation Time: Feb 26, 2021 at 05:22 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -132,7 +132,7 @@ CREATE TABLE `tbl_testimonial` (
 INSERT INTO `tbl_testimonial` (`id`, `nama_user`, `ket_testimonial`, `foto`, `date_post`) VALUES
 (7, 'Ridho', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever', 'Testimoni.jpg', '2021-02-18 07:54:29'),
 (10, 'hery', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever', 'baru.png', '2021-02-18 08:09:17'),
-(11, 'aldi', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever', 'dfdaa.png', '2021-02-18 08:11:22');
+(11, 'aldi', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever', 'cake.jpg', '2021-02-26 02:42:34');
 
 -- --------------------------------------------------------
 
@@ -143,15 +143,17 @@ INSERT INTO `tbl_testimonial` (`id`, `nama_user`, `ket_testimonial`, `foto`, `da
 CREATE TABLE `tbl_video_review` (
   `id` int(11) NOT NULL,
   `nama_video_review` varchar(100) NOT NULL,
-  `frame` text NOT NULL
+  `frame` text NOT NULL,
+  `section` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_video_review`
 --
 
-INSERT INTO `tbl_video_review` (`id`, `nama_video_review`, `frame`) VALUES
-(11, 'ddvdvdvddv', 'ddfdfdfdfd');
+INSERT INTO `tbl_video_review` (`id`, `nama_video_review`, `frame`, `section`) VALUES
+(13, 'Section 1', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1O5rUs20Iz0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'section 1'),
+(14, 'Section 2', '                      <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/e8bW6DKXPmI\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>                    ', 'section 2');
 
 -- --------------------------------------------------------
 
@@ -185,7 +187,8 @@ INSERT INTO `tbl_visitor` (`id`, `ip`, `date`, `hits`, `online`, `time`) VALUES
 (11, '::1', '2021-02-22', 329, '1613988070', '2021-02-22 03:14:37'),
 (12, '127.0.0.1', '2021-02-22', 3, '1613978941', '2021-02-22 04:01:49'),
 (13, '::1', '2021-02-23', 127, '1614071562', '2021-02-23 03:08:01'),
-(14, '::1', '2021-02-24', 91, '1614156318', '2021-02-24 03:56:42');
+(14, '::1', '2021-02-24', 91, '1614156318', '2021-02-24 03:56:42'),
+(15, '::1', '2021-02-26', 29, '1614312606', '2021-02-26 03:41:22');
 
 --
 -- Indexes for dumped tables
@@ -271,13 +274,13 @@ ALTER TABLE `tbl_testimonial`
 -- AUTO_INCREMENT for table `tbl_video_review`
 --
 ALTER TABLE `tbl_video_review`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tbl_visitor`
 --
 ALTER TABLE `tbl_visitor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

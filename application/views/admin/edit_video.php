@@ -44,8 +44,7 @@
                     <label for="formGroupExampleInput">Section video</label>
                     <select class="form-control" name="section">
                       <option><?= $data['section']; ?></option>
-                      <option>section 1</option>
-                      <option>section 2</option>
+                     
                     </select>
                   </div>
                    
