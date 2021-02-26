@@ -38,6 +38,16 @@
                     <textarea class="form-control" name="frame" placeholder="Masukan embed video"><?= $data['frame'] ?></textarea>
                     <small>Ambil embed video darai youtube</small>
                   </div>
+
+
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Section video</label>
+                    <select class="form-control" name="section">
+                      <option><?= $data['section']; ?></option>
+                      <option>section 1</option>
+                      <option>section 2</option>
+                    </select>
+                  </div>
                    
 
 

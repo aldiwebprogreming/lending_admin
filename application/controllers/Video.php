@@ -43,6 +43,7 @@
 
 					'nama_video_review' => $this->input->post('nama_video_review'),
 					'frame' => $this->input->post('frame'),
+					'section' => $this->input->post('section'),
 
 				];
 
@@ -71,6 +72,7 @@
 
 					'nama_video_review' => $this->input->post('nama_video_review'),
 					'frame' => $this->input->post('frame'),
+					'section' => $this->input->post('section'),
 
 				];
 

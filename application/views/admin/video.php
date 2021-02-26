@@ -21,18 +21,16 @@
               <div class="card-body">
 
             
-                <?php 
-                if ($num >= 1) { ?>
-                  
-              <?php } else{ ?>
+
                 <a href="<?= base_url() ?>video/add_video" class="btn btn-primary mb-4"><i class="fas fa-plus"></i> Tambah Video Review</a>
-              <?php } ?>
+            
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>No</th>
                   <th>Nama Video Review</th>
                   <th>Freme video</th>
+                  <th>Section</th>
                   <th>Opsi</th>
                 </tr>
                 </thead>
@@ -44,6 +42,7 @@
                     <td><?= $no++; ?></td>
                     <td><?= $data['nama_video_review'] ?></td>
                     <td><?= $data['frame'] ?></td>
+                     <td><?= $data['section'] ?></td>
                     <td>
                       <a href="<?= base_url('video/') ?>hapus?id=<?= $data['id'] ?>"  onclick="return confirm('Yakin Hapus?')" class="badge badge-danger">Hapus</a>
                       <a href="<?= base_url('video/') ?>edit?id=<?= $data['id'] ?>" class="badge badge-success">Edit</a>
@@ -60,6 +59,7 @@
                   <th>No</th>
                   <th>Nama Video Review</th>
                   <th>Freme video</th>
+                  <th>Section</th>
                   <th>Opsi</th>
                 </tr>
                 </tfoot>
