@@ -870,7 +870,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 					<label>Kantor 2 : Jl.Cemara No.15 A, Deli Serdang.</label><br>
 					
 					<label>Hotline / WA :  0821-6751-1111 </label><br>
-					<a href="https://www.facebook.com/ebungasuksesmakmur" target="_blank"><i class="fab fa-facebook"></i></a>
+					<a href="https://www.facebook.com/ebungasuksesmakmur" target="_blank"><i class="fab fa-facebook" style="color: #fff;"></i></a>
 					<a href="https://www.instagram.com/ebunga_com/" target="_blank"><i class="fab fa-instagram"></i></a>
 					<a href="https://www.youtube.com/channel/UCckDN3oAXos7DQhYugR9SZQ" target="_blank"><i class="fab fa-youtube"></i></a>
 					<!-- <a href="#"><i class="fa fa-linkedin"></i></a> -->
