@@ -50,6 +50,18 @@
                     <textarea class="form-control" name="keterangan" style="height: 100px;" placeholder="Masukan keterangan product"><?= $data['keterangan'] ?></textarea>
                   </div>
 
+
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Harga</label>
+                   <input type="number" name="harga" class="form-control" placeholder="Harga awal produk" value="<?= $data['harga'] ?>" required="">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Diskon</label>
+                     <input type="number" name="diskon" class="form-control" placeholder="Masukan diskon produk" required="" value="<?= $data['diskon'] ?>">
+                     <small>Mauskan diskon tanpa (%)</small>
+                  </div>
+
                  
 
                   <div class="form-group">

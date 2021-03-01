@@ -60,12 +60,21 @@
 	         			$this->session->set_flashdata('message', 'swal("Sukses!", "Galery Product Gagal Ditambahkan", "error");');
 				redirect('galery/galery');
 	         		} else {
+
+
+	         		$harga = $this->input->post('harga');
+	         		$diskon = $this->input->post('diskon');
+	         		$proses = ($diskon/100)*$harga;
+	         		$nilai = ($harga - $proses);
 				
 				$data = [
 
 					'nama_product' => $this->input->post('nama_product'),
 					'kategori_produk' => $this->input->post('kategori_produk'),
 					'keterangan' => $this->input->post('keterangan'),
+					'harga' => $this->input->post('harga'),
+					'diskon' => $this->input->post('diskon'),
+					'harga_diskon' => $nilai,
 					'gambar' => $this->upload->data('file_name'),  
 					
 				];
@@ -109,12 +118,20 @@
 			if ($this->input->post('edit')) {
 				
 				if (!$this->upload->do_upload('foto')) {
+
+					$harga = $this->input->post('harga');
+	         		$diskon = $this->input->post('diskon');
+	         		$proses = ($diskon/100)*$harga;
+	         		$nilai = ($harga - $proses);
 					 
 					 $data = [
 
 					'nama_product' => $this->input->post('nama_product'),
 					'kategori_produk' => $this->input->post('kategori_produk'),
 					'keterangan' => $this->input->post('keterangan'),
+					'harga' => $this->input->post('harga'),
+					'diskon' => $this->input->post('diskon'),
+					'harga_diskon' => $nilai,
 				];
 				$this->db->where('id', $id);
 				$this->db->update('tbl_galeri_product', $data);
@@ -126,12 +143,20 @@
 	         			$this->session->set_flashdata('message', 'swal("Sukses!", "Galery Product Gagal Diubah", "error");');
 				redirect('galery/galery');
 	         		} else {
+
+	         		$harga = $this->input->post('harga');
+	         		$diskon = $this->input->post('diskon');
+	         		$proses = ($diskon/100)*$harga;
+	         		$nilai = ($harga - $proses);
 					
 				$data = [
 
 					'nama_product' => $this->input->post('nama_product'),
 					'kategori_produk' => $this->input->post('kategori_produk'),
 					'keterangan' => $this->input->post('keterangan'),
+					'harga' => $this->input->post('harga'),
+					'diskon' => $this->input->post('diskon'),
+					'harga_diskon' => $nilai,
 					'gambar' => $this->upload->data('file_name'),  
 					
 				];

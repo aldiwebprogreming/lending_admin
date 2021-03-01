@@ -44,14 +44,13 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
 
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/color.css">
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/style.css">
@@ -63,13 +62,18 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
     <link rel="stylesheet" href="/assets/css/app.css?v=1.0">
     <link rel="stylesheet" href="/assets/css/app.css?v=1.1">
     <!-- Open Sans for body font -->
+
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+
     <!-- Lato for Title -->
   	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
 
   	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
     <script type="text/javascript" src="<?= base_url() ?>assets2/inc/TimeCircles.js"></script>
+
     <link rel="stylesheet" href="<?= base_url() ?>assets2/inc/TimeCircles.css" />
+
     <link rel="stylesheet" href="<?= base_url() ?>assets2/header.css" />
 
     <script type="text/javascript" src="<?= base_url() ?>assets3/dist/wow.min.js"></script>
@@ -155,14 +159,14 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 				
 				<div class="col-md-6 col-sm-6 col-sm-push-6 animate__animated animate__fadeInRight">
 					<div class="mu-hero-right">
-						<img src="<?= base_url() ?>assets3/img/default.jpg" alt="" style="border-radius: 2%;">
+						<img src="<?= base_url() ?>assets3/img/serbudiskon.jpg" alt="" style="border-radius: 3%;">
 					</div>
 				</div>
 				
 				<div class="col-md-6 col-sm-6 col-sm-pull-6">
 					<div class="mu-hero-left" >
-						<h2 class="animate__animated animate__fadeInLeft" style="color: #fff;">Selamat Datang Diebunga</h2>
-						<p class="animate__animated animate__fadeInLeft">Sebuah bisnis e-commerce yang memudahkan masyarakat untuk kirim bingkisan ucapan ke teman, keluarga, dan kenalannya dimana saja di Indonesia tanpa perlu membayar ongkos kirim, karena ebunga ada disetiap kabupaten di Indonesia yang siap mengantarkan pesanan ke tujuan.</p>
+						<h2 class="animate__animated animate__fadeInLeft" style="color: #fff;">Selama Datang !</h2>
+						<p class="animate__animated animate__fadeInLeft">Ebunga memudahkan untuk memberi bingkisan ucapan kepada teman, keluarga, dan kenalan dimana saja, diseluruh Indonesia tanpa perlu bayar ongkos kirim, ebunga ada disetiap Kabupaten/Kota di Indonesia yang siap mengantarkan ketempat tujuan pemberian.</p>
 						<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
 							Sign up now</a>
 						<!-- <span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span> -->
@@ -230,7 +234,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 				<div class="col-md-6 col-sm-6 col-sm-push-6">
 					<div class="mu-hero-right animate__animated animate__fadeInRight">
-						<img src="<?= base_url() ?>assets/gambar_promo/<?= $data['foto'] ?>" alt="">
+						<img src="<?= base_url() ?>assets/gambar_promo/<?= $data['foto'] ?>" alt="" style="border-radius: 3%;">
 					</div>
 				</div>
 				
@@ -272,7 +276,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 										<div style="">
 											<h3 style="margin-top: 20px;">Remaining Promo Time</h3>
 								          		<span class="mu-header-dot" style="background-color: orange;"></span>
-								            <div id="DateCountdown" data-date="<?= $data['end_promo'] ?> 00:00:00"></div>
+								            <!-- <div id="DateCountdown" data-date="2021-03-31 00:00:00"> -->
+								            	<h2 style="color: blue;">1 Maret 2021 - 31 Maret 2021</h2>
+								           <!--  </div>  -->
 								         </div>
 										</div>
 									</div>
@@ -669,7 +675,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="mu-pricing-area">
 
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title ">Apa Yang Ingin Anda Tanyakan</h2>
+								<h2 class="mu-heading-title ">Pertanyaan</h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
 								<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p> -->
 							</div>
@@ -704,7 +710,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 													<button id="tutup1" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 40px; ">-</button></li>
 
 													<div id="jwb1" class="jwb1" style="margin-top: 20px; display: none;">
-														Sebuah bisnis e-commerce yang memudahkan masyarakat untuk kirim bingkisan ucapan ke teman, keluarga, dan kenalannya dimana saja di Indonesia tanpa perlu membayar ongkos kirim.
+														 Bisnis e-commerce yang memudahkan masyarakat untuk kirim bingkisan ucapan ke teman, keluarga, dan kenalannya dimana saja di Indonesia tanpa perlu membayar ongkos kirim.
 													</div>
 
 													<hr>
@@ -716,7 +722,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 													</li>
 
 													<div id="jwb2" class="jwb2" style="margin-top: 20px; display: none;">
-														Dengan bergabung diebunga anda akan mendapatkan cashback seumur hidup dan tentunnya belanja tanpa ongkir.
+													 Anda akan mendapatkan cashback seumur hidup dan tentunnya belanja tanpa ongkir.
 													</div>
 
 													<hr>
@@ -727,7 +733,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 													</li>
 													<div id="jwb3" class="jwb3" style="margin-top: 20px; display: none;">
-														Produk ebunga terdiri dari BUNGA, PAPAN BUNGA, PARCEL dan CAKE.
+														 BUNGA, PAPAN BUNGA, PARCEL dan CAKE.
 													</div>
 													<hr>
 
@@ -741,7 +747,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 													</li>
 
 													<div id="jwb4" class="jwb4" style="margin-top: 20px; display: none; ">
-														Cara pemesanan produk diebunga sangat mudah, dengan mendaftar akun diebunga selanjutnya menentukan tujuan pengantaran produk, pilih produk yang tersedia, dan lakukan proses pembayaran. 
+														Masukan kelurahan tujuan pengantaran produ, pilih produk yang tersedia & lakukan proses pembayaran. 
 													</div>
 													<hr>
 													<li style="font-weight: bold">Bagaimana harganya ?
@@ -752,8 +758,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 													</li>
 
 													<div id="jwb5" class="jwb5" style="margin-top: 20px; display: none;">
-														Harga produk diebunga sangat terjangkau
-														mulai dari IDR 100.000 ~ IDR 1000.000 untuk ekonomi dan IDR 1000.000 ~ Above untuk yang premium. 
+														Harga lokal pastinya murah. 
 													</div>
 
 													<hr>
@@ -785,7 +790,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 	
 		<!-- Start Contact -->
-		<section id="mu-contact">
+		<section id="mu-contact" style="">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -853,16 +858,24 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 			
 			
 	<!-- Start footer -->
-	<footer id="mu-footer" role="contentinfo">
+	<footer id="mu-footer" role="contentinfo" style="background-color: silver;">
 		<div class="container">
 			<div class="mu-footer-area">
 				<div class="mu-social-media">
-					<a href="https://www.facebook.com/ebungasuksesmakmur"><i class="fab fa-facebook"></i></a>
-					<a href="https://www.instagram.com/ebunga_com/"><i class="fab fa-instagram"></i></a>
-					<a href="https://www.youtube.com/channel/UCckDN3oAXos7DQhYugR9SZQ"><i class="fab fa-youtube"></i></a>
+
+					
+					<!-- <label><ul>	<li>Kantor 1 : Komp Cemara Asri, jl.Tanjung no.10, Deli Serdang.</li></ul></label><br>
+					<label><ul> <li>Kantor 2 : Jl.Cemara No.15 A, Deli Serdang.</li></ul></label><br> -->
+					<label>Kantor 1 : Komp Cemara Asri, jl.Tanjung No.10, Deli Serdang.</label><br>
+					<label>Kantor 2 : Jl.Cemara No.15 A, Deli Serdang.</label><br>
+					
+					<label>Hotline / WA :  0821-6751-1111 </label><br>
+					<a href="https://www.facebook.com/ebungasuksesmakmur" target="_blank"><i class="fab fa-facebook"></i></a>
+					<a href="https://www.instagram.com/ebunga_com/" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.youtube.com/channel/UCckDN3oAXos7DQhYugR9SZQ" target="_blank"><i class="fab fa-youtube"></i></a>
 					<!-- <a href="#"><i class="fa fa-linkedin"></i></a> -->
 				</div>
-				<p class="mu-copyright">&copy; Copyright <a rel="nofollow" href="http://markups.io">www.ebunga.com</a>. All right reserved.</p>
+				<p class="mu-copyright">&copy; Copyright <a rel="nofollow" href="http://www.ebunga.com" target="_blank">ebungaa</a>. All right reserved.</p>
 			</div>
 		</div>
 
@@ -887,10 +900,6 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
     <!-- Custom js -->
 	<script type="text/javascript" src="<?= base_url() ?>assets2/js/custom.js"></script>
 	
-	<script>
-            $("#DateCountdown").TimeCircles();
-          
-     </script>
 
    
 		 <script>

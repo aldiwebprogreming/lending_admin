@@ -30,6 +30,9 @@
                   <th>Nama Product</th>
                   <th>Kategori Product</th>
                   <th>Keterangan</th>
+                  <th>Harga</th>
+                  <th>Diskon</th>
+                  <th>Harga Diskon</th>
                   <th>Gambar</th>
                   <th>Opsi</th>
                 </tr>
@@ -43,7 +46,11 @@
                     <td><?= $data['nama_product'] ?></td>
                     <td><?= $data['kategori_produk'] ?></td>
                     <td><?= $data['keterangan'] ?></td>
+                    <td><?= number_format($data['harga'],2,",",".")?></td>
+                    <td><?= $data['diskon'] ?></td>
+                    <td><?= $data['harga_diskon'] ?></td>
                     <td><?= $data['gambar'] ?></td>
+
                     <td>
                       <a href="<?= base_url('galery/') ?>hapus?id=<?= $data['id'] ?>"  onclick="return confirm('Yakin Hapus?')" class="badge badge-danger">Hapus</a>
                       <a href="<?= base_url('galery/') ?>edit?id=<?= $data['id'] ?>" class="badge badge-success">Edit</a>
@@ -61,6 +68,9 @@
                   <th>Nama Product</th>
                   <th>Kategori Product</th>
                   <th>Keterangan</th>
+                  <th>Harga</th>
+                  <th>Diskon</th>
+                  <th>Harga Diskon</th>
                   <th>Gambar</th>
                   <th>Opsi</th>
                 </tr>
