@@ -277,7 +277,14 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 											<h3 style="margin-top: 20px;">Remaining Promo Time</h3>
 								          		<span class="mu-header-dot" style="background-color: orange;"></span>
 								            <!-- <div id="DateCountdown" data-date="2021-03-31 00:00:00"> -->
-								            	<h2 style="color: blue;">1 Maret 2021 - 31 Maret 2021</h2>
+								            	<center>
+								            	<div class="" style=" width: 200px; height: 200px; background-color: #590FFF; border-radius: 50%;">
+								            		<br>
+								            		<h4 style="color: #fff;">TERSISA </h4>
+								            		<h1 style="color: orange; font-weight: bold; font-size: 70px;">28</h1>
+								            		<p style="font-size: 15px; color: #fff; font-weight: bold; margin-top: 5px;">HARI LAGI</p>
+								            	</div>
+								            	</center>
 								           <!--  </div>  -->
 								         </div>
 										</div>
@@ -384,9 +391,12 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		
 								    <div id="slid_bunga" class="item slid_bunga">
 								    	<span class="mu-book-overview-icon-box">
+								    		<span class="btn btn-primary" style="position: absolute; right: 15px; bottom: 180px; border-radius: 5%; background-color: #590FFF;"><b>SALE <?= $data['diskon'] ?>%</b></span>
 								    	<img src="<?= base_url() ?>assets/gambar_galery/<?= $data['gambar'] ?>" class="img-fluid" alt="Image">
 								    	</span>
 								    	<h4><?= $data['nama_product'] ?></h4>
+								    	<h7><strike>Rp.<?=  number_format($data['harga'],2,",",".") ?></strike></h7>
+								    	<h6>Rp.<?=  number_format($data['harga_diskon'],2,",",".") ?></h6>
 										<p><?= $data['keterangan'] ?></p>
 
 										<?php 
@@ -870,7 +880,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 					<label>Kantor 2 : Jl.Cemara No.15 A, Deli Serdang.</label><br>
 					
 					<label>Hotline / WA :  0821-6751-1111 </label><br>
-					<a href="https://www.facebook.com/ebungasuksesmakmur" target="_blank"><i class="fab fa-facebook" style="color: #fff;"></i></a>
+					<a href="https://www.facebook.com/ebungasuksesmakmur" target="_blank"><i class="fab fa-facebook"></i></a>
 					<a href="https://www.instagram.com/ebunga_com/" target="_blank"><i class="fab fa-instagram"></i></a>
 					<a href="https://www.youtube.com/channel/UCckDN3oAXos7DQhYugR9SZQ" target="_blank"><i class="fab fa-youtube"></i></a>
 					<!-- <a href="#"><i class="fa fa-linkedin"></i></a> -->

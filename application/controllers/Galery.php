@@ -51,6 +51,8 @@
 				
 				if (!$this->upload->do_upload('foto')) {
 					 $error = array('error' => $this->upload->display_errors());
+					 echo $error;
+
 				 $this->session->set_flashdata('message', 'swal("Error!", "Proses input data gagal", "error");');
 	         	 redirect("galery/add_galery");
 

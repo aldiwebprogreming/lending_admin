@@ -48,7 +48,7 @@
                     <td><?= $data['keterangan'] ?></td>
                     <td><?= number_format($data['harga'],2,",",".")?></td>
                     <td><?= $data['diskon'] ?></td>
-                    <td><?= $data['harga_diskon'] ?></td>
+                    <td><?= number_format($data['harga_diskon'],2,",",".")?></td>
                     <td><?= $data['gambar'] ?></td>
 
                     <td>
