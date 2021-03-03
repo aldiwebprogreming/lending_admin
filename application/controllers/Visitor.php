@@ -23,6 +23,7 @@ class Visitor extends CI_Controller
 
 	function data_visitor(){
 
+	
 		$data['title'] = "Data Visitor";
 		$data['sub_title'] = "Data Visitor";
 
@@ -34,7 +35,6 @@ class Visitor extends CI_Controller
 		$this->load->view('template/header', $data);
 		$this->load->view('admin/data_visitor', $data);
 		$this->load->view('template/footer');
-
 
 	}
 

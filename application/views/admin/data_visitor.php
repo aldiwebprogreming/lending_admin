@@ -22,8 +22,9 @@
 
             
               <!--   <a href="<?= base_url() ?>operator/add_operator" class="btn btn-primary mb-4"><i class="fas fa-plus"></i> Tambah Operator</a> -->
-            
+              
               <table id="example1" class="table table-bordered table-striped">
+                
                 <thead>
                 <tr>
                   <th>No</th>

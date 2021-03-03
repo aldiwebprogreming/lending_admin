@@ -80,7 +80,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
  
- 
+  <link type="text/css" href="<?= base_url() ?>countdown/jquery.countdown.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="<?= base_url() ?>countdown/jquery.countdown.min.js"></script>
 	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -166,7 +168,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 				<div class="col-md-6 col-sm-6 col-sm-pull-6">
 					<div class="mu-hero-left" >
 						<h2 class="animate__animated animate__fadeInLeft" style="color: #fff;">Selama Datang !</h2>
-						<p class="animate__animated animate__fadeInLeft">Ebunga memudahkan untuk memberi bingkisan ucapan kepada teman, keluarga, dan kenalan dimana saja, diseluruh Indonesia tanpa perlu bayar ongkos kirim, ebunga ada disetiap Kabupaten/Kota di Indonesia yang siap mengantarkan ketempat tujuan pemberian.</p>
+						<p class="animate__animated animate__fadeInLeft" style="font-size: 20px;">Ebunga memudahkan untuk memberi bingkisan ucapan kepada teman, keluarga, dan kenalan dimana saja, diseluruh Indonesia tanpa perlu bayar ongkos kirim, ebunga ada disetiap Kabupaten/Kota di Indonesia yang siap mengantarkan ketempat tujuan pemberian.</p>
 						<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
 							Sign up now</a>
 						<!-- <span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span> -->
@@ -241,7 +243,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 				<div class="col-md-6 col-sm-6 col-sm-pull-6">
 					<div class="mu-hero-left" >
 						<h1 class="animate__animated animate__fadeInLeft"><?= $data['judul'] ?></h1>
-						<p class="animate__animated animate__fadeInLeft"><?= $data['sub_judul'] ?></p>
+						<p class="animate__animated animate__fadeInLeft" style="font-size: 20px;"><?= $data['sub_judul'] ?></p>
 						<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
 							Sign up now</a>
 						<!-- <span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span> -->
@@ -251,7 +253,10 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 			</div>
 		</div>
 	</section>
-	
+
+	<script>
+		var end_promo = <?= $data['end_promo'] ?>;
+	</script>
 	<!-- Start Featured Slider -->
 	
 	<!-- Start main content -->
@@ -278,12 +283,15 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 								          		<span class="mu-header-dot" style="background-color: orange;"></span>
 								            <!-- <div id="DateCountdown" data-date="2021-03-31 00:00:00"> -->
 								            	<center>
-								            	<div class="" style=" width: 200px; height: 200px; background-color: #590FFF; border-radius: 50%;">
-								            		<br>
-								            		<h4 style="color: #fff;">TERSISA </h4>
-								            		<h1 style="color: orange; font-weight: bold; font-size: 70px;">28</h1>
-								            		<p style="font-size: 15px; color: #fff; font-weight: bold; margin-top: 5px;">HARI LAGI</p>
-								            	</div>
+								            	<ul id="example" class="<?= $data['end_promo'] ?>">
+												    <li><span class="days">00</span><p class="days_text">Days</p></li>
+												    <li class="seperator">:</li>
+												    <li><span class="hours">00</span><p class="hours_text">Hours</p></li>
+												    <li class="seperator">:</li>
+												    <li><span class="minutes">00</span><p class="minutes_text">Minutes</p></li>
+												    <li class="seperator">:</li>
+												    <li><span class="seconds">00</span><p class="seconds_text">Seconds</p></li>
+											  </ul>
 								            	</center>
 								           <!--  </div>  -->
 								         </div>
@@ -846,18 +854,16 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		</section>
 
 
-		
-		<!-- End Contact -->
-
-		<!-- Start Google Map -->
-		<section id="mu-google-map">
-			<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d912.8357592517264!2d98.69582144273261!3d3.629044874562542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031322e4b729385%3A0xac458639382f0c39!2sTiki%20Gerai%2056%20Cemara!5e0!3m2!1sid!2sid!4v1612251591516!5m2!1sid!2sid" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
-		</section>
-
-			
-		<!-- End Google Map -->
-
 	</main>
+
+	 <script class="source" type="text/javascript">
+			 var ad = $("#example").attr('class');
+		    $('#example').countdown({
+		    date: ad+" 23:59:59"
+		    }, function () {
+		      alert('Tidak Ada Promo');
+		    });
+  	</script>
 
 	<script>
             $("#DateCountdown").TimeCircles();
