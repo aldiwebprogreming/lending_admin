@@ -83,14 +83,13 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
   <link type="text/css" href="<?= base_url() ?>countdown/jquery.countdown.css" rel="stylesheet">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript" src="<?= base_url() ?>countdown/jquery.countdown.min.js"></script>
-
-
-<!-- Swiper || slider halaman home -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>slide/style.css">
-  <!-- Swiper || slider halaman home -->
-
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
     <script type="text/javascript">
     	$(window).on('scroll',function(){
@@ -103,8 +102,6 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
     </script>
 
   </head>
-
-  
 
   <body>
 
@@ -164,7 +161,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 				
 				<div class="col-md-6 col-sm-6 col-sm-push-6 animate__animated animate__fadeInRight">
 					<div class="mu-hero-right">
-						<img src="<?= base_url() ?>assets3/img/default.jpg" alt="" style="border-radius: 3%;">
+						<img src="<?= base_url() ?>assets3/img/serbudiskon.jpg" alt="" style="border-radius: 3%;">
 					</div>
 				</div>
 				
@@ -237,69 +234,21 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 					# code...
 				} ?>
 
-					<div class="swiper-container">
-					    <div class="swiper-wrapper">
-
-					    	<!-- slid pertama -->
-					      <div class="swiper-slide">
-					      	<div class="row">
-								<div class="col-md-6 col-sm-6 col-sm-push-6 animate__animated animate__fadeInRight">
-									<div class="mu-hero-right">
-										<img src="<?= base_url() ?>assets3/img/default.jpg" alt="" style="border-radius: 3%;">
-									</div>
-								</div>
+				<div class="col-md-6 col-sm-6 col-sm-push-6">
+					<div class="mu-hero-right animate__animated animate__fadeInRight">
+						<img src="<?= base_url() ?>assets/gambar_promo/<?= $data['foto'] ?>" alt="" style="border-radius: 3%;">
+					</div>
+				</div>
 				
-								<div class="col-md-6 col-sm-6 col-sm-pull-6">
-									<div class="mu-hero-left" >
-										<h2 class="animate__animated animate__fadeInLeft" style="color: #fff;">Selama Datang !</h2>
-										<p class="animate__animated animate__fadeInLeft" style="font-size: 20px;">Ebunga memudahkan untuk memberi bingkisan ucapan kepada teman, keluarga, dan kenalan dimana saja, diseluruh Indonesia tanpa perlu bayar ongkos kirim, ebunga ada disetiap Kabupaten/Kota di Indonesia yang siap mengantarkan ketempat tujuan pemberian.</p>
-										<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
-											Sign up now</a>
-										<!-- <span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span> -->
-									</div>
-								</div>	
-
-								</div>
-							</div>
-							<!-- slid pertama -->
-
-							<!-- slid kedua -->
-					      <div class="swiper-slide">
-					      	<div class="row">
-
-								<?php foreach ($num_promo as $data) {
-									# code...
-								} ?>
-
-								<div class="col-md-6 col-sm-6 col-sm-push-6">
-									<div class="mu-hero-right animate__animated animate__fadeInRight">
-										<img src="<?= base_url() ?>assets/gambar_promo/<?= $data['foto'] ?>" alt="" style="border-radius: 3%;">
-									</div>
-								</div>
-								
-								<div class="col-md-6 col-sm-6 col-sm-pull-6">
-									<div class="mu-hero-left" >
-										<h1 class="animate__animated animate__fadeInLeft"><?= $data['judul'] ?></h1>
-										<p class="animate__animated animate__fadeInLeft" style="font-size: 20px;"><?= $data['sub_judul'] ?></p>
-										<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
-											Sign up now</a>
-										<!-- <span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span> -->
-									</div>
-								</div>	
-
-							</div>
-					      </div>
-
-					      <!-- slid kedua -->
-					    
-					    </div>
-					    <!-- Add Arrows -->
-					    <br>
-					    <br><br>
-					     <div class="swiper-pagination"></div>
-					  </div>
-				
-				
+				<div class="col-md-6 col-sm-6 col-sm-pull-6">
+					<div class="mu-hero-left" >
+						<h1 class="animate__animated animate__fadeInLeft"><?= $data['judul'] ?></h1>
+						<p class="animate__animated animate__fadeInLeft" style="font-size: 20px;"><?= $data['sub_judul'] ?></p>
+						<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
+							Sign up now</a>
+						<!-- <span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span> -->
+					</div>
+				</div>	
 
 			</div>
 		</div>
@@ -359,56 +308,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 			</div>
 		</section>
 
-			<?php } ?>
-
-			
-			<section class="">
-				<div class="container">
-					<br>
-			<br>
-					<div class="row">
-						<h2 style="text-align: center; margin-bottom: 20px;">Kemudahan Itu Adalah Hak Setiap Individual !!!</h2>
-						<center>
-						<span class="mu-header-dot" style="background-color: orange;"></span>
-						</center>
-
-						<div class="col-sm-4 col-md-4">
-
-							<span class="mu-book-overview-icon-box" style="margin-top: 15px; border: 2px solid #590FFF;">
-								<h3 style="text-align: center; margin-top: 20px; color: #9500FF;;">Mudahnya Pesan Hadiah</h4>
-								<img src="<?= base_url() ?>assets/logo/1.png" class="img-fluid" alt="Image" style="">
-								<p style="text-align: center; font-size: 20px; color:#333333">Hanya dengan sentuhan jari, bingkisan di momen yang kamu butuhkan bisa di dapatkan dengan mudah.</p>
-					    	</span>
-
-						</div>
-
-						<div class="col-sm-4 col-md-4">
-
-							<span class="mu-book-overview-icon-box" style="margin-top: 15px; border: 2px solid #590FFF;">
-								<h3 style="text-align: center; margin-top: 22px; color: #590FFF;">Kualitas Produk Terjamin</h4>
-								<center>
-								<img src="<?= base_url() ?>assets/logo/2.png" class="img-fluid" alt="Image">
-								</center>
-								<p style="text-align: center; font-size: 20px; color:#333333 ">Kami menyediakan produk dengan kualitas terjamin, karena kepuasan kamu menjadi prioritas utama kami.</p>
-					    	</span>
-
-						</div>
-
-						<div class="col-sm-4 col-md-4">
-
-							<span class="mu-book-overview-icon-box" style="margin-top: 15px; border: 2px solid #590FFF;">
-								<h3 style="text-align: center; margin-top: 20px; color:#590FFF;">Kemudahan Pembayaran</h4>
-								<img src="<?= base_url() ?>assets/logo/3.png" class="img-fluid" alt="Image">
-								<br>
-								<p style="text-align: center; font-size: 20px; color:#333333">Kamu bebas memilih berbagai metode pembayaran yang prosesnya cepat, sederhana, dan aman.</p>
-					    	</span>
-
-						</div>
-						
-					</div>
-				</div>
-				
-			</section>
+					<?php } ?>
 
 			<section id="mu-video-review" style="background-image: url(<?= base_url() ?>assets2/images/bg-bunga.jpg); background-color: #9500FF;">
 			<div class="container" style="">
@@ -418,9 +318,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 							<div class="mu-heading-area">
 
-								<h1 class="mu-heading-title " style="color">Dapat Undangan Diluar Kota, Tidak Bisa Hadir ?</h1>
+								<h1 class="mu-heading-title " style="color">Video Review</h1>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<p style="font-size: 20px; ">Kamu pernah mengalami seperti itu, tonton video dibawah ini.</p>
+								<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p> -->
 							
 
 							<!-- Start Video Review Content -->
@@ -476,7 +376,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 							<div class="mu-heading-area">
 								<h2 class="mu-heading-title">Produk Ebunga</h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<p style="font-size: 20px;">Mau kirim kemana ? ebunga semua bisa.</p>
+							<!-- 	<p>Sekarang anda tidak perlu lagi</p> -->
 							</div>
 
 							<!-- Start Book Overview Content -->
@@ -529,8 +429,6 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 								<?php } ?>
 								    
 								</div>
-								<br>
-								<p style="font-size: 20px; margin-top 50px;">Di ebunga kamu bisa memilih produk mulai dari papan bunga, kue ulang tahun, buket bunga, buket uang hingga parcel yang bisa dicustom sesuai dengann moment acaranya.</p>
 								
 								</center>
 							</div>
@@ -558,7 +456,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 							<div class="mu-heading-area">
 								<h2 class="mu-heading-title ">Terobosan Terbaru Cuma Diebunga</h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<p style="font-size: 20px;">Satu-satunya platform ecommerse 100% karya anak bangsa yang luar biasa memiliki jaringan yang luas sehingga dapat menjangkau kota-kota di seluruh Indonesia.</p>
+								<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p> -->
 							
 
 							<!-- Start Video Review Content -->
@@ -657,55 +555,49 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 								<div class="row">
 
 									<!-- Pricing Single Content -->
-									<div class="col-sm-4 col-md-4 ">
-										 <img src="<?= base_url() ?>assets2/images/1.png"  class="rounded float-left">
+									<div class="col-sm-6 col-md-6 ">
+										 <div class="mu-pricing-single wow animate__animated animate__backInRight" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+											<div class="mu-pricing-single-head">
+												<h4>ECONOMIC</h4>
+												<p class="mu-price-tag">
+													<h3>IDR 100.000 ~ 1.000.000</h3>
+												</p>
+											</div>
+
+											<div class="">
+												<img src="<?= base_url() ?>assets2/images/eco.png" alt="..." class="" style="height: 300px;">
+											</div>
+
+											<div class="mu-pricing-single-footer">
+												<a href="https://www.ebunga.com/" class="mu-order-btn" target="_blank">Order Now!</a>
+											</div>
+
+										</div>
 									</div>
 
 									<!-- --------------------------- -->
 
-									<div class="col-sm-8 col-md-8 ">
-										<h4>Produk Papan Bunga Type Sewa</h4>
-										<p style="text-align: left; font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+									<div class="col-sm-6 col-md-6 ">
+										 <div class="mu-pricing-single wow animate__animated animate__backInLeft" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
+											<div class="mu-pricing-single-head">
+												<h4>PREMIUM</h4>
+												<p class="mu-price-tag">
+													<h3>IDR 1.000.000 ~ Above</h3>
+												</p>
+											</div>
+
+											<div class="">
+												<img src="<?= base_url() ?>assets2/images/und.png" alt="..." class="" style="height: 300px;">
+											</div>
+
+											<div class="mu-pricing-single-footer">
+												<a href="https://www.ebunga.com/" class="mu-order-btn" target="_blank">Order Now!</a>
+											</div>
+
+										</div>
 									</div>
-								</div>
-
-									<div class="col-sm-8 col-md-8 " style="margin-top: 50px;">
-										<h4>Produk Papan Bunga Type Jual</h4>
-										<p style="text-align: left; font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-									</div>
-
-
-									<div class="col-sm-4 col-md-4 ">
-										 <img src="<?= base_url() ?>assets2/images/2.png"  class="rounded float-left">
-									</div>
-
-
-									<div class="col-sm-4 col-md-4 ">
-										 <img src="<?= base_url() ?>assets2/images/3.png"  class="rounded float-left">
-									</div>
-
-									<div class="col-sm-8 col-md-8 " style="margin-top: 50px;">
-										<h4>Produk Papan Bunga Digital</h4>
-										<p style="text-align: left; font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-									</div>
-
-
 									<!-- / Pricing Single Content -->
 
 									<!-- Pricing Single Content -->
@@ -750,109 +642,6 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 				</div>
 			</div>
 		</section>
-
-
-		<section id="mu-video-review" style="background-image: url(<?= base_url() ?>assets2/images/bg-bunga.jpg); background-color: #9500FF;">
-			<div class="container">
-				<div class="row" style="">
-					<div class="col-md-12">
-						<div class="mu-video-review-area">
-
-							<div class="mu-heading-area">
-								<h2 class="mu-heading-title ">Mitra Eksklusif Ebunga</h2>
-								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<p style="font-size: 20px;">Kamu adalah prioritas kami, ebunga hanya bekerjasama dengan pengerajinan yang berpengalaman disetiap kelurahan di kota/kabupaten untuk memastikan pengiriman bingkisan aman dan tepat waktu.</p>
-							
-
-							<!-- Start Video Review Content -->
-							<p style="font-size: 30px;">Gak percaya ?</p>
-							<p style="font-size: 20px;">Tonton video berikut ini sampai habis.</p>
-						
-							<div class="mu-video-review-content">
-								<div class="embed-responsive embed-responsive-16by9">
-								
-									<iframe width="560" height="315" src="https://www.youtube.com/embed/po5l2dQTqNo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-								</div>
-								
-							</div>
-						</div>
-						</div>
-							
-							<!-- End Video Review Content -->
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-
-
-		<section id="mu-pricing">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="mu-pricing-area">
-
-							<div class="mu-heading-area">
-								<h2 class="mu-heading-title ">Paket Harga Ebunga</h2>
-								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p> -->
-							</div>
-
-							<!-- Start Pricing Content -->
-							<div class="mu-pricing-content">
-								<div class="row">
-
-		
-						<div class="col-sm-4 col-md-4">
-
-							<span class="mu-book-overview-icon-box" style="margin-top: 15px; border: 2px solid #590FFF;">
-								<h3 style="text-align: center; margin-top: 20px; color: #9500FF;;">Mudahnya Pesan Hadiah</h4>
-								<img src="<?= base_url() ?>assets/logo/free_ongkir.png" class="img-fluid" alt="Image" style="margin-top: 20px;">
-								<p style="text-align: center; font-size: 20px; color:#333333">Hanya dengan sentuhan jari, bingkisan di momen yang kamu butuhkan bisa di dapatkan dengan mudah.</p>
-					    	</span>
-
-						</div>
-
-						<div class="col-sm-4 col-md-4">
-
-							<span class="mu-book-overview-icon-box" style="margin-top: 15px; border: 2px solid #590FFF;">
-								<h3 style="text-align: center; margin-top: 20px; color: #590FFF;">Kualitas Produk Terjamin</h4>
-								<center>
-								<img src="<?= base_url() ?>assets/logo/best.png" class="img-fluid" alt="Image" style="height: 260px; margin-top: 20px;">
-								</center>
-								<p style="text-align: center; font-size: 20px; color:#333333 ">Kami menyediakan produk dengan kualitas terjamin, karena kepuasan kamu menjadi prioritas utama kami.</p>
-					    	</span>
-
-						</div>
-
-						<div class="col-sm-4 col-md-4">
-
-							<span class="mu-book-overview-icon-box" style="margin-top: 15px; border: 2px solid #590FFF;">
-								<h3 style="text-align: center; margin-top: 20px; color:#590FFF;">Kemudahan Pembayaran</h4>
-								<img src="<?= base_url() ?>assets/logo/pay2.png" class="img-fluid" alt="Image" style="height: 245px;">
-								<p style="text-align: center; font-size: 20px; color:#333333"> Bebas memilih metode pembayaran, karena kami sudah bermitra denagan payment gateway, sehingga prosesnya simpel dan aman.</p>
-					    	</span>
-
-						</div>
-						
-					</div>
-				</div>
-									
-								</div>
-							
-							
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-
-
-
 		<!-- End Pricing -->
 
 		<!-- Start Testimonials -->
@@ -1067,7 +856,19 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 	</main>
 
-	
+	 <script class="source" type="text/javascript">
+			 var ad = $("#example").attr('class');
+		    $('#example').countdown({
+		    date: ad+" 23:59:59"
+		    }, function () {
+		      alert('Tidak Ada Promo');
+		    });
+  	</script>
+
+	<script>
+            $("#DateCountdown").TimeCircles();
+          
+     </script>      
 	
 	<!-- End main content -->	
 			
@@ -1095,37 +896,6 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		</div>
 
 	</footer>
-
-	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper('.swiper-container', {
-      pagination: {
-        el: '.swiper-pagination',
-        dynamicBullets: true,
-      },
-    });
-  </script>
-
-	 <script class="source" type="text/javascript">
-			 var ad = $("#example").attr('class');
-		    $('#example').countdown({
-		    date: ad+" 23:59:59"
-		    }, function () {
-		      alert('Tidak Ada Promo');
-		    });
-  	</script>
-
-	<script>
-            $("#DateCountdown").TimeCircles();
-          
-     </script>    
-
-
-
-
 	<!-- End footer -->
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 	  <?php echo "<script>".$this->session->flashdata('message')."</script>"?>
