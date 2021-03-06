@@ -92,6 +92,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
   <!-- Swiper || slider halaman home -->
 
 
+ <!-- aksi untuk ganti warna header saat di scroll -->
     <script type="text/javascript">
     	$(window).on('scroll',function(){
     		if($(window).scrollTop()){
@@ -101,14 +102,27 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
     		}
     	})
     </script>
+    <!-- aksi untuk ganti warna header saat di scroll -->
 
   </head>
 
-  
+<!-- aksi untuk tampilan mobil di section cerita produk -->
+  <style>
+
+@media only screen and (max-width: 700px) {
+  #media, #media1{
+  	display: none;
+  }
+}
+
+
+</style>
+
+
+
+<!-- aksi untuk tampilan mobil di section cerita produk -->
 
   <body>
-
-   	
   	<!-- Start Header -->
 	<header id="mu-header" role="banner" style="position: fixed;">
 		<div class="container">
@@ -250,7 +264,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 								</div>
 				
 								<div class="col-md-6 col-sm-6 col-sm-pull-6">
-									<div class="mu-hero-left" >
+									<div class="mu-hero-left" style="margin-top: 20px; margin-left: 15px;">
 										<h2 class="animate__animated animate__fadeInLeft" style="color: #fff;">Selama Datang !</h2>
 										<p class="animate__animated animate__fadeInLeft" style="font-size: 20px;">Ebunga memudahkan untuk memberi bingkisan ucapan kepada teman, keluarga, dan kenalan dimana saja, diseluruh Indonesia tanpa perlu bayar ongkos kirim, ebunga ada disetiap Kabupaten/Kota di Indonesia yang siap mengantarkan ketempat tujuan pemberian.</p>
 										<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
@@ -278,7 +292,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 								</div>
 								
 								<div class="col-md-6 col-sm-6 col-sm-pull-6">
-									<div class="mu-hero-left" >
+									<div class="mu-hero-left" style="margin-top: 20px; margin-left: 15px;">
 										<h1 class="animate__animated animate__fadeInLeft"><?= $data['judul'] ?></h1>
 										<p class="animate__animated animate__fadeInLeft" style="font-size: 20px;"><?= $data['sub_judul'] ?></p>
 										<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
@@ -371,6 +385,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<center>
 						<span class="mu-header-dot" style="background-color: orange;"></span>
 						</center>
+						<br>
 
 						<div class="col-sm-4 col-md-4">
 
@@ -411,14 +426,13 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 			</section>
 
 			<section id="mu-video-review" style="background-image: url(<?= base_url() ?>assets2/images/bg-bunga.jpg); background-color: #9500FF;">
-			<div class="container" style="">
-				<div class="row" style="">
+			<div class="container">
+				<div class="row">
 					<div class="col-md-12">
-						<div class="mu-video-review-area">
+						<div class="mu-video-review-area" style="padding: 90px;">
 
-							<div class="mu-heading-area">
-
-								<h1 class="mu-heading-title " style="color">Dapat Undangan Diluar Kota, Tidak Bisa Hadir ?</h1>
+							<div class="mu-heading-area" style="padding: 10px;">
+								<h1 class="mu-heading-title" style="">Dapat Undangan Diluar Kota, Tidak Bisa Hadir ?</h1>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
 								<p style="font-size: 20px; ">Kamu pernah mengalami seperti itu, tonton video dibawah ini.</p>
 							
@@ -427,12 +441,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						
 							<div class="mu-video-review-content">
 								<div class="embed-responsive embed-responsive-16by9">
-								
-									<!-- <iframe  width="560" height="315" src="https://www.youtube.com/embed/FBU-qweFF4g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
 									<?php 
-
-
 									$video1 = $this->db->get_where('tbl_video_review',array('section' => 'section 1' ))->result_array();
 
 									foreach ($video1 as $video) {
@@ -553,7 +562,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 			<div class="container">
 				<div class="row" style="">
 					<div class="col-md-12">
-						<div class="mu-video-review-area">
+						<div class="mu-video-review-area" style="padding: 90px;">
 
 							<div class="mu-heading-area">
 								<h2 class="mu-heading-title ">Terobosan Terbaru Cuma Diebunga</h2>
@@ -664,7 +673,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 									<!-- --------------------------- -->
 
 									<div class="col-sm-8 col-md-8 ">
-										<h4>Produk Papan Bunga Type Sewa</h4>
+										<h4>Produk Papan Bunga Tipe Sewa</h4>
 										<p style="text-align: left; font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -675,8 +684,13 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 									</div>
 								</div>
 
-									<div class="col-sm-8 col-md-8 " style="margin-top: 50px;">
-										<h4>Produk Papan Bunga Type Jual</h4>
+									<div class="col-sm-4 col-md-4" id="mediaon" style="display: none">
+										 <img src="<?= base_url() ?>assets2/images/2.png"  class="rounded float-left">
+									</div>
+
+
+									<div class="col-sm-8 col-md-8" id="mediaon1" style="margin-top: 50px; display: none">
+										<h4>Produk Papan Bunga Tipe Jual</h4>
 										<p style="text-align: left; font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -686,7 +700,21 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 									</div>
 
 
-									<div class="col-sm-4 col-md-4 ">
+									
+
+
+									<div class="col-sm-8 col-md-8" id="media" style="margin-top: 50px;">
+										<h4>Produk Papan Bunga Tipe Jual</h4>
+										<p style="text-align: left; font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+									</div>
+
+
+									<div class="col-sm-4 col-md-4" id="media1">
 										 <img src="<?= base_url() ?>assets2/images/2.png"  class="rounded float-left">
 									</div>
 
@@ -756,12 +784,12 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 			<div class="container">
 				<div class="row" style="">
 					<div class="col-md-12">
-						<div class="mu-video-review-area">
+						<div class="mu-video-review-area" style="padding: 90px;">
 
 							<div class="mu-heading-area">
 								<h2 class="mu-heading-title ">Mitra Eksklusif Ebunga</h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<p style="font-size: 20px;">Kamu adalah prioritas kami, ebunga hanya bekerjasama dengan pengerajinan yang berpengalaman disetiap kelurahan di kota/kabupaten untuk memastikan pengiriman bingkisan aman dan tepat waktu.</p>
+								<p style="font-size: 20px;">Kamu adalah prioritas kami, ebunga hanya bekerja sama dengan pengerajinan yang berpengalaman disetiap kelurahan di kota/kabupaten untuk memastikan pengiriman bingkisan aman dan tepat waktu.</p>
 							
 
 							<!-- Start Video Review Content -->
@@ -795,34 +823,24 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="mu-pricing-area">
 
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title ">Paket Harga Ebunga</h2>
+								<h2 class="mu-heading-title ">TUNGGU DULU !!!! <br>Selain Mendapatkan Kemudahannya, dapatkan Juga 3 Keuntungan Ini.</h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
 								<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p> -->
 							</div>
 
 							<!-- Start Pricing Content -->
-							<div class="mu-pricing-content">
+							<div class="mu-pricing-content" style="margin-top: 15px;">
 								<div class="row">
 
 		
 						<div class="col-sm-4 col-md-4">
 
 							<span class="mu-book-overview-icon-box" style="margin-top: 15px; border: 2px solid #590FFF;">
-								<h3 style="text-align: center; margin-top: 20px; color: #9500FF;;">Mudahnya Pesan Hadiah</h4>
-								<img src="<?= base_url() ?>assets/logo/free_ongkir.png" class="img-fluid" alt="Image" style="margin-top: 20px;">
-								<p style="text-align: center; font-size: 20px; color:#333333">Hanya dengan sentuhan jari, bingkisan di momen yang kamu butuhkan bisa di dapatkan dengan mudah.</p>
-					    	</span>
-
-						</div>
-
-						<div class="col-sm-4 col-md-4">
-
-							<span class="mu-book-overview-icon-box" style="margin-top: 15px; border: 2px solid #590FFF;">
-								<h3 style="text-align: center; margin-top: 20px; color: #590FFF;">Kualitas Produk Terjamin</h4>
+								<h3 style="text-align: center; margin-top: 20px; color: #9500FF;">Ecash Reward</h4>
 								<center>
-								<img src="<?= base_url() ?>assets/logo/best.png" class="img-fluid" alt="Image" style="height: 260px; margin-top: 20px;">
+								<img src="<?= base_url() ?>assets/logo/card/ecas.png" class="img-fluid" alt="Image" style="height: 362px;">
 								</center>
-								<p style="text-align: center; font-size: 20px; color:#333333 ">Kami menyediakan produk dengan kualitas terjamin, karena kepuasan kamu menjadi prioritas utama kami.</p>
+								<p style="text-align: center; font-size: 20px; color:#333333">Kamu akan langsung mendapatkan ecash 5000 tanpa syarat yang bisa langsung dipakai untuk berintraski diebunga.</p>
 					    	</span>
 
 						</div>
@@ -830,9 +848,23 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="col-sm-4 col-md-4">
 
 							<span class="mu-book-overview-icon-box" style="margin-top: 15px; border: 2px solid #590FFF;">
-								<h3 style="text-align: center; margin-top: 20px; color:#590FFF;">Kemudahan Pembayaran</h4>
-								<img src="<?= base_url() ?>assets/logo/pay2.png" class="img-fluid" alt="Image" style="height: 245px;">
-								<p style="text-align: center; font-size: 20px; color:#333333"> Bebas memilih metode pembayaran, karena kami sudah bermitra denagan payment gateway, sehingga prosesnya simpel dan aman.</p>
+								<h3 style="text-align: center; margin-top: 20px; color: #590FFF;">Cashback Reward</h4>
+								<center>
+								<img src="<?= base_url() ?>assets/logo/card/bek.png" class="img-fluid" alt="Image">
+								</center>
+								<p style="text-align: center; font-size: 20px; color:#333333 ">Setiap melakukan transaksi, kamu akan mendapatkna Cashback 5% dari nilai transaksi dalam untuk transaksi berikutnya.</p>
+					    	</span>
+
+						</div>
+
+						<div class="col-sm-4 col-md-4">
+
+							<span class="mu-book-overview-icon-box" style="margin-top: 15px; border: 2px solid #590FFF;">
+								<h3 style="text-align: center; margin-top: 20px; color:#590FFF;">Gratis Ongkir</h4>
+								<center>
+								<img src="<?= base_url() ?>assets/logo/card/free.png" class="img-fluid" alt="Image">
+								</center>
+								<p style="text-align: center; font-size: 20px; color:#333333">Kami siap mengantarkan pesanan kemana saja tanpa biaya pengeriman sedikitpun yang bisa kamu menfaatkan kapan saja selamanya.</p>
 					    	</span>
 
 						</div>
@@ -860,7 +892,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="mu-testimonials-area">
+						<div class="mu-testimonials-area" style="padding:90px;">
 							<div class="mu-heading-area">
 								<h2 class="mu-heading-title ">Lebih Dari 1000 Orang Telah Merasakan Inovasi Terbaru Diebunga</h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>

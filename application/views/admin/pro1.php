@@ -856,14 +856,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 	</main>
 
-	 <script class="source" type="text/javascript">
-			 var ad = $("#example").attr('class');
-		    $('#example').countdown({
-		    date: ad+" 23:59:59"
-		    }, function () {
-		      alert('Tidak Ada Promo');
-		    });
-  	</script>
+	 
 
 	<script>
             $("#DateCountdown").TimeCircles();
