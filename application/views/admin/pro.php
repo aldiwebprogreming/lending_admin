@@ -150,7 +150,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				      	<ul class="nav navbar-nav mu-menu navbar-right">
 					        <li><a href="#">HOME</a></li>
-					        <li><a href="#mu-book-overview">OVERVIEW</a></li>
+					        <li><a href="#mu-book-overview">PRODUCT</a></li>
 					       <!--  <li><a href="#mu-author">AUTHOR</a></li> -->
 				            <li><a href="#mu-pricing">PRICE</a></li>
 				            <li><a href="#mu-testimonials">TESTIMONIALS</a></li>
@@ -263,17 +263,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 					<div class="col-md-12">
 						<div class="mu-counter-area">
 
-							<div class="mu-counter-block">
-								<div class="row">
-									<!-- <div class="col-md-2 col-sm-6">
-										
-									</div> -->
-									<!-- Start Single Counter -->
-									
-
-								</div>
-							</div>
-
+							
 
 						</div>
 					</div>
@@ -353,8 +343,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 					    <!-- <br>
 					    <br><br>
 					     <div class="swiper-pagination"></div> -->
-					     <div class="swiper-button-next"></div>
-    					<div class="swiper-button-prev"></div>
+					      <div class="swiper-button-next" style="color: black;"></div>
+					    
+    					<div class="swiper-button-prev" style="color: black;"></div>
 					  </div>
 				
 				
