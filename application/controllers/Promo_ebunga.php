@@ -71,7 +71,7 @@
 				$this->session->set_flashdata('message', "Swal.fire({
 					  title: 'Yess!',
 					  text: 'Message anda berhasil dikirim',
-					  imageUrl: 'http://localhost:8080/lending_admin/assets2/images/message.svg',
+					  imageUrl: 'http://localhost:8080/lending_admin/assets2/images/pesan.svg',
 					  imageWidth: 200,
 					  imageHeight: 100,
 					  imageAlt: 'Custom image',

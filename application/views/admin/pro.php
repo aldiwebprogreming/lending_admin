@@ -853,7 +853,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 								<center>
 								<img src="<?= base_url() ?>assets/logo/card/ecas.png" class="img-fluid" alt="Image" style="margin-bottom: 30px;">
 								</center>
-								<p style="text-align: center; font-size: 20px; color:#333333">Kamu akan langsung mendapatkan ecash 5000 tanpa syarat yang bisa langsung dipakai untuk berintraski diebunga.</p>
+								<p style="text-align: center; font-size: 20px; color:#333333">Kamu akan langsung mendapatkan ecash 5000 tanpa syarat yang bisa langsung dipakai untuk berintraski diebunga. Tanpa syarat dan tanpa batas.</p>
 					    	</span>
 
 						</div>
@@ -865,7 +865,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 								<center>
 								<img src="<?= base_url() ?>assets/logo/card/bek.png" class="img-fluid" alt="Image">
 								</center>
-								<p style="text-align: center; font-size: 20px; color:#333333 ">Setiap melakukan transaksi, kamu akan mendapatkna Cashback 5% dari nilai transaksi dalam untuk transaksi berikutnya.</p>
+								<p style="text-align: center; font-size: 20px; color:#333333 ">Setiap melakukan transaksi, kamu akan mendapatkna Cashback 5% dari nilai transaksi dalam bentuk ecash dan dapat dipakai untuk transaksi berikutnya.</p>
 					    	</span>
 
 						</div>
@@ -877,7 +877,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 								<center>
 								<img src="<?= base_url() ?>assets/logo/card/free.png" class="img-fluid" alt="Image">
 								</center>
-								<p style="text-align: center; font-size: 20px; color:#333333">Kami siap mengantarkan pesanan kemana saja tanpa biaya pengeriman sedikitpun yang bisa kamu menfaatkan kapan saja selamanya.</p>
+								<p style="text-align: center; font-size: 20px; color:#333333">Kami siap mengantarkan pesanan kamu kemana saja tanpa biaya pengiriman sedikitpun yang bisa kamu manfaatkan kapan saja  dan selamanya.</p>
 					    	</span>
 
 						</div>
