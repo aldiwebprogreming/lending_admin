@@ -175,18 +175,11 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		<div class="container">
 			<div class="row">
 
-				
-				<div class="swiper-container">
-					    <div class="swiper-wrapper">
-
-					    	<!-- slid pertama -->
-					      <div class="swiper-slide">
-					      	<div class="row">
-								<div class="col-md-6 col-sm-6 col-sm-push-6 animate__animated animate__fadeInRight">
-									<div class="mu-hero-right">
-										<img src="<?= base_url() ?>assets3/img/default.jpg" alt="" style="border-radius: 3%;">
-									</div>
-								</div>
+				<div class="col-md-6 col-sm-6 col-sm-push-6 animate__animated animate__fadeInRight">
+					<div class="mu-hero-right">
+						<img src="<?= base_url() ?>assets3/img/default.jpg" alt="" style="border-radius: 3%;">
+					</div>
+				</div>
 				
 								<div class="col-md-6 col-sm-6 col-sm-pull-6">
 									<div class="mu-hero-left" style="margin-top: 20px; margin-left: 15px;">
@@ -198,52 +191,10 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 									</div>
 								</div>	
 
-								</div>
-							</div>
-							<!-- slid pertama -->
-
-							<!-- slid kedua -->
-					      <div class="swiper-slide">
-					      	<div class="row">
-
-								<div class="col-md-6 col-sm-6 col-sm-push-6">
-									<div class="mu-hero-right animate__animated animate__fadeInRight">
-										<img src="<?= base_url() ?>assets/logo/slid2.png" alt="" style="border-radius: 3%;">
-									</div>
-								</div>
-								
-								<div class="col-md-6 col-sm-6 col-sm-pull-6">
-									<div class="mu-hero-left" style="margin-top: 20px; margin-left: 15px;">
-										<h1 class="animate__animated animate__fadeInLeft">Apa Itu Ebunga ?</h1>
-										<p class="animate__animated animate__fadeInLeft" style="font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-										<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
-											Sign up now</a>
-										<!-- <span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span> -->
-									</div>
-								</div>	
-
-							</div>
-					      </div>
-
-					      <!-- slid kedua -->
+							
+							
 					    
-					    </div>
-					    <!-- Add Arrows -->
-					    <!-- <br>
-					    <br><br>
-					     <div class="swiper-pagination"></div> -->
-					   
-					     <div class="swiper-button-next" style="color: black;"></div>
-					    
-    					<div class="swiper-button-prev" style="color: black;"></div>
-					  </div>
-				
-
+					  
 			</div>
 		</div>
 	</section>

@@ -14,7 +14,18 @@
             <div class="card">
               <div class="card-header border-0">
                 <div class="d-flex justify-content-between">
+                  <?php foreach ($pertanggal as $tgl) {
+                    
+                  } ?>
+
+                <?php if ($pertanggal == NULL) { ?>
+
                   <h3 ><?= $sub_title ?></h3>
+                <?php }else { ?>
+                  <h3 ><?= $sub_title ?> <?= $tgl['date'] ?></h3>
+                  <?php } ?>  
+
+                  
                  <!--  <a href="javascript:void(0);">View Report</a> -->
                 </div>
               </div>
@@ -27,6 +38,8 @@
                   <input type="submit" name="cari" class="btn btn-primary mt-2" value="Cari">
                 </form>
               </div>
+
+
               <br>
 
               
@@ -44,7 +57,7 @@
                 <tbody>
                   <?php 
                   $no =1;
-                  foreach ($data_visitor as $data) { ?>
+                  foreach ($pertanggal as $data) { ?>
                     
                 <tr> 
                     <td><?= $no++; ?></td>

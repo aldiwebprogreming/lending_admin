@@ -23,7 +23,32 @@ class Visitor extends CI_Controller
 
 	function data_visitor(){
 
+
+
 	
+		$data['title'] = "Data Visitor";
+		$data['sub_title'] = "Data Visitor";
+
+
+		if ($this->input->post('cari')) {
+
+		$data['title'] = "Data Visitor";
+		$data['sub_title'] = "Data Visitor";
+			
+			$tgl = $this->input->post('tgl');
+			$bataswaktu = time() -300;
+        	$data['online']  = $this->db->query("SELECT * FROM tbl_visitor WHERE online > '".$bataswaktu."'")->result_array();
+
+			$data['pertanggal'] = $this->db->get_where('tbl_visitor', array('date' => $tgl ))->result_array();
+
+			$data['jumlah'] = $this->db->get_where('tbl_visitor', array('date' => $tgl ))->num_rows();
+
+
+		$this->load->view('template/header', $data);
+		$this->load->view('admin/data_visitor_tgl', $data);
+		$this->load->view('template/footer');
+		} else {
+
 		$data['title'] = "Data Visitor";
 		$data['sub_title'] = "Data Visitor";
 
@@ -35,6 +60,8 @@ class Visitor extends CI_Controller
 		$this->load->view('template/header', $data);
 		$this->load->view('admin/data_visitor', $data);
 		$this->load->view('template/footer');
+
+	}
 
 	}
 
