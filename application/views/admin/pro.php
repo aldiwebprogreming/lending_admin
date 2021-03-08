@@ -176,21 +176,73 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 			<div class="row">
 
 				
-				<div class="col-md-6 col-sm-6 col-sm-push-6 animate__animated animate__fadeInRight">
-					<div class="mu-hero-right">
-						<img src="<?= base_url() ?>assets3/img/default.jpg" alt="" style="border-radius: 3%;">
-					</div>
-				</div>
+				<div class="swiper-container">
+					    <div class="swiper-wrapper">
+
+					    	<!-- slid pertama -->
+					      <div class="swiper-slide">
+					      	<div class="row">
+								<div class="col-md-6 col-sm-6 col-sm-push-6 animate__animated animate__fadeInRight">
+									<div class="mu-hero-right">
+										<img src="<?= base_url() ?>assets3/img/default.jpg" alt="" style="border-radius: 3%;">
+									</div>
+								</div>
 				
-				<div class="col-md-6 col-sm-6 col-sm-pull-6">
-					<div class="mu-hero-left" >
-						<h2 class="animate__animated animate__fadeInLeft" style="color: #fff;">Selama Datang !</h2>
-						<p class="animate__animated animate__fadeInLeft" style="font-size: 20px;">Ebunga memudahkan untuk memberi bingkisan ucapan kepada teman, keluarga, dan kenalan dimana saja, diseluruh Indonesia tanpa perlu bayar ongkos kirim, ebunga ada disetiap Kabupaten/Kota di Indonesia yang siap mengantarkan ketempat tujuan pemberian.</p>
-						<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
-							Sign up now</a>
-						<!-- <span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span> -->
-					</div>
-				</div>	
+								<div class="col-md-6 col-sm-6 col-sm-pull-6">
+									<div class="mu-hero-left" style="margin-top: 20px; margin-left: 15px;">
+										<h1 class="animate__animated animate__fadeInLeft" style="color: #fff;">Selamat Datang !</h1>
+										<p class="animate__animated animate__fadeInLeft" style="font-size: 20px;">Ebunga memudahkan untuk memberi bingkisan ucapan kepada teman, keluarga, dan kenalan dimana saja, diseluruh Indonesia tanpa perlu bayar ongkos kirim, ebunga ada disetiap Kabupaten/Kota di Indonesia yang siap mengantarkan ketempat tujuan pemberian.</p>
+										<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
+											Sign up now</a>
+										<!-- <span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span> -->
+									</div>
+								</div>	
+
+								</div>
+							</div>
+							<!-- slid pertama -->
+
+							<!-- slid kedua -->
+					      <div class="swiper-slide">
+					      	<div class="row">
+
+								<div class="col-md-6 col-sm-6 col-sm-push-6">
+									<div class="mu-hero-right animate__animated animate__fadeInRight">
+										<img src="<?= base_url() ?>assets/logo/slid2.png" alt="" style="border-radius: 3%;">
+									</div>
+								</div>
+								
+								<div class="col-md-6 col-sm-6 col-sm-pull-6">
+									<div class="mu-hero-left" style="margin-top: 20px; margin-left: 15px;">
+										<h1 class="animate__animated animate__fadeInLeft">Apa Itu Ebunga ?</h1>
+										<p class="animate__animated animate__fadeInLeft" style="font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+										<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
+											Sign up now</a>
+										<!-- <span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span> -->
+									</div>
+								</div>	
+
+							</div>
+					      </div>
+
+					      <!-- slid kedua -->
+					    
+					    </div>
+					    <!-- Add Arrows -->
+					    <!-- <br>
+					    <br><br>
+					     <div class="swiper-pagination"></div> -->
+					   
+					     <div class="swiper-button-next" style="color: black;"></div>
+					    
+    					<div class="swiper-button-prev" style="color: black;"></div>
+					  </div>
+				
 
 			</div>
 		</div>
@@ -217,17 +269,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 										
 									</div> -->
 									<!-- Start Single Counter -->
-									<div class="col-md-12 col-xl-6">
-											
-										<center>
-											<h3 style="margin-top: 20px;">Remaining Promo Time</h3>
-
-								          		<span class="mu-header-dot" style="background-color: orange;"></span>
-								          		<br>
-								            	<img src="<?= base_url() ?>assets3/img/baru.gif" alt="" style="height: 250px;">
-								            	<!-- <h2 style="color: orange;">Not found promo time</h2> -->
-										</center>								         
-									</div>
+									
 
 								</div>
 							</div>
@@ -265,7 +307,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 				
 								<div class="col-md-6 col-sm-6 col-sm-pull-6">
 									<div class="mu-hero-left" style="margin-top: 20px; margin-left: 15px;">
-										<h2 class="animate__animated animate__fadeInLeft" style="color: #fff;">Selama Datang !</h2>
+										<h2 class="animate__animated animate__fadeInLeft" style="color: #fff;">Selamat Datang !</h2>
 										<p class="animate__animated animate__fadeInLeft" style="font-size: 20px;">Ebunga memudahkan untuk memberi bingkisan ucapan kepada teman, keluarga, dan kenalan dimana saja, diseluruh Indonesia tanpa perlu bayar ongkos kirim, ebunga ada disetiap Kabupaten/Kota di Indonesia yang siap mengantarkan ketempat tujuan pemberian.</p>
 										<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
 											Sign up now</a>
