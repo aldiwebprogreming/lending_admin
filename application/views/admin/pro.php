@@ -109,11 +109,11 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 <!-- aksi untuk tampilan mobil di section cerita produk -->
   <style>
 
-@media only screen and (max-width: 700px) {
+/*@media only screen and (max-width: 700px) {
   #media, #media1{
   	display: none;
   }
-}
+}*/
 
 
 </style>
@@ -308,9 +308,11 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 					    
 					    </div>
 					    <!-- Add Arrows -->
-					    <br>
+					    <!-- <br>
 					    <br><br>
-					     <div class="swiper-pagination"></div>
+					     <div class="swiper-pagination"></div> -->
+					     <div class="swiper-button-next"></div>
+    					<div class="swiper-button-prev"></div>
 					  </div>
 				
 				
@@ -656,7 +658,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="mu-pricing-area">
 
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title ">Paket Harga Ebunga</h2>
+								<h2 class="mu-heading-title ">Perbedaan Papan Bunga Sistem Sewa dan Jual</h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
 								<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p> -->
 							</div>
@@ -673,50 +675,32 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 									<!-- --------------------------- -->
 
 									<div class="col-sm-8 col-md-8 ">
-										<h4>Produk Papan Bunga Tipe Sewa</h4>
-										<p style="text-align: left; font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+										<h4>Papan Bunga Sistem Rental / Sewa</h4>
+										<p style="text-align: left; font-size: 20px;">Papan bunga akan di ambil kembali oleh seller setelah acaranya selesai. Durasi penyewaan rata-rata 1 - 3 hari. Bahan yang digunakan untuk pembuatan papan bunga ini terbuat dari Bahan busa, kain baldu, kayu, dan bunga suyok.
+										Papan bunga sewa biasanya terdapat di kota Medan, Binjai, Pematang Siantar, Padang, Samosir, Tanjung Balai, Bukittinggi, Asahan, dll.
+									</p>
 
 									</div>
 								</div>
 
-									<div class="col-sm-4 col-md-4" id="mediaon" style="display: none">
+
+								
+									<div class="col-sm-4 col-md-4" id="media0" style="display: none">
 										 <img src="<?= base_url() ?>assets2/images/2.png"  class="rounded float-left">
 									</div>
 
-
-									<div class="col-sm-8 col-md-8" id="mediaon1" style="margin-top: 50px; display: none">
-										<h4>Produk Papan Bunga Tipe Jual</h4>
-										<p style="text-align: left; font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-									</div>
-
-
-									
-
-
 									<div class="col-sm-8 col-md-8" id="media" style="margin-top: 50px;">
-										<h4>Produk Papan Bunga Tipe Jual</h4>
-										<p style="text-align: left; font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+										<h4>Papan Bunga Sistem Jual</h4>
+										<p style="text-align: left; font-size: 20px;">Papan bunga dijual lepas dan tidak diambil kembali. Bahan Papan Biasanya terbuat dari Styrofoam, bunga segar, dan bunga artificial. 
+										Papan bunga yang dijual lepas biasanya terdapat di kota Jakarta, Bekasi, Bandung, Surabaya, Denpasar, Kota Baru Kalsel, dll.
+										  </p>
 									</div>
-
+								
 
 									<div class="col-sm-4 col-md-4" id="media1">
 										 <img src="<?= base_url() ?>assets2/images/2.png"  class="rounded float-left">
 									</div>
+
 
 
 									<div class="col-sm-4 col-md-4 ">
@@ -724,14 +708,10 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 									</div>
 
 									<div class="col-sm-8 col-md-8 " style="margin-top: 50px;">
-										<h4>Produk Papan Bunga Digital</h4>
-										<p style="text-align: left; font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+										<h4>Papan Bunga Digital</h4>
+										<p style="text-align: left; font-size: 20px;">Papan bunga digital menggunakan bahan spanduk / baliho, dan bunga. Sistem papan bunga ini juga menggunakan sistem jual. Papan bunga ini biasanya terdapat di kota Denpasar, Kota Baru Kalsel, dll. </p>
 									</div>
+								</div>
 
 
 									<!-- / Pricing Single Content -->
@@ -838,7 +818,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 							<span class="mu-book-overview-icon-box" style="margin-top: 15px; border: 2px solid #590FFF;">
 								<h3 style="text-align: center; margin-top: 20px; color: #9500FF;">Ecash Reward</h4>
 								<center>
-								<img src="<?= base_url() ?>assets/logo/card/ecas.png" class="img-fluid" alt="Image" style="height: 362px;">
+								<img src="<?= base_url() ?>assets/logo/card/ecas.png" class="img-fluid" alt="Image" style="margin-bottom: 30px;">
 								</center>
 								<p style="text-align: center; font-size: 20px; color:#333333">Kamu akan langsung mendapatkan ecash 5000 tanpa syarat yang bisa langsung dipakai untuk berintraski diebunga.</p>
 					    	</span>
@@ -964,21 +944,21 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 											</div>
 
 											<div class="" style="text-align: left; margin-left: 15px;">
-												<div class="" style="margin-left: 50px; ">
+												<div class="" style="margin-left: 12px; ">
 												<ul>
-													<li style="font-weight: bold;">Apa itu ebunga ? <button id="tanya1" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 40px;">+</button>
+													<li style="font-weight: bold;">Apa itu ebunga ? <button id="tanya1" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 5px;">+</button>
 
-													<button id="tutup1" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 40px; ">-</button></li>
+													<button id="tutup1" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 5px; ">-</button></li>
 
 													<div id="jwb1" class="jwb1" style="margin-top: 20px; display: none;">
 														 Bisnis e-commerce yang memudahkan masyarakat untuk kirim bingkisan ucapan ke teman, keluarga, dan kenalannya dimana saja di Indonesia tanpa perlu membayar ongkos kirim.
 													</div>
 
 													<hr>
-													<li style="font-weight: bold;">Manfaat bergabung diebunga ? 
+													<li style="font-weight: bold;">Manfaat bergabung diebunga? 
 
-													<button id="tanya2" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 40px;">+</button>
-													<button id="tutup2" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 40px; ">-</button></li>
+													<button id="tanya2" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 5px;">+</button>
+													<button id="tutup2" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 5px; ">-</button></li>
 
 													</li>
 
@@ -988,9 +968,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 													<hr>
 													<li style="font-weight: bold;">Produk apa saja yang dijual ebunga ? 
-													<button id="tanya3" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 40px;">+</button>
+													<button id="tanya3" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 5px;">+</button>
 
-													<button id="tutup3" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 40px;">-</button></li>
+													<button id="tutup3" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 5px;">-</button></li>
 
 													</li>
 													<div id="jwb3" class="jwb3" style="margin-top: 20px; display: none;">
@@ -1001,9 +981,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 
 													<li style="font-weight: bold;">Cara pemesanan diebunga ? 
-													<button id="tanya4" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 40px;">+</button>
+													<button id="tanya4" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 5px;">+</button>
 
-													<button id="tutup4" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 40px; ">-</button></li>
+													<button id="tutup4" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 5px; ">-</button></li>
 
 													</li>
 
@@ -1013,9 +993,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 													<hr>
 													<li style="font-weight: bold">Bagaimana harganya ?
 
-													 <button id="tanya5" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 40px;">+</button>
+													 <button id="tanya5" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 5px;">+</button>
 
-													 <button id="tutup5" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 40px; ">-</button></li>
+													 <button id="tutup5" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 5px; ">-</button></li>
 													</li>
 
 													<div id="jwb5" class="jwb5" style="margin-top: 20px; display: none;">
@@ -1132,11 +1112,20 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
   	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <!-- Initialize Swiper -->
-  <script>
+  <!-- <script>
     var swiper = new Swiper('.swiper-container', {
       pagination: {
         el: '.swiper-pagination',
         dynamicBullets: true,
+      },
+    });
+  </script> -->
+
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
     });
   </script>
@@ -1340,6 +1329,23 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 			$("#tanya5").show();
 		})
 	})
+</script>
+
+<script>
+
+	$(document).ready(function(){
+		$(window).resize(function(){
+			if ( $(window).width() <= 991 ) {
+				
+			
+				$("#media0").show();
+
+				$("#media1").hide();
+				
+			}
+		})
+	})
+	
 </script>
 
 
