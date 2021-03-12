@@ -249,7 +249,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 								<div class="col-md-6 col-sm-6 col-sm-pull-6">
 									<div class="mu-hero-left" style="margin-top: 20px; margin-left: 15px;">
 										<h2 class="animate__animated animate__fadeInLeft" style="color: #fff;">Selamat Datang !</h2>
-										<p class="animate__animated animate__fadeInLeft" style="font-size: 20px;">Ebunga memudahkan untuk memberi bingkisan ucapan kepada teman, keluarga, dan kenalan dimana saja, diseluruh Indonesia tanpa perlu bayar ongkos kirim, ebunga ada disetiap Kabupaten/Kota di Indonesia yang siap mengantarkan ketempat tujuan pemberian.</p>
+										<p class="animate__animated animate__fadeInLeft" style="font-size: 20px; margin-right: 15px;">Ebunga memudahkan untuk memberi bingkisan ucapan kepada teman, keluarga, dan kenalan dimana saja, diseluruh Indonesia tanpa perlu bayar ongkos kirim, ebunga ada disetiap Kabupaten/Kota di Indonesia yang siap mengantarkan ketempat tujuan pemberian.</p>
 										<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
 											Sign up now</a>
 										<!-- <span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span> -->
@@ -277,7 +277,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 								<div class="col-md-6 col-sm-6 col-sm-pull-6">
 									<div class="mu-hero-left" style="margin-top: 20px; margin-left: 15px;">
 										<h1 class="animate__animated animate__fadeInLeft"><?= $data['judul'] ?></h1>
-										<p class="animate__animated animate__fadeInLeft" style="font-size: 20px;"><?= $data['sub_judul'] ?></p>
+										<p class="animate__animated animate__fadeInLeft" style="font-size: 20px; margin-right: 15px;"><?= $data['sub_judul'] ?></p>
 										<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
 											Sign up now</a>
 										<!-- <span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span> -->
