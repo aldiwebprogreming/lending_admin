@@ -14,6 +14,8 @@
             <div class="card">
               <div class="card-header border-0">
                 <div class="d-flex justify-content-between">
+
+
                   <?php foreach ($pertanggal as $tgl) {
                     
                   } ?>
@@ -24,6 +26,13 @@
                 <?php }else { ?>
                   <h3 ><?= $sub_title ?> <?= $tgl['date'] ?></h3>
                   <?php } ?>  
+
+
+                   <h1 style="color: orange; font-size: 50px;"><?= $jumlah ?></h>
+                    <label>Visitor</label>
+
+
+
 
                   
                  <!--  <a href="javascript:void(0);">View Report</a> -->
