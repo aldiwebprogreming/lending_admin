@@ -22,37 +22,34 @@
                 <div class="row">
                    <div class="col-lg-6">
                 <form method="post" action="" enctype="multipart/form-data">
-
+                  <?php foreach ($default as $data) {
+                    # code...
+                  } ?>
                   <div class="form-group">
-                    <label for="formGroupExampleInput">Nama Video Review</label>
-                    <input type="text" class="form-control" id="" placeholder="Masukan nama video review" name="nama_video_review" value="" required="">
+                    <label for="formGroupExampleInput">Judul</label>
+                    <input type="text" class="form-control" id="" placeholder="Masukan judul" name="judul" required="" value="<?= $data['judul'] ?>">
                   </div>
 
-                 
-
-
                   <div class="form-group">
-                    <label for="formGroupExampleInput">Embed Video</label>
-                   <textarea class="form-control" name="frame" required="" placeholder="Masukan embed video"></textarea>
-                    <small>Ambil embed video darai youtube</small>
+                    <label for="formGroupExampleInput">Sub judul</label>
+                    <textarea class="form-control" name="sub_judul" required="" placeholder="Masukan sub judul halaman"><?= $data['sub_judul'] ?></textarea>
                   </div>
 
-                   <div class="form-group">
-                    <label for="formGroupExampleInput">Section video</label>
-                    <select class="form-control" name="section">
-                      <option>-- Pilih Section Video --</option>
-                      <option>video 1</option>
-                      <option>video 2</option>
-                      <option>video 3</option>
-                    </select>
-                   <small style="color: red;"> <?php echo form_error('section'); ?></small>
+                 <div class="form-group">
+                    <img src="<?= base_url() ?>assets/gambar_default/<?= $data['images'] ?>" class = "img-thumbnail" style="height: 300px;" id="imgPreview">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Image</label>
+                    <input type="file" name="foto" class="form-control"  id="image">
+                    <small>Format  gambar harus jpg/jpeg dan png</small>
                   </div>
                    
 
 
                   <div class="form-group">
-                  <input type="submit" name="kirim" class="btn btn-primary" value="Save">
-                  <a href="<?= base_url() ?>video/video"  class = "btn btn-success">Kembali</a>
+                  <input type="submit" name="edit" class="btn btn-primary" value="Edit">
+                  <a href="<?= base_url() ?>home/data_home"  class = "btn btn-success">Kembali</a>
                   </div>
 
 

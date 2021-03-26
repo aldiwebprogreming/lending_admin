@@ -42,7 +42,7 @@
 
                   <div class="form-group">
                     <label for="formGroupExampleInput">Section video</label>
-                    <select class="form-control" name="section">
+                    <select class="form-control" name="section" readonly="">
                       <option><?= $data['section']; ?></option>
                      
                     </select>

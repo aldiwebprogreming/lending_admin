@@ -245,6 +245,15 @@
               </p>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href="<?= base_url() ?>home/data_home" class="nav-link">
+              <i class="nav-icon fas fa-ad"></i>
+              <p>
+                Home Default
+              </p>
+            </a>
+          </li>
           <li class="nav-item">
             <a href="<?= base_url() ?>galery/galery" class="nav-link">
               <i class="nav-icon far fa-image"></i>

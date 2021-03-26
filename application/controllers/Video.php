@@ -34,7 +34,7 @@
 		function add_video(){
 
 
-			$this->form_validation->set_rules('section','Section','is_unique[tbl_video_review.section]');
+			$this->form_validation->set_rules('section','Video','is_unique[tbl_video_review.section]');
 
 			if ($this->form_validation->run() == FALSE) {
 					

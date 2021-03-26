@@ -20,50 +20,43 @@
               </div>
               <div class="card-body">
 
-              <div class="col-sm-6">
-                <form method="post" action="">
-                  <label>Cari data visitor</label>
-                  <input type="date" name="tgl" class="form-control" placeholder="Cari data visitor sesuai tanggal">
-                  <input type="submit" name="cari" class="btn btn-primary mt-2" value="Cari">
-                </form>
-              </div>
+                <?php if ($cek >= 1) { ?>
+                  
+                <button class="btn btn-secondary" style="pointer-events: none;" type="button" disabled><i class="fas fa-plus"></i> Tambah Home Default</button>
+              <br>
               <br>
 
-              
+              <?php } else { ?>
+            
+                <a href="<?= base_url() ?>home/add_default" class="btn btn-primary mb-4"><i class="fas fa-plus"></i> Tambah Home Default</a>
+
+              <?php } ?>
+            
               <table id="example1" class="table table-bordered table-striped">
-                
                 <thead>
                 <tr>
                   <th>No</th>
-                  <th>IP Address</th>
-                  <th>Date</th>
-                  <th>Status</th>
+                  <th>Judul</th>
+                  <th>Sub Judul</th>
+                  <th>Images</th>
+                  <th>Opsi</th>
                 
                 </tr>
                 </thead>
                 <tbody>
                   <?php 
                   $no =1;
-                  foreach ($data_visitor as $data) { ?>
-                    
+                  foreach ($default as $data) { ?>
                 <tr> 
                     <td><?= $no++; ?></td>
-                    <td><?= $data['ip'] ?></td>
-                    <td><?= $data['date'] ?></td>
-                   <!--  <td>
-                      <?php if ($online == null) {
-                        echo "<span style='color:red;'>offline</span>";
-                      }else {
+                    <td><?= $data['judul'] ?></td>
+                    <td><?= $data['sub_judul'] ?></td>
+                    <td><img src="<?= base_url() ?>assets/gambar_default/<?= $data['images'] ?>" style='height: 100px;'></td>
+                    <td>
+                      <a id="hapus" href="<?= base_url('home/') ?>hapus?id=<?= $data['id'] ?>" onclick="return confirm('Yakin Hapus?')" class="badge badge-danger">Hapus</a>
 
-                        foreach ($online as $data1) {
-                          if ($data1 == $data) {
-                            echo "<span style='color:blue;'>Online</span>";
-                          } else {
-                            echo "<span style='color:red;'>offline</span>";
-                          }
-                        }
-                      } ?>
-                    </td> -->
+                      <a href="<?= base_url('home/') ?>edit?id=<?= $data['id'] ?>" class="badge badge-success">Edit</a>
+                  </td>
                    
                 </tr>
 
@@ -73,9 +66,10 @@
                 <tfoot>
                 <tr>
                   <th>No</th>
-                  <th>IP Address</th>
-                  <th>Tanggal</th>
-                  <!-- <th>Status</th> -->
+                  <th>Judul</th>
+                  <th>Sub Judul</th>
+                  <th>Images</th>
+                  <th>Opsi</th>
                 </tr>
                 </tfoot>
               </table>

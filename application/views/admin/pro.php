@@ -174,17 +174,19 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 	<section id="mu-hero" style=" background-color: #9500FF;">
 		<div class="container">
 			<div class="row">
-
+				<?php foreach ($default as $data) {} ?>
 				<div class="col-md-6 col-sm-6 col-sm-push-6 animate__animated animate__fadeInRight">
 					<div class="mu-hero-right">
-						<img src="<?= base_url() ?>assets3/img/default.jpg" alt="" style="border-radius: 3%;">
+						<img src="<?= base_url() ?>assets/gambar_default/<?= $data['images'] ?>" alt="" style="border-radius: 3%;">
 					</div>
 				</div>
+
+				
 				
 								<div class="col-md-6 col-sm-6 col-sm-pull-6">
 									<div class="mu-hero-left" style="margin-top: 20px; margin-left: 15px;">
-										<h1 class="animate__animated animate__fadeInLeft" style="color: #fff;">Selamat Datang !</h1>
-										<p class="animate__animated animate__fadeInLeft" style="font-size: 20px;">Ebunga memudahkan untuk memberi bingkisan ucapan kepada teman, keluarga, dan kenalan dimana saja, diseluruh Indonesia tanpa perlu bayar ongkos kirim, ebunga ada disetiap Kabupaten/Kota di Indonesia yang siap mengantarkan ketempat tujuan pemberian.</p>
+										<h1 class="animate__animated animate__fadeInLeft" style="color: #fff;"><?= $data['judul'] ?></h1>
+										<p class="animate__animated animate__fadeInLeft" style="font-size: 20px;"><?= $data['sub_judul'] ?></p>
 										<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
 											Sign up now</a>
 										<!-- <span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span> -->
@@ -198,6 +200,8 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 			</div>
 		</div>
 	</section>
+
+	
 
 
 	
@@ -230,9 +234,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		<div class="container">
 			<div class="row">
 
-				<?php foreach ($num_promo as $data) {
-					# code...
-				} ?>
+				<?php foreach ($num_promo as $data) {} ?>
+
+				<?php foreach ($default as $data) {} ?>
 
 					<div class="swiper-container">
 					    <div class="swiper-wrapper">
@@ -242,14 +246,16 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 					      	<div class="row">
 								<div class="col-md-6 col-sm-6 col-sm-push-6 animate__animated animate__fadeInRight">
 									<div class="mu-hero-right">
-										<img src="<?= base_url() ?>assets3/img/default.jpg" alt="" style="border-radius: 3%;">
+										<img src="<?= base_url() ?>assets/gambar_default/<?= $data['images'] ?>" alt="" style="border-radius: 3%;">
 									</div>
 								</div>
+
+								
 				
 								<div class="col-md-6 col-sm-6 col-sm-pull-6">
 									<div class="mu-hero-left" style="margin-top: 20px; margin-left: 15px;">
-										<h2 class="animate__animated animate__fadeInLeft" style="color: #fff;">Selamat Datang !</h2>
-										<p class="animate__animated animate__fadeInLeft" style="font-size: 20px; margin-right: 15px;">Ebunga memudahkan untuk memberi bingkisan ucapan kepada teman, keluarga, dan kenalan dimana saja, diseluruh Indonesia tanpa perlu bayar ongkos kirim, ebunga ada disetiap Kabupaten/Kota di Indonesia yang siap mengantarkan ketempat tujuan pemberian.</p>
+										<h2 class="animate__animated animate__fadeInLeft" style="color: #fff;"><?= $data['judul'] ?></h2>
+										<p class="animate__animated animate__fadeInLeft" style="font-size: 20px; margin-right: 15px;"><?= $data['sub_judul'] ?></p>
 										<a href="https://www.ebunga.com/user/register.html" target="_blank" class="mu-primary-btn">
 											Sign up now</a>
 										<!-- <span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span> -->
@@ -428,7 +434,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 							<div class="mu-video-review-content">
 								<div class="embed-responsive embed-responsive-16by9">
 									<?php 
-									$video1 = $this->db->get_where('tbl_video_review',array('section' => 'section 1' ))->result_array();
+									$video1 = $this->db->get_where('tbl_video_review',array('section' => 'video 1' ))->result_array();
 
 									foreach ($video1 as $video) {
 										echo $video['frame'];
@@ -564,7 +570,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 									<?php 
 
 
-									$video2 = $this->db->get_where('tbl_video_review',array('section' => 'section 2' ))->result_array();
+									$video2 = $this->db->get_where('tbl_video_review',array('section' => 'video 2' ))->result_array();
 
 									foreach ($video2 as $videoo) {
 										echo $videoo['frame'];
@@ -762,8 +768,17 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						
 							<div class="mu-video-review-content">
 								<div class="embed-responsive embed-responsive-16by9">
+									
+									<?php 
+
+									$video2 = $this->db->get_where('tbl_video_review',array('section' => 'video 3' ))->result_array();
+
+									foreach ($video2 as $videoo) {
+										echo $videoo['frame'];
+									}
 								
-									<iframe width="560" height="315" src="https://www.youtube.com/embed/po5l2dQTqNo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									 ?>
+									
 								</div>
 								
 							</div>

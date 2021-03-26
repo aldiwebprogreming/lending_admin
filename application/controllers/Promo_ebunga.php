@@ -39,6 +39,8 @@
 			$data['cake'] = $this->db->get_where('tbl_galeri_product', array('kategori_produk' => $cake ))->result_array();
 			$data['parcel'] = $this->db->get_where('tbl_galeri_product', array('kategori_produk' => $parcel ))->result_array();
 
+			$data['default'] = $this->db->get('tbl_default')->result_array();
+
 			
 
 			$this->load->view('admin/pro', $data);

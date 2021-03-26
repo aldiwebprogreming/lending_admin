@@ -29,7 +29,7 @@
                 <tr>
                   <th>No</th>
                   <th>Nama Video Review</th>
-                  <th>Freme video</th>
+                  <th>Frame video</th>
                   <th>Section</th>
                   <th>Opsi</th>
                 </tr>
@@ -58,7 +58,7 @@
                 <tr>
                   <th>No</th>
                   <th>Nama Video Review</th>
-                  <th>Freme video</th>
+                  <th>Frame video</th>
                   <th>Section</th>
                   <th>Opsi</th>
                 </tr>
