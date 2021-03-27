@@ -174,6 +174,8 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 	<section id="mu-hero" style=" background-color: #9500FF;">
 		<div class="container">
 			<div class="row">
+
+		
 				<?php foreach ($default as $data) {} ?>
 				<div class="col-md-6 col-sm-6 col-sm-push-6 animate__animated animate__fadeInRight">
 					<div class="mu-hero-right">
@@ -424,9 +426,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="mu-video-review-area" style="padding: 90px;">
 
 							<div class="mu-heading-area" style="padding: 10px;">
-								<h1 class="mu-heading-title" style="">Dapat Undangan Diluar Kota, Tidak Bisa Hadir ?</h1>
+								<h1 class="mu-heading-title" style=""><!-- Dapat Undangan Diluar Kota, Tidak Bisa Hadir ? --> Kini Kamu Bisa Tetap Berhemat Ketika Berbelanja</h1>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<p style="font-size: 20px; ">Kamu pernah mengalami seperti itu, tonton video dibawah ini.</p>
+								<p style="font-size: 20px; "><!-- Kamu pernah mengalami seperti itu, tonton video dibawah ini. -->Nikmati PROMO SERBU DISKON 10% Untuk Semua Produk di Ebunga.</p>
 							
 
 							<!-- Start Video Review Content -->
