@@ -1039,7 +1039,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="mu-contact-area">
 
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title ">Kirimkan Pesan Anda</h2>
+								<h2 class="mu-heading-title ">Silahkan Isi Formulir Dibawah Ini, Untuk Mendapatkan Hadiah Perdana Dari Kami !!</h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
 								<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p> -->
 							</div>
