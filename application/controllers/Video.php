@@ -58,6 +58,8 @@
 				$data = [
 
 					'nama_video_review' => $this->input->post('nama_video_review'),
+					'judul' => $this->input->post('judul'),
+					'sub_judul' => $this->input->post('sub_judul'),
 					'frame' => $this->input->post('frame'),
 					'section' => $this->input->post('section'),
 
@@ -88,6 +90,8 @@
 				$data = [
 
 					'nama_video_review' => $this->input->post('nama_video_review'),
+					'judul' => $this->input->post('judul'),
+					'sub_judul' => $this->input->post('sub_judul'),
 					'frame' => $this->input->post('frame'),
 					'section' => $this->input->post('section'),
 

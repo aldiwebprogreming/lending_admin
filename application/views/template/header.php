@@ -19,7 +19,9 @@
   <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
 
   <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/daterangepicker/daterangepicker.css">
- 
+
+  <script type="text/javascript" src="<?= base_url() ?>assets/ckeditor/ckeditor.js"></script>
+  
   <script src="<?= base_url() ?>assets/plugins/jquery/jquery.min.js"></script>
 </head>
 <!--
@@ -322,6 +324,48 @@
 
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-address-card"></i>
+              <p>
+                Section 
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= base_url() ?>section/data_section1" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Section Card 1</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url() ?>section/section_produk" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Section Produk</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url() ?>section/testimoni" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Section Testimoni</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url() ?>section/kontak" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Section Kontak</p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="<?= base_url() ?>section/data_section2" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Section Card 2</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-atlas"></i>
               <p>
                 Section
@@ -348,7 +392,7 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> -->
          
           
         </ul>

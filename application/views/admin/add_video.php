@@ -28,6 +28,16 @@
                     <input type="text" class="form-control" id="" placeholder="Masukan nama video review" name="nama_video_review" value="" required="">
                   </div>
 
+
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Judul Video Review</label>
+                    <input type="text" class="form-control" id="" placeholder="Masukan judul video review" name="judul" value="" required="">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Sub Judul</label>
+                    <textarea class="form-control ckeditor" name="sub_judul" id="ckeditor" placeholder="Masukan sub judul review" required=""></textarea>
+                  </div>
                  
 
 

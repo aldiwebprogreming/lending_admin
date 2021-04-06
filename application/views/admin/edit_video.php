@@ -30,6 +30,16 @@
                     <input type="text" class="form-control" id="" placeholder="Masukan nama video review" name="nama_video_review" value="<?= $data['nama_video_review'] ?>">
                   </div>
 
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Judul Video Review</label>
+                    <input type="text" class="form-control" id="" placeholder="Masukan judul video review" name="judul" value="<?= $data['judul'] ?>" required="">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Sub Judul</label>
+                    <textarea class="form-control ckeditor" name="sub_judul" id="ckeditor" placeholder="Masukan sub judul review" required=""><?= $data['sub_judul'] ?></textarea>
+                  </div>
+
                  
 
 

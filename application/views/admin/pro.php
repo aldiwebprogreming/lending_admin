@@ -426,9 +426,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="mu-video-review-area" style="padding: 90px;">
 
 							<div class="mu-heading-area" style="padding: 10px;">
-								<h1 class="mu-heading-title" style=""><!-- Dapat Undangan Diluar Kota, Tidak Bisa Hadir ? --> Kini Kamu Bisa Tetap Berhemat Ketika Berbelanja</h1>
+								<h1 class="mu-heading-title" style=""><!-- Dapat Undangan Diluar Kota, Tidak Bisa Hadir ? --> Saatnya Berbagi Kebaikan Dibulan Penuh Berkah</h1>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<p style="font-size: 20px; "><!-- Kamu pernah mengalami seperti itu, tonton video dibawah ini. -->Nikmati PROMO SERBU DISKON 10% Untuk Semua Produk di Ebunga.</p>
+								<p style="font-size: 20px; "><!-- Kamu pernah mengalami seperti itu, tonton video dibawah ini. -->Habiskan waktu Ramadhan kamu dengan melakukan berbagai hal yang baik, serta selalu menjaga silaturahmi dengan orang-orang tersayang.</p>
 							
 
 							<!-- Start Video Review Content -->
@@ -502,12 +502,20 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		
 								    <div id="slid_bunga" class="item slid_bunga">
 								    	<span class="mu-book-overview-icon-box">
+								    		<?php if ($data['diskon'] != 0) { ?>
 								    		<span class="btn btn-primary" style="position: absolute; right: 15px; bottom: 180px; border-radius: 5%; background-color: #590FFF;"><b>SALE <?= $data['diskon'] ?>%</b></span>
+								    	<?php } ?>
 								    	<img src="<?= base_url() ?>assets/gambar_galery/<?= $data['gambar'] ?>" class="img-fluid" alt="Image">
 								    	</span>
 								    	<h4><?= $data['nama_product'] ?></h4>
-								    	<h7><strike>Rp.<?=  number_format($data['harga'],2,",",".") ?></strike></h7>
+								    	<?php if ($data['diskon'] != 0) { ?>
+								    	<h7><strike>Rp.<?=  number_format($data['harga'],2,",",".") ?></strike></h7> 
 								    	<h6>Rp.<?=  number_format($data['harga_diskon'],2,",",".") ?></h6>
+								    <?php }else {  ?>
+
+								    	<h6>Rp.<?=  number_format($data['harga'],2,",",".") ?></h6> 
+								    <?php } ?>
+
 										<p><?= $data['keterangan'] ?></p>
 
 										<?php 
@@ -558,10 +566,20 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 					<div class="col-md-12">
 						<div class="mu-video-review-area" style="padding: 90px;">
 
+							<?php 
+
+									$video2 = $this->db->get_where('tbl_video_review',array('section' => 'video 2' ))->result_array();
+
+									foreach ($video2 as $videoo) {
+										
+									}
+								
+									 ?>
+
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title ">Terobosan Terbaru Cuma Diebunga</h2>
+								<h2 class="mu-heading-title "><?=  $videoo['judul']; ?></h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<p style="font-size: 20px;">Satu-satunya platform ecommerse 100% karya anak bangsa yang luar biasa memiliki jaringan yang luas sehingga dapat menjangkau kota-kota di seluruh Indonesia.</p>
+								<?=  $videoo['sub_judul']; ?>
 							
 
 							<!-- Start Video Review Content -->
@@ -569,16 +587,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 							<div class="mu-video-review-content">
 								<div class="embed-responsive embed-responsive-16by9">
 								
-									<?php 
-
-
-									$video2 = $this->db->get_where('tbl_video_review',array('section' => 'video 2' ))->result_array();
-
-									foreach ($video2 as $videoo) {
-										echo $videoo['frame'];
-									}
-								
-									 ?>
+									<?=  $videoo['frame']; ?>
 								</div>
 								
 							</div>
@@ -757,29 +766,26 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 				<div class="row" style="">
 					<div class="col-md-12">
 						<div class="mu-video-review-area" style="padding: 90px;">
-
-							<div class="mu-heading-area">
-								<h2 class="mu-heading-title ">Mitra Eksklusif Ebunga</h2>
-								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<p style="font-size: 20px;">Kamu adalah prioritas kami, ebunga hanya bekerja sama dengan pengerajinan yang berpengalaman disetiap kelurahan di kota/kabupaten untuk memastikan pengiriman bingkisan aman dan tepat waktu.</p>
-							
-
-							<!-- Start Video Review Content -->
-							<p style="font-size: 30px;">Gak percaya ?</p>
-							<p style="font-size: 20px;">Tonton video berikut ini sampai habis.</p>
-						
-							<div class="mu-video-review-content">
-								<div class="embed-responsive embed-responsive-16by9">
-									
-									<?php 
+							<?php 
 
 									$video2 = $this->db->get_where('tbl_video_review',array('section' => 'video 3' ))->result_array();
 
 									foreach ($video2 as $videoo) {
-										echo $videoo['frame'];
+										
 									}
 								
 									 ?>
+							<div class="mu-heading-area">
+								<h2 class="mu-heading-title "><?php echo $videoo['judul']; ?></h2>
+								<span class="mu-header-dot" style="background-color: orange;"></span>
+									
+									<?php echo $videoo['sub_judul']; ?>
+							
+						
+							<div class="mu-video-review-content">
+								<div class="embed-responsive embed-responsive-16by9">
+									
+									<?php echo $videoo['frame']; ?>
 									
 								</div>
 								

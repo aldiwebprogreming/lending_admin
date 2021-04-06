@@ -30,14 +30,7 @@
 
 		function add_galery(){
 
-		$this->load->helper(array('form', 'url'));
-
-          $config['upload_path']          = './assets/gambar_galery/';
-          $config['allowed_types']        = 'jpg|png';
-          $config['max_size']             = 200000000;
-          $config['file_name']           = '';
-         
-  		$this->load->library('upload', $config);
+		 
 
 			$data['title'] = "Tambah Galery";
 			$data['sub_title'] = "Tambah Galery Product";

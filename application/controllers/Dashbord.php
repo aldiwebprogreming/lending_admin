@@ -13,8 +13,7 @@
 			redirect('login/');
 			}
 			$this->load->library('form_validation');
-		}
-
+		} 
 		function index(){
 				
 			$data['title'] ="Dashboard";

@@ -29,6 +29,8 @@
                 <tr>
                   <th>No</th>
                   <th>Nama Video Review</th>
+                  <th>Judul</th>
+                  <th>Sub Judul</th>
                   <th>Frame video</th>
                   <th>Section</th>
                   <th>Opsi</th>
@@ -41,6 +43,8 @@
                 <tr> 
                     <td><?= $no++; ?></td>
                     <td><?= $data['nama_video_review'] ?></td>
+                    <td><?= $data['judul'] ?></td>
+                    <td><?= $data['sub_judul'] ?></td>
                     <td><?= $data['frame'] ?></td>
                      <td><?= $data['section'] ?></td>
                     <td>
@@ -58,6 +62,8 @@
                 <tr>
                   <th>No</th>
                   <th>Nama Video Review</th>
+                  <th>Judul</th>
+                  <th>Sub Judul</th>
                   <th>Frame video</th>
                   <th>Section</th>
                   <th>Opsi</th>
