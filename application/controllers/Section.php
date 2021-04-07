@@ -114,6 +114,94 @@
 	      	$this->load->view('template/footer');
 	      }
 
+	       function hapus_section1(){
+
+	      	$id = $this->input->get('id');
+	      	$delet_images = $this->db->get_where('tbl_section1',array('id' => $id))->row();
+	      	$target1 = $delet_images->img_card1;
+	      	$target2 = $delet_images->img_card2;
+	      	$target3 = $delet_images->img_card3;
+			
+			unlink("./assets/gambar_section1/$target1");
+			unlink("./assets/gambar_section1/$target2");
+			unlink("./assets/gambar_section1/$target3");
+
+	      	$delete = $this->db->delete('tbl_section1', array('id' => $id));
+	      	$this->session->set_flashdata('message', 'swal("Sukses!", "Data Berhasil Dihapus", "success");');
+				redirect('section/data_section1');
+	      }
+
+	      function edit_section1(){
+
+
+	      	$data['title'] = "Section card1";
+			$data['sub_title'] = "Edit Section Card 1";
+
+			$id = $this->input->get('id');
+			$data['editsection'] = $this->db->get_where('tbl_section1')->result_array();
+
+			$this->load->view('template/header', $data);
+			$this->load->view('admin/edit_section1', $data);
+			$this->load->view('template/footer');
+
+			
+
+	      }
+
+	      function action_editcard1(){
+	      	echo $this->input->get('id');
+
+
+			$this->load->helper(array('form','url'));
+			 $config['upload_path']          = './assets/gambar_section1/';
+	          $config['allowed_types']        = 'jpg|png';
+	          $config['max_size']             = 200000000;
+	          $config['file_name']           = '';
+
+	          $this->load->library('upload', $config);
+
+	          if ($this->input->post('edit')) {
+
+	          	$this->upload->do_upload('img_card1');
+	         	$result1 = $this->upload->data();
+
+	         	$this->upload->do_upload('img_card2');
+	         	$result2 = $this->upload->data();
+
+	         	$this->upload->do_upload('img_card3');
+	         	$result3 = $this->upload->data();
+
+	         	$result = array('img_card1'=>$result1,'img_card2'=>$result2,'img_card3'=>$result3);
+
+	         		$data = [
+
+					'judul' => $this->input->post('judul'),
+					'sub_judul' => $this->input->post('sub_judul'),
+					'judul_card1' => $this->input->post('judul_card1'),
+					'text_card1' => $this->input->post('text1'),
+					'img_card1' => $result['img_card1']['file_name'],
+					'judul_card2' => $this->input->post('judul_card2'),
+					'text_card2' => $this->input->post('text2'),
+					'img_card2' => $result['img_card2']['file_name'],
+					'judul_card3' => $this->input->post('judul_card3'),
+					'text_card3' => $this->input->post('text3'),
+					'img_card3' =>$result['img_card3']['file_name'],
+
+					
+
+				];
+				$id = $this->input->post('id');
+
+				$this->db->where('id', $id);
+				$this->db->update('tbl_section1', $data);
+				$this->session->set_flashdata('message', 'swal("Sukses!", "Data Berhasil Diubah", "success");');
+				redirect('section/data_section1');
+
+
+	          }
+
+	      }
+
 
 	      function section_produk(){
 
@@ -130,22 +218,7 @@
 
 
 
-	      function hapus_section1(){
-
-	      	$id = $this->input->get('id');
-	      	$delet_images = $this->db->get_where('tbl_section1',array('id' => $id))->row();
-	      	$target1 = $delet_images->img_card1;
-	      	$target2 = $delet_images->img_card2;
-	      	$target3 = $delet_images->img_card3;
-			
-			unlink("./assets/gambar_section1/$target1");
-			unlink("./assets/gambar_section1/$target2");
-			unlink("./assets/gambar_section1/$target3");
-
-	      	$delete = $this->db->delete('tbl_section1', array('id' => $id));
-	      	$this->session->set_flashdata('message', 'swal("Sukses!", "Data Berhasil Dihapus", "success");');
-				redirect('section/data_section1');
-	      }
+	     
 
 
 
@@ -462,6 +535,75 @@
 				redirect('section/data_section2');
 	      }
 
+	      function edit_section2(){
+
+	      	$data['title'] = "Section card2";
+			$data['sub_title'] = "Edit Section Card 2";
+
+			$id = $this->input->get('id');
+			$data['editsection2'] = $this->db->get_where('tbl_section2')->result_array();
+
+			$this->load->view('template/header', $data);
+			$this->load->view('admin/edit_section2', $data);
+			$this->load->view('template/footer');
+
+			
+
+	      }
+
+	      function action_editcard2(){
+	      	echo $this->input->get('id');
+
+
+			$this->load->helper(array('form','url'));
+			 $config['upload_path']          = './assets/gambar_section2/';
+	          $config['allowed_types']        = 'jpg|png';
+	          $config['max_size']             = 200000000;
+	          $config['file_name']           = '';
+
+	          $this->load->library('upload', $config);
+
+	          if ($this->input->post('edit')) {
+
+	          	$this->upload->do_upload('img_card1');
+	         	$result1 = $this->upload->data();
+
+	         	$this->upload->do_upload('img_card2');
+	         	$result2 = $this->upload->data();
+
+	         	$this->upload->do_upload('img_card3');
+	         	$result3 = $this->upload->data();
+
+	         	$result = array('img_card1'=>$result1,'img_card2'=>$result2,'img_card3'=>$result3);
+
+	         		$data = [
+
+					'judul' => $this->input->post('judul'),
+					'sub_judul' => $this->input->post('sub_judul'),
+					'judul_card1' => $this->input->post('judul_card1'),
+					'text_card1' => $this->input->post('text1'),
+					'img_card1' => $result['img_card1']['file_name'],
+					'judul_card2' => $this->input->post('judul_card2'),
+					'text_card2' => $this->input->post('text2'),
+					'img_card2' => $result['img_card2']['file_name'],
+					'judul_card3' => $this->input->post('judul_card3'),
+					'text_card3' => $this->input->post('text3'),
+					'img_card3' =>$result['img_card3']['file_name'],
+
+					
+
+				];
+				$id = $this->input->post('id');
+
+				$this->db->where('id', $id);
+				$this->db->update('tbl_section2', $data);
+				$this->session->set_flashdata('message', 'swal("Sukses!", "Data Berhasil Diubah", "success");');
+				redirect('section/data_section2');
+
+
+	          }
+
+	      }
 
 
 

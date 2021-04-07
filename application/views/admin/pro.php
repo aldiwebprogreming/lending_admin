@@ -40,7 +40,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
     <!-- Slick slider -->
     <link href="<?= base_url() ?>assets2/css/slick.css" rel="stylesheet">
     <!-- Theme color -->
-    <link id="switcher" href="<?= base_url() ?>assets2/css/theme-color/default-theme.css" rel="stylesheet">
+    <link id="switcher" href="<?= base_url() ?>assets2/css/theme-color/green-theme.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
@@ -52,7 +52,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/color.css">
+ <!--  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/color.css"> -->
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/style.css">
 
     <!-- Main Style -->
@@ -171,7 +171,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 	 ?>
 	<!-- Start Featured Slider -->
 <?php if ($num_promo == FALSE OR $promo == 0) { ?>
-	<section id="mu-hero" style=" background-color: #9500FF;">
+	<section id="mu-hero" style=" background-color: #3fc35f;">
 		<div class="container">
 			<div class="row">
 
@@ -419,7 +419,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 				
 			</section>
 
-			<section id="mu-video-review" style="background-image: url(<?= base_url() ?>assets2/images/bg-bunga.jpg); background-color: #9500FF;">
+			<section id="mu-video-review" style="background-image: url(<?= base_url() ?>assets2/images/bg-bunga.jpg); ">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -560,7 +560,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		
 
 		<!-- Start Video Review -->
-		<section id="mu-video-review" style="background-image: url(<?= base_url() ?>assets2/images/bg-bunga.jpg); background-color: #9500FF;">
+		<section id="mu-video-review" style="background-image: url(<?= base_url() ?>assets2/images/bg-bunga.jpg); background-color: ">
 			<div class="container">
 				<div class="row" style="">
 					<div class="col-md-12">
@@ -953,9 +953,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 											<div class="" style="text-align: left; margin-left: 15px;">
 												<div class="" style="margin-left: 12px; ">
 												<ul>
-													<li style="font-weight: bold;">Apa itu ebunga ? <button id="tanya1" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 5px;">+</button>
+													<li style="font-weight: bold;">Apa itu ebunga ? <button id="tanya1" class="badge badge-primary" style="background-color: #3fc35f; float: right; margin-right: 5px;">+</button>
 
-													<button id="tutup1" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 5px; ">-</button></li>
+													<button id="tutup1" class="badge badge-primary" style="background-color: #3fc35f; display: none; float: right; margin-right: 5px; ">-</button></li>
 
 													<div id="jwb1" class="jwb1" style="margin-top: 20px; display: none;">
 														 Bisnis e-commerce yang memudahkan masyarakat untuk kirim bingkisan ucapan ke teman, keluarga, dan kenalannya dimana saja di Indonesia tanpa perlu membayar ongkos kirim.
@@ -964,8 +964,8 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 													<hr>
 													<li style="font-weight: bold;">Manfaat bergabung diebunga? 
 
-													<button id="tanya2" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 5px;">+</button>
-													<button id="tutup2" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 5px; ">-</button></li>
+													<button id="tanya2" class="badge badge-primary" style="background-color: #3fc35f; float: right; margin-right: 5px;">+</button>
+													<button id="tutup2" class="badge badge-primary" style="background-color: #3fc35f; display: none; float: right; margin-right: 5px; ">-</button></li>
 
 													</li>
 
@@ -975,9 +975,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 													<hr>
 													<li style="font-weight: bold;">Produk apa saja yang dijual ebunga ? 
-													<button id="tanya3" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 5px;">+</button>
+													<button id="tanya3" class="badge badge-primary" style="background-color: #3fc35f; float: right; margin-right: 5px;">+</button>
 
-													<button id="tutup3" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 5px;">-</button></li>
+													<button id="tutup3" class="badge badge-primary" style="background-color: #3fc35f; display: none; float: right; margin-right: 5px;">-</button></li>
 
 													</li>
 													<div id="jwb3" class="jwb3" style="margin-top: 20px; display: none;">
@@ -988,9 +988,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
 
 													<li style="font-weight: bold;">Cara pemesanan diebunga ? 
-													<button id="tanya4" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 5px;">+</button>
+													<button id="tanya4" class="badge badge-primary" style="background-color: #3fc35f; float: right; margin-right: 5px;">+</button>
 
-													<button id="tutup4" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 5px; ">-</button></li>
+													<button id="tutup4" class="badge badge-primary" style="background-color: #3fc35f; display: none; float: right; margin-right: 5px; ">-</button></li>
 
 													</li>
 
@@ -1000,9 +1000,9 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 													<hr>
 													<li style="font-weight: bold">Bagaimana harganya ?
 
-													 <button id="tanya5" class="badge badge-primary" style="background-color: orange; float: right; margin-right: 5px;">+</button>
+													 <button id="tanya5" class="badge badge-primary" style="background-color: #3fc35f; float: right; margin-right: 5px;">+</button>
 
-													 <button id="tutup5" class="badge badge-primary" style="background-color: orange; display: none; float: right; margin-right: 5px; ">-</button></li>
+													 <button id="tutup5" class="badge badge-primary" style="background-color: #3fc35f; display: none; float: right; margin-right: 5px; ">-</button></li>
 													</li>
 
 													<div id="jwb5" class="jwb5" style="margin-top: 20px; display: none;">
