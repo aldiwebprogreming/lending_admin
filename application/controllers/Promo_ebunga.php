@@ -89,8 +89,8 @@
 			$config = [
 			'protocol'  => 'smtp',
 			'smtp_host' => 'ssl://smtp.googlemail.com',
-			'smtp_user' => 'ebungasuksesmakmur@gmail.com',
-			'smtp_pass' => 'master@1719',
+			'smtp_user' => 'alldii1956@gmail.com',
+			'smtp_pass' => 'aldimantap123',
 			'smtp_port' => 465,
 			'mailtype'  => 'html',
 			'charset'   => 'utf-8',
@@ -102,13 +102,15 @@
 		$this->load->library('email', $config);
 		$this->email->initialize($config);
 
-	      $this->email->from('ebungasuksesmakmur@gmail.com', 'ebunga');
+	      $this->email->from('alldii1956@gmail.com', 'ebunga');
 	      $this->email->to($email);
 	      $this->email->subject('Info ebunga');
 
-	      $get = file_get_contents(base_url('email/email.html'));	
-	  	$this->email->message("$get");
-	 
+	      $get = file_get_contents(base_url('email/email.php?id=3'));
+	      $get1 = file_get_contents(base_url('email/email1.php'));
+	      $get2 = file_get_contents(base_url('email/email2.php'));	
+	  		$this->email->message("$get1<h1 style='text-align:center; color: orange'>Herry Tonesa</h1>$get2");
+	 	
 
         if ($this->email->send()) {
         	

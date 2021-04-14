@@ -338,6 +338,12 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="<?= base_url() ?>section/data_section2" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Section Card 2</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="<?= base_url() ?>section/section_produk" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Section Produk</p>
@@ -355,12 +361,7 @@
                   <p>Section Kontak</p>
                 </a>
               </li>
-               <li class="nav-item">
-                <a href="<?= base_url() ?>section/data_section2" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Section Card 2</p>
-                </a>
-              </li>
+               
             </ul>
           </li>
 

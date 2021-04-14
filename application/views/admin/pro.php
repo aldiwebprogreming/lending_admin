@@ -419,7 +419,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 				
 			</section>
 
-			<section id="mu-video-review" style="background-image: url(<?= base_url() ?>assets2/images/bg-bunga.jpg); ">
+			<section id="mu-video-review" style="background-image: url(<?= base_url() ?>assets2/images/ketupat2.png); ">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -560,7 +560,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		
 
 		<!-- Start Video Review -->
-		<section id="mu-video-review" style="background-image: url(<?= base_url() ?>assets2/images/bg-bunga.jpg); background-color: ">
+		<section id="mu-video-review" style="background-image: url(<?= base_url() ?>assets2/images/ketupat2.png); background-color: ">
 			<div class="container">
 				<div class="row" style="">
 					<div class="col-md-12">
@@ -761,7 +761,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 		</section>
 
 
-		<section id="mu-video-review" style="background-image: url(<?= base_url() ?>assets2/images/bg-bunga.jpg); background-color: #9500FF;">
+		<section id="mu-video-review" style="background-image: url(<?= base_url() ?>assets2/images/ketupat2.png); background-color: #9500FF;">
 			<div class="container">
 				<div class="row" style="">
 					<div class="col-md-12">
