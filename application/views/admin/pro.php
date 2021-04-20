@@ -374,19 +374,24 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 				<div class="container">
 					<br>
 			<br>
+
+			<?php foreach ($section1 as $card1) { } ?>
 					<div class="row">
-						<h2 style="text-align: center; margin-bottom: 20px;">Kemudahan Itu Adalah Hak Setiap Individual !!!</h2>
+						<h2 style="text-align: center; margin-bottom: 20px;"><!-- Kemudahan Itu Adalah Hak Setiap Individual !!! --><?= $card1['judul'] ?></h2>
+
 						<center>
 						<span class="mu-header-dot" style="background-color: orange;"></span>
+						
+						<p><?= $card1['sub_judul'] ?></p>
 						</center>
 						<br>
 
 						<div class="col-sm-4 col-md-4">
 
 							<span class="mu-book-overview-icon-box" style="margin-top: 15px; border: 2px solid #590FFF;">
-								<h3 style="text-align: center; margin-top: 20px; color: #9500FF;;">Mudahnya Pesan Hadiah</h4>
-								<img src="<?= base_url() ?>assets/logo/1.png" class="img-fluid" alt="Image" style="">
-								<p style="text-align: center; font-size: 20px; color:#333333">Hanya dengan sentuhan jari, bingkisan di momen yang kamu butuhkan bisa di dapatkan dengan mudah.</p>
+								<h3 style="text-align: center; margin-top: 20px; color: #9500FF;;"><!-- Mudahnya Pesan Hadiah --><?= $card1['judul_card1'] ?></h4>
+								<img src="<?= base_url() ?>assets/gambar_section1/<?= $card1['img_card1'] ?>" class="img-fluid" alt="Image" style="">
+								<p style="text-align: center; font-size: 20px; color:#333333"><!-- Hanya dengan sentuhan jari, bingkisan di momen yang kamu butuhkan bisa di dapatkan dengan mudah. --><?= $card1['text_card1'] ?></p>
 					    	</span>
 
 						</div>
@@ -394,11 +399,11 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="col-sm-4 col-md-4">
 
 							<span class="mu-book-overview-icon-box" style="margin-top: 15px; border: 2px solid #590FFF;">
-								<h3 style="text-align: center; margin-top: 22px; color: #590FFF;">Kualitas Produk Terjamin</h4>
+								<h3 style="text-align: center; margin-top: 22px; color: #590FFF;"><!-- Kualitas Produk Terjamin --><?= $card1['judul_card2'] ?></h4>
 								<center>
-								<img src="<?= base_url() ?>assets/logo/2.png" class="img-fluid" alt="Image">
+								<img src="<?= base_url() ?>assets/gambar_section1/<?= $card1['img_card2'] ?>" class="img-fluid" alt="Image">
 								</center>
-								<p style="text-align: center; font-size: 20px; color:#333333 ">Kami menyediakan produk dengan kualitas terjamin, karena kepuasan kamu menjadi prioritas utama kami.</p>
+								<p style="text-align: center; font-size: 20px; color:#333333 "><!-- Kami menyediakan produk dengan kualitas terjamin, karena kepuasan kamu menjadi prioritas utama kami. --><?= $card1['text_card2'] ?></p>
 					    	</span>
 
 						</div>
@@ -406,10 +411,10 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="col-sm-4 col-md-4">
 
 							<span class="mu-book-overview-icon-box" style="margin-top: 15px; border: 2px solid #590FFF;">
-								<h3 style="text-align: center; margin-top: 20px; color:#590FFF;">Kemudahan Pembayaran</h4>
-								<img src="<?= base_url() ?>assets/logo/3.png" class="img-fluid" alt="Image">
+								<h3 style="text-align: center; margin-top: 20px; color:#590FFF;"><!-- Kemudahan Pembayaran --><?= $card1['judul_card3'] ?></h4>
+								<img src="<?= base_url() ?>assets/gambar_section1/<?= $card1['img_card3'] ?>" class="img-fluid" alt="Image">
 								<br>
-								<p style="text-align: center; font-size: 20px; color:#333333">Kamu bebas memilih berbagai metode pembayaran yang prosesnya cepat, sederhana, dan aman.</p>
+								<p style="text-align: center; font-size: 20px; color:#333333"><?= $card1['text_card3'] ?></p>
 					    	</span>
 
 						</div>
@@ -420,29 +425,26 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 			</section>
 
 			<section id="mu-video-review" style="background-image: url(<?= base_url() ?>assets2/images/ketupat2.png); ">
+
+				<?php foreach ($video1 as $v1) {
+					
+				} ?>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="mu-video-review-area" style="padding: 90px;">
 
 							<div class="mu-heading-area" style="padding: 10px;">
-								<h1 class="mu-heading-title" style=""><!-- Dapat Undangan Diluar Kota, Tidak Bisa Hadir ? --> Saatnya Berbagi Kebaikan Dibulan Penuh Berkah</h1>
+								<h1 class="mu-heading-title" style=""><!-- Dapat Undangan Diluar Kota, Tidak Bisa Hadir ? --> <!-- Saatnya Berbagi Kebaikan Dibulan Penuh Berkah --><?= $v1['judul'] ?></h1>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<p style="font-size: 20px; "><!-- Kamu pernah mengalami seperti itu, tonton video dibawah ini. -->Habiskan waktu Ramadhan kamu dengan melakukan berbagai hal yang baik, serta selalu menjaga silaturahmi dengan orang-orang tersayang.</p>
+								<p style="font-size: 20px; "><!-- Kamu pernah mengalami seperti itu, tonton video dibawah ini. --><!-- Habiskan waktu  --><!-- Ramadhan kamu dengan melakukan berbagai hal yang baik, serta selalu menjaga silaturahmi dengan orang-orang tersayang. --><?= $data['sub_judul'] ?></p>
 							
 
 							<!-- Start Video Review Content -->
 						
 							<div class="mu-video-review-content">
 								<div class="embed-responsive embed-responsive-16by9">
-									<?php 
-									$video1 = $this->db->get_where('tbl_video_review',array('section' => 'video 1' ))->result_array();
-
-									foreach ($video1 as $video) {
-										echo $video['frame'];
-									}
-								
-									 ?>
+									<?= $v1['frame'] ?>
 								</div>
 								
 							</div>
@@ -477,9 +479,10 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="mu-book-overview-area">
 
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title">Produk Ebunga</h2>
+								<?php $produk = $this->db->get('tbl_section_produk')->row(); ?>
+								<h2 class="mu-heading-title"> <?= $produk->judul ?></h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
-								<p style="font-size: 20px;">Mau kirim kemana ? ebunga semua bisa.</p>
+								<p style="font-size: 20px;"><?= $produk->sub_judul ?></p>
 							</div>
 
 							<!-- Start Book Overview Content -->
@@ -809,8 +812,12 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 					<div class="col-md-12">
 						<div class="mu-pricing-area">
 
+							<?php foreach ($section2 as $card2) {
+								
+							} ?>
+
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title ">TUNGGU DULU !!!! <br>Selain Mendapatkan Kemudahannya, dapatkan Juga 3 Keuntungan Ini.</h2>
+								<h2 class="mu-heading-title ">T<!-- UNGGU DULU !!!! <br>Selain Mendapatkan Kemudahannya, dapatkan Juga 3 Keuntungan Ini. --> <?= $card2['judul'] ?></h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
 								<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p> -->
 							</div>
@@ -823,11 +830,11 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="col-sm-4 col-md-4">
 
 							<span class="mu-book-overview-icon-box" style="margin-top: 15px; border: 2px solid #590FFF;">
-								<h3 style="text-align: center; margin-top: 20px; color: #9500FF;">Ecash Reward</h4>
+								<h3 style="text-align: center; margin-top: 20px; color: #9500FF;"><!-- Ecash Reward --><?= $card2['judul_card1'] ?></h4>
 								<center>
-								<img src="<?= base_url() ?>assets/logo/card/ecas.png" class="img-fluid" alt="Image" style="margin-bottom: 30px;">
+								<img src="<?= base_url() ?>assets/gambar_section2/<?= $card2['img_card1'] ?>" class="img-fluid" alt="Image" style="margin-bottom: 30px;">
 								</center>
-								<p style="text-align: center; font-size: 20px; color:#333333">Kamu akan langsung mendapatkan ecash 5000 tanpa syarat yang bisa langsung dipakai untuk berintraski diebunga. Tanpa syarat dan tanpa batas.</p>
+								<p style="text-align: center; font-size: 20px; color:#333333"><!-- Kamu akan langsung mendapatkan ecash 5000 tanpa syarat yang bisa langsung dipakai untuk berintraski diebunga. Tanpa syarat dan tanpa batas. --><?= $card2['text_card1'] ?></p>
 					    	</span>
 
 						</div>
@@ -835,11 +842,11 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="col-sm-4 col-md-4">
 
 							<span class="mu-book-overview-icon-box" style="margin-top: 15px; border: 2px solid #590FFF;">
-								<h3 style="text-align: center; margin-top: 20px; color: #590FFF;">Cashback Reward</h4>
+								<h3 style="text-align: center; margin-top: 20px; color: #590FFF;"><?= $card2['judul_card2'] ?></h4>
 								<center>
-								<img src="<?= base_url() ?>assets/logo/card/bek.png" class="img-fluid" alt="Image">
+								<img src="<?= base_url() ?>assets/gambar_section2/<?= $card2['img_card2'] ?>" class="img-fluid" alt="Image">
 								</center>
-								<p style="text-align: center; font-size: 20px; color:#333333 ">Setiap melakukan transaksi, kamu akan mendapatkna Cashback 5% dari nilai transaksi dalam bentuk ecash dan dapat dipakai untuk transaksi berikutnya.</p>
+								<p style="text-align: center; font-size: 20px; color:#333333 "><!-- Setiap melakukan transaksi, kamu akan mendapatkna Cashback 5% dari nilai transaksi dalam bentuk ecash dan dapat dipakai untuk transaksi berikutnya. --><?= $card2['text_card2'] ?></p>
 					    	</span>
 
 						</div>
@@ -847,11 +854,11 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 						<div class="col-sm-4 col-md-4">
 
 							<span class="mu-book-overview-icon-box" style="margin-top: 15px; border: 2px solid #590FFF;">
-								<h3 style="text-align: center; margin-top: 20px; color:#590FFF;">Gratis Ongkir</h4>
+								<h3 style="text-align: center; margin-top: 20px; color:#590FFF;"><?= $card2['judul_card3'] ?></h4>
 								<center>
-								<img src="<?= base_url() ?>assets/logo/card/free.png" class="img-fluid" alt="Image">
+								<img src="<?= base_url() ?>assets/gambar_section2/<?= $card2['img_card3'] ?>" class="img-fluid" alt="Image">
 								</center>
-								<p style="text-align: center; font-size: 20px; color:#333333">Kami siap mengantarkan pesanan kamu kemana saja tanpa biaya pengiriman sedikitpun yang bisa kamu manfaatkan kapan saja  dan selamanya.</p>
+								<p style="text-align: center; font-size: 20px; color:#333333"><!-- Kami siap mengantarkan pesanan kamu kemana saja tanpa biaya pengiriman sedikitpun yang bisa kamu manfaatkan kapan saja  dan selamanya. --><?= $card2['text_card3'] ?></p>
 					    	</span>
 
 						</div>
@@ -881,7 +888,12 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 					<div class="col-md-12">
 						<div class="mu-testimonials-area" style="padding:90px;">
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title ">Lebih Dari 1000 Orang Telah Merasakan Inovasi Terbaru Diebunga</h2>
+								<h2 class="mu-heading-title ">
+
+									<?php 
+									$tes = $this->db->get('tbl_section_testimoni')->row();
+									?>
+									<!-- Lebih Dari 1000 Orang Telah Merasakan Inovasi Terbaru Diebunga --><?= $tes->judul ?></h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
 							</div>
 
@@ -1043,9 +1055,11 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 				<div class="row">
 					<div class="col-md-12">
 						<div class="mu-contact-area">
-
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title ">Silahkan Isi Formulir Dibawah Ini, Untuk Mendapatkan Hadiah Perdana Dari Kami !!</h2>
+
+							<?php $kontak = $this->db->get('tbl_section_kontak')->row()  ?>
+
+								<h2 class="mu-heading-title "><!-- Silahkan Isi Formulir Dibawah Ini, Untuk Mendapatkan Hadiah Perdana Dari Kami !! --> <?= $kontak->judul; ?></h2>
 								<span class="mu-header-dot" style="background-color: orange;"></span>
 								<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p> -->
 							</div>

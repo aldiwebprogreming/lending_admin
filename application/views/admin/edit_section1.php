@@ -23,7 +23,7 @@
                    <div class="col-lg-6">
                 <form method="post" action="<?= base_url() ?>section/action_editcard1" enctype="multipart/form-data">
 
-                  <?php foreach ($editsection2 as $data) {
+                  <?php foreach ($editsection as $data) {
                     # code...
                   } ?>
 

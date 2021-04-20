@@ -41,6 +41,16 @@
 
 			$data['default'] = $this->db->get('tbl_default')->result_array();
 
+			$data['section1'] = $this->db->get('tbl_section1')->result_array();
+
+			$data['video1'] = $this->db->get_where('tbl_video_review', array('nama_video_review' => 'video 1'))->result_array();
+			// $data['video2'] = $this->db->get_where('tbl_video_review', array('nama_video_review' => 'video 2'))->result_array();
+			// $data['video3'] = $this->db->get_where('tbl_video_review', array('nama_video_review' => 'video 3'))->result_array();
+
+			$data['section2'] = $this->db->get('tbl_section2')->result_array();
+
+
+
 			
 
 			$this->load->view('admin/pro', $data);
@@ -86,43 +96,36 @@
 		private function _kirimEmail($email,$nama){
 
 
-			$config = [
-			'protocol'  => 'smtp',
-			'smtp_host' => 'ssl://smtp.googlemail.com',
-			'smtp_user' => 'alldii1956@gmail.com',
-			'smtp_pass' => 'aldimantap123',
+			$config = Array(
+			'protocol' => 'smtp',
+			'smtp_host' => 'smtp.zoho.com',
 			'smtp_port' => 465,
-			'mailtype'  => 'html',
-			'charset'   => 'utf-8',
-			'newline'   => "\r\n",
-		];
+			'smtp_user' => 'master@ebunga.co.id',
+			'smtp_pass' => 'Brian1903',
+			'mailtype' => 'html',
+			'wordwrap' => TRUE
+			);
 
 
+			$this->load->library('email', $config);
+			$this->email->initialize($config);
+			$this->email->set_newline("\r\n");
+			$this->email->from('master@ebunga.co.id', 'ebunga');
+			$this->email->to($email);
 
-		$this->load->library('email', $config);
-		$this->email->initialize($config);
+			$this->email->subject('Info ebunga');
+			
+			// $get1 = file_get_contents(base_url('email/email3.php'));
+			// $get2 = file_get_contents(base_url('email/email4.php'));
 
-	      $this->email->from('alldii1956@gmail.com', 'ebunga');
-	      $this->email->to($email);
-	      $this->email->subject('Info ebunga');
+			$this->email->message("aldisaha");
 
-	      $get = file_get_contents(base_url('email/email.php?id=3'));
-	      $get1 = file_get_contents(base_url('email/email1.php'));
-	      $get2 = file_get_contents(base_url('email/email2.php'));	
-	  		$this->email->message("$get1<h1 style='text-align:center; color: orange'>Herry Tonesa</h1>$get2");
-	 	
-
-        if ($this->email->send()) {
-        	
-		        	echo "berhasil";
-		        } else {
-
-
-		        	  echo 'Email tidak berhasil dikirim';
-		               echo '<br />';
-		               echo $this->email->print_debugger();
-		        }
-
+			if ($this->email->send()) {
+				echo 'Your e-mail has been sent!';
+			}else{
+				show_error($this->email->print_debugger());
+			
+			}
 
 		}
 
